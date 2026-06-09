@@ -20,7 +20,9 @@ Requires the `gh` CLI, authenticated. Run with: uv run divine-spells.py
 
 from __future__ import annotations
 
+import base64
 import json
+import re
 import subprocess
 import sys
 import tomllib
@@ -39,6 +41,23 @@ TOOL_TOPICS = ["llm", "ai-agents", "llm-agents", "agent-framework",
                "llmops", "llm-tools", "rag", "llm-framework"]
 
 PER_TOPIC = 15
+
+# Awesome-lists worth mining: each links to many skill repos. We harvest their
+# repo links and run them through the same gate, so the lists become a vein of
+# *accountable houses* rather than an undifferentiated flood of street magic.
+AWESOME_LISTS = [
+    "ComposioHQ/awesome-claude-skills",
+    "VoltAgent/awesome-agent-skills",
+    "VoltAgent/awesome-openclaw-skills",
+    "hesreallyhim/awesome-claude-code",
+    "sickn33/antigravity-awesome-skills",
+]
+HARVEST_CAP = 250   # gate at most this many newly-harvested repos (logged if hit)
+
+NON_REPO_OWNERS = {"sponsors", "topics", "features", "about", "marketplace",
+                   "sindresorhus", "user-attachments", "apps", "settings",
+                   "collections", "orgs", "login", "join", "pricing"}
+
 THIS_YEAR = datetime.now(timezone.utc).year
 
 
@@ -59,6 +78,42 @@ def search_topic(topic: str):
     return gh_json(["search", "repos", f"--topic={topic}", "--sort=stars",
                     f"--limit={PER_TOPIC}", "--json",
                     "fullName,stargazersCount,owner,pushedAt,description"])
+
+
+REPO_LINK = re.compile(r"github\.com/([A-Za-z0-9][A-Za-z0-9._-]*/[A-Za-z0-9][A-Za-z0-9._-]*)")
+
+
+def harvest_list(slug: str) -> set[str]:
+    """Pull every github repo link out of an awesome-list's README."""
+    obj = gh_json(["api", f"repos/{slug}/readme"])
+    if not isinstance(obj, dict) or "content" not in obj:
+        return set()
+    try:
+        text = base64.b64decode(obj["content"]).decode("utf-8", "ignore")
+    except (ValueError, UnicodeDecodeError):
+        return set()
+    out = set()
+    for m in REPO_LINK.finditer(text):
+        repo = re.sub(r"(?:\.git)?[).,]*$", "", m.group(1))
+        owner = repo.split("/", 1)[0]
+        if owner.lower() in NON_REPO_OWNERS or repo.lower() == slug.lower():
+            continue
+        out.add(repo)
+    return out
+
+
+def repo_record(slug: str) -> dict | None:
+    """Minimal repo facts for a harvested candidate (one API call)."""
+    o = gh_json(["api", f"repos/{slug}"])
+    if not isinstance(o, dict) or "full_name" not in o:
+        return None
+    return {
+        "fullName": o["full_name"],
+        "stargazersCount": o.get("stargazers_count", 0),
+        "owner": {"login": (o.get("owner") or {}).get("login", "")},
+        "pushedAt": o.get("pushed_at") or "",
+        "description": o.get("description") or "",
+    }
 
 
 _owner_cache: dict[str, dict] = {}
@@ -132,9 +187,30 @@ def main() -> int:
     have, allowlist = load_known()
     print("🔮  scrying the aether for spell repos…")
 
-    # ── Candidate houses (skill repos), gated ───────────────────────────────
+    # ── Candidate houses: topic search + awesome-list harvest, all gated ─────
+    candidates = collect(HOUSE_TOPICS)   # name -> search record
+
+    print(f"🔮  harvesting {len(AWESOME_LISTS)} awesome-lists…")
+    harvested: set[str] = set()
+    for lst in AWESOME_LISTS:
+        harvested |= harvest_list(lst)
+    # Only fetch repo facts for harvested repos we don't already have a record for.
+    fresh = [s for s in sorted(harvested)
+             if s not in candidates and s.lower() not in have]
+    if len(fresh) > HARVEST_CAP:
+        print(f"   (harvested {len(fresh)} repos; gating the first {HARVEST_CAP})")
+        fresh = fresh[:HARVEST_CAP]
+    else:
+        print(f"   harvested {len(fresh)} new repos from the lists")
+    for i, slug in enumerate(fresh, 1):
+        rec = repo_record(slug)
+        if rec:
+            candidates[slug] = rec
+        if i % 50 == 0:
+            print(f"   …gathered facts for {i}/{len(fresh)}")
+
     houses = []
-    for name, r in collect(HOUSE_TOPICS).items():
+    for name, r in candidates.items():
         if name.lower() in have:
             continue  # already in the Book
         login = (r.get("owner") or {}).get("login") or name.split("/", 1)[0]

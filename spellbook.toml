@@ -89,6 +89,121 @@ url = "https://github.com/browser-act/skills"
 repo = "browseract-skills"
 trust = "verified-org"   # verified org (young — 4 repos); browser automation
 
+# ── Houses harvested from the awesome-lists by the Rite of Divination ─────────
+# Major companies' official agent-skill collections, all gate-passed.
+
+[[source]]
+name = "microsoft"
+url = "https://github.com/microsoft/skills"
+repo = "microsoft-skills"
+trust = "verified-org"   # Microsoft — 13 yrs, 8020 repos
+roots = [".github/plugins"]
+
+[[source]]
+name = "nvidia"
+url = "https://github.com/NVIDIA/skills"
+repo = "nvidia-skills"
+trust = "verified-org"   # NVIDIA — 14 yrs, 745 repos
+roots = ["plugins"]
+
+[[source]]
+name = "vercel"
+url = "https://github.com/vercel-labs/agent-skills"
+repo = "vercel-skills"
+trust = "verified-org"   # Vercel Labs — official agent skills
+roots = ["skills"]
+
+[[source]]
+name = "huggingface"
+url = "https://github.com/huggingface/skills"
+repo = "huggingface-skills"
+trust = "verified-org"   # Hugging Face — 9 yrs, 438 repos
+roots = ["skills"]
+
+[[source]]
+name = "supabase"
+url = "https://github.com/supabase/agent-skills"
+repo = "supabase-skills"
+trust = "verified-org"   # Supabase — 7 yrs, 153 repos
+roots = ["skills"]
+
+[[source]]
+name = "expo"
+url = "https://github.com/expo/skills"
+repo = "expo-skills"
+trust = "verified-org"   # Expo — 11 yrs, 439 repos
+roots = ["plugins"]
+
+[[source]]
+name = "apify"
+url = "https://github.com/apify/agent-skills"
+repo = "apify-skills"
+trust = "established-org"   # Apify — 10 yrs, 225 repos
+roots = ["skills"]
+
+[[source]]
+name = "redis"
+url = "https://github.com/redis/agent-skills"
+repo = "redis-skills"
+trust = "verified-org"   # Redis — 14 yrs, 72 repos
+roots = ["skills"]
+
+[[source]]
+name = "neon"
+url = "https://github.com/neondatabase/agent-skills"
+repo = "neon-skills"
+trust = "established-org"   # Neon — 5 yrs, 241 repos
+roots = ["skills"]
+
+[[source]]
+name = "qdrant"
+url = "https://github.com/qdrant/skills"
+repo = "qdrant-skills"
+trust = "established-org"   # Qdrant — 6 yrs, 131 repos
+roots = ["skills"]
+
+[[source]]
+name = "remotion"
+url = "https://github.com/remotion-dev/skills"
+repo = "remotion-skills"
+trust = "established-org"   # Remotion — 5 yrs, 95 repos
+roots = ["skills"]
+
+[[source]]
+name = "transloadit"
+url = "https://github.com/transloadit/skills"
+repo = "transloadit-skills"
+trust = "established-org"   # Transloadit — 17 yrs, 34 repos
+roots = ["skills"]
+
+[[source]]
+name = "metalbear"
+url = "https://github.com/metalbear-co/skills"
+repo = "metalbear-skills"
+trust = "established-org"   # MetalBear — 4 yrs, 108 repos
+roots = ["skills"]
+
+[[source]]
+name = "longbridge"
+url = "https://github.com/longbridge/skills"
+repo = "longbridge-skills"
+trust = "established-org"   # Longbridge — 6 yrs, 79 repos
+roots = ["skills"]
+
+[[source]]
+name = "montecarlo"
+url = "https://github.com/monte-carlo-data/mc-agent-toolkit"
+repo = "montecarlo-skills"
+trust = "established-org"   # Monte Carlo — 7 yrs, 34 repos
+roots = ["skills"]
+
+[[source]]
+name = "mojoauth"
+url = "https://github.com/MojoAuth/skills"
+repo = "mojoauth-skills"
+trust = "org"   # MojoAuth — official auth skills
+roots = ["skills"]
+
 [[source]]
 name = "angular"
 url = "https://github.com/angular/skills"
