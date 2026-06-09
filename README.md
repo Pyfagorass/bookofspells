@@ -54,21 +54,28 @@ Read the Book of Spells — a library of ready-made skills (each a folder with a
 SKILL.md, often with scripts/ and references/ beside it) that you discover ON
 DEMAND through one keystone index. Do NOT bulk-install the skills/ folder.
 
-1. House the Book somewhere permanent and tether ONLY the keystone(s) onto my
-   skills-shelf (Claude Code: ~/.claude/skills/) — symlink, never copy:
+1. Determine YOUR OWN skills directory — wherever you, the agent reading this,
+   load SKILL.md skills from. It depends on which agent you are: the open Agent
+   Skills standard uses ~/.agents/skills/; Claude Code uses ~/.claude/skills/;
+   others differ. If you are unsure, consult your own documentation/config and
+   use that path. Substitute it for SKILLS_DIR below.
 
+2. House the Book somewhere permanent, then tether ONLY the keystone(s) into
+   YOUR skills directory — symlink, never copy:
+
+     SKILLS_DIR="$HOME/.agents/skills"   # <-- replace with YOUR agent's skills dir
      git clone https://github.com/Pyfagorass/bookofspells.git ~/grimoires/bookofspells
-     mkdir -p ~/.claude/skills
-     ln -s ~/grimoires/bookofspells/the-grimoire    ~/.claude/skills/the-grimoire
-     ln -s ~/grimoires/bookofspells/the-spellwright ~/.claude/skills/the-spellwright
+     mkdir -p "$SKILLS_DIR"
+     ln -s ~/grimoires/bookofspells/the-grimoire    "$SKILLS_DIR/the-grimoire"
+     ln -s ~/grimoires/bookofspells/the-spellwright "$SKILLS_DIR/the-spellwright"
 
-2. Then read the-grimoire/SKILL.md and obey it. To find a skill: grep
+3. Then read the-grimoire/SKILL.md and obey it. To find a spell: grep
    skills/_index/ (or catalog.json) for a capability, read the SKILL.md at the
    "read at `…`" path it returns, and follow that spell — including any scripts
    it ships. Never read the whole catalogue into context; grep it.
 ````
 
-Tether `the-grimoire` to *find* spells; keep `the-spellwright` if you also want your demon to *forge* new ones. After binding, simply ask — *"is there a skill for Figma?"* — and the grimoire will stir.
+Tether `the-grimoire` to *find* spells; keep `the-spellwright` if you also want your demon to *forge* new ones. After binding, simply ask — *"is there a spell for Figma?"* — and the grimoire will stir.
 
 ---
 

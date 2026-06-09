@@ -52,9 +52,11 @@ A *tether* is a **symlink**, not a copy. This matters:
 
    ```bash
    BOOK=~/grimoires/bookofspells          # wherever you housed it
-   mkdir -p ~/.claude/skills
-   ln -s "$BOOK/the-grimoire"   ~/.claude/skills/the-grimoire
-   ln -s "$BOOK/the-spellwright" ~/.claude/skills/the-spellwright   # optional: the forge
+   SHELF="$HOME/.agents/skills"           # YOUR conduit's shelf from step 2 (e.g.
+                                          # ~/.claude/skills for Claude Code)
+   mkdir -p "$SHELF"
+   ln -s "$BOOK/the-grimoire"    "$SHELF/the-grimoire"
+   ln -s "$BOOK/the-spellwright" "$SHELF/the-spellwright"   # optional: the forge
    ```
 
    Tether `the-grimoire` to *find* spells; add `the-spellwright` if you also want
