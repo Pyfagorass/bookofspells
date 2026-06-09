@@ -147,12 +147,12 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 
 *Raw spirit is volatile and shapeless. The alchemist's apparatus channels it into vessels, tools, and structured matter.*
 
-- **The Vercel Alembic (AI SDK)** — a slender apparatus for streaming spirit-speech into the browser-realm.
-- **The LangChain Retort** — a vast and tangled apparatus of chains, links, and bindings; powerful, and not for the faint of heart.
-- **The LlamaIndex Crucible** — for the alchemist who would wed a spirit to a great library of forbidden scrolls.
-- **The Anthropic & OpenAI Phials** — the pure, unadorned apparatus handed down by the spirit-houses themselves.
-- **The Instructor & Outlines Molds** — apparatus that forces the spirit's formless utterance into rigid, schema-bound crystal.
-- **The Pydantic-AI Athanor** — the slow furnace that yokes type-safety to conjuration.
+- **[The Vercel Alembic — AI SDK](https://ai-sdk.dev/)** — a slender apparatus for streaming spirit-speech into the browser-realm.
+- **[The LangChain Retort](https://github.com/langchain-ai/langchain)** — a vast and tangled apparatus of chains, links, and bindings; powerful, and not for the faint of heart.
+- **[The LlamaIndex Crucible](https://github.com/run-llama/llama_index)** — for the alchemist who would wed a spirit to a great library of forbidden scrolls.
+- **The [Anthropic](https://github.com/anthropics/anthropic-sdk-python) & [OpenAI](https://github.com/openai/openai-python) Phials** — the pure, unadorned apparatus handed down by the spirit-houses themselves.
+- **The [Instructor](https://github.com/567-labs/instructor) & [Outlines](https://github.com/dottxt-ai/outlines) Molds** — apparatus that forces the spirit's formless utterance into rigid, schema-bound crystal.
+- **[The Pydantic-AI Athanor](https://github.com/pydantic/pydantic-ai)** — the slow furnace that yokes type-safety to conjuration.
 
 > *The alchemist's first law: trust no spirit's output until it has passed through the validating fire.*
 
@@ -163,8 +163,10 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 *The Demon Harnesses above were bound by other hands. Here lie the great Summoning Circles — the apparatus by which a conjurer forges a harness of their own, yoking a spirit to tools, memory, and will.*
 
 - **[The Anthropic Athanor — Claude Agent SDK](https://code.claude.com/docs/en/agent-sdk/overview)** — the House of Anthropic's own furnace for forging demons; the very apparatus from which Claude Code itself was wrought.
-- **[The OpenAI Conjury — Agents Guide](https://developers.openai.com/api/docs/guides/agents)** — the rival house's rite for binding spirits into autonomous, tool-wielding agents.
-- **[The Strands Weave — Strands Agents](https://strandsagents.com/)** — a model-driven loom (favoured in the halls of AWS) where reasoning and tools are woven into a single thread of action.
+- **[The OpenAI Conjury — Agents SDK](https://openai.github.io/openai-agents-python/)** — the rival house's lightweight rite for binding spirits into autonomous, tool-wielding agents.
+- **[The Google Forge — Agent Development Kit (ADK)](https://github.com/google/adk-python)** — the House of Google's own kit for forging agents (Python and Java), model-agnostic and deployment-ready.
+- **[The Microsoft Confluence — Agent Framework](https://github.com/microsoft/agent-framework)** — the House of Microsoft's framework, where its elder workings *Semantic Kernel* and *AutoGen* flow into one, for Python and .NET.
+- **[The Strands Weave — Strands Agents](https://strandsagents.com/)** — the House of AWS's model-driven loom, where reasoning and tools are woven into a single thread of action (and run in production on [Bedrock AgentCore](https://aws.amazon.com/bedrock/agentcore/)).
 - **[The Vercel Loom — AI SDK Agents](https://ai-sdk.dev/docs/agents/overview)** — the same slender Alembic above, now coiled into agentic loops that act and observe of their own accord.
 - **[The Cloudflare Ward — Agents at the Edge](https://developers.cloudflare.com/agents/)** — demons summoned not in your terminal but at the very edge of the world, durable and ever-waking.
 - **[Dify](https://github.com/langgenius/dify)** — a great visual workshop where agentic workflows are wired together by hand, no incantation in raw code required.
