@@ -136,13 +136,23 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 
 ## 🗂️ The Architecture of the Book
 
+The Book also *gathers* spells — skills penned by other houses — and binds them
+into a single shelf, each scried for dark magic before it is admitted.
+
 ```
 bookofspells/
-├── spells/        # Inscribed incantations & reusable rites
-├── grimoire/      # Catalogues of spirits, their humours and costs
-├── pacts/         # Permissions, safety wards, and binding terms
-└── README.md      # This — the book's own title page
+├── spellbook.toml          # the one ledger: which houses to gather, which spells to keep
+├── gather-reliquaries.py   # the Rite of Gathering — clone/refresh houses into temp-repos/
+├── transcribe-spells.py    # the Rite of Transcription — flatten & scry spells into skills/
+├── the-grimoire/           # the index spell — one spell that unlocks all the others
+├── skills/                 # the gathered spellbook (generated): <house>-<spell>/ + INDEX.md
+├── temp-repos/             # gathered grimoires, kept unseen by our own book (gitignored)
+└── README.md               # this — the book's own title page
 ```
+
+To add a house of your own, see **[CONTRIBUTING.md](./CONTRIBUTING.md)** — but
+know that only accountable houses pass the Trust Gate, and every spell is scried
+before it enters.
 
 ---
 
