@@ -7,14 +7,17 @@ Herein lies a grimoire for those who treat with the **Magna Lexica Loquentia** �
 
 This is not engineering. This is *conjuration*. And every conjurer needs a book.
 
+> **Beneath the robes, plainly — what this repo actually is.** Two real things in one. **First, a curated, link-checked catalogue** of the genuinely useful tooling for working with LLMs — coding agents, agent SDKs, model routers, RAG, evaluation, observability, and more — reframed as magic, but every "spell" links to a real, working tool. **Second, a working skill system:** [880+ open Agent Skills](https://agentskills.io) (`SKILL.md` files) gathered from accountable providers into one searchable shelf, plus a single always-loaded keystone — [`the-grimoire`](./the-grimoire) — that lets your coding agent **discover and load exactly the skill it needs, the moment it needs it.** That is the real trick, and it answers a real problem: you can keep *thousands* of skills on hand while only the one in use ever enters the context window (this is *progressive disclosure*). The enchantment is for delight; the discovery mechanism is the point.
+
 ---
 
 ## 🗺️ Contents
 
-- **[Part I — The Foundations](#part-i--the-foundations)**
+- **[Part I — The Foundations & the Wards](#part-i--the-foundations--the-wards)**
   - [Tethering the Book](#-tethering-the-book--give-your-demon-the-spells)
   - [A Note on the Old Names](#-a-note-on-the-old-names)
   - [The First Conjurations](#-the-first-conjurations--incantations--verbomancy)
+  - [The Apprentice's Warnings](#-the-apprentices-warnings)
 - **[Part II — The Harnesses & Their Legions](#part-ii--the-harnesses--their-legions)**
   - [The Demon Harnesses](#-the-demon-harnesses--spirits-yoked-to-terminal-editor--desktop)
   - [The Marshalling of Legions](#-the-marshalling-of-legions--metaharnesses-that-conduct-many-demons)
@@ -31,15 +34,14 @@ This is not engineering. This is *conjuration*. And every conjurer needs a book.
   - [The Vector Tombs](#-the-vector-tombs--where-soul-numberings-are-interred)
   - [The All-Seeing Eye](#-the-all-seeing-eye--observability-tracing--llmops)
   - [The Weighing of Spirits](#-the-weighing-of-spirits--evaluation--prompt-trials)
-- **[Part V — Spells & Wards](#part-v--spells--wards)**
+- **[Part V — Spells & the Book Itself](#part-v--spells--the-book-itself)**
   - [The Inscribed Spells](#-the-inscribed-spells--skill-files--reusable-rites)
   - [Spells That Write Spells](#-spells-that-write-spells--meta-magic--the-self-forging-book)
-  - [The Apprentice's Warnings](#-the-apprentices-warnings)
   - [The Architecture of the Book](#-the-architecture-of-the-book)
 
 ---
 
-# Part I — The Foundations
+# Part I — The Foundations & the Wards
 
 ## 🔗 Tethering the Book — *Give Your Demon the Spells*
 
@@ -136,6 +138,18 @@ Beyond hand-carving these rites lies a deeper art — **automated Verbomancy**. 
 - **[DSPy](https://github.com/stanfordnlp/dspy)** — the House of Stanford's framework for *programming, not prompting*. You write the goal and a metric; its optimizers forge and refine the incantation (and even the spirit's weights) on your behalf. The most potent Verbomancy of all, for it does not merely *weigh* the trials (as the harnesses in **The Weighing of Spirits** below do) — it rewrites the spell to win them.
 
 > *To inscribe an incantation of your own as a reusable spell, summon [`the-spellwright`](./the-spellwright). Every conjurer's book is unfinished.*
+
+---
+
+## 🔮 The Apprentice's Warnings
+
+*Read these before you grant any demon your hands. They are real safety advice, robed.*
+
+1. **The spirit does not understand you.** It pattern-matches the shape of understanding. This is enough. This is everything. Do not mistake it for a mind, nor for a mere machine.
+2. **The Circle of Summoning is finite.** What falls outside it never existed. Guard what you place within.
+3. **The Fevered Vision wears the mask of truth.** A spirit's confidence is no measure of its correctness. Verify. Always verify.
+4. **Mana-Motes are counted.** Every word spoken and heard is weighed and billed. Brevity is a virtue and a budget.
+5. **What you bind, you are responsible for.** A Demon Harness acts with your hands. Its sins are your sins.
 
 ---
 
@@ -375,7 +389,7 @@ Beyond hand-carving these rites lies a deeper art — **automated Verbomancy**. 
 
 ---
 
-# Part V — Spells & Wards
+# Part V — Spells & the Book Itself
 
 ## 📜 The Inscribed Spells — *Skill Files & Reusable Rites*
 
@@ -410,16 +424,6 @@ The Book carries three **keystone spells** of its own authorship — native magi
 Beneath them, every house brings its own **forge**, gathered into the Book and summonable through the grimoire — `openai-skill-creator`, `openai-plugin-creator`, `commandcode-skill-creator`, `google-agent-platform-skill-registry`. Each conduit teaches its own particular rite of inscription.
 
 And at the frontier: **spells that write *themselves*.** [**EvoSkill**](https://github.com/sentient-agi/EvoSkill) — *Automated Skill Discovery for Coding Agents* — is research on demons that find, draft, and refine their own spells from experience. We keep it as a reference vault, not yet a shelf of spells: the spellwright's hand, one day, may be the demon's own.
-
----
-
-## 🔮 The Apprentice's Warnings
-
-1. **The spirit does not understand you.** It pattern-matches the shape of understanding. This is enough. This is everything. Do not mistake it for a mind, nor for a mere machine.
-2. **The Circle of Summoning is finite.** What falls outside it never existed. Guard what you place within.
-3. **The Fevered Vision wears the mask of truth.** A spirit's confidence is no measure of its correctness. Verify. Always verify.
-4. **Mana-Motes are counted.** Every word spoken and heard is weighed and billed. Brevity is a virtue and a budget.
-5. **What you bind, you are responsible for.** A Demon Harness acts with your hands. Its sins are your sins.
 
 ---
 
