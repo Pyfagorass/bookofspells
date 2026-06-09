@@ -92,24 +92,39 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 
 ---
 
-## ⛧ The Demon Harnesses — *Spirits Yoked to the Terminal*
+## ⛧ The Demon Harnesses — *Spirits Yoked to Terminal, Editor & Desktop*
 
-*Here we bind the greater spirits to labour at our code. Treat them with respect. They have read your entire repository and they remember.*
+*Here we bind the greater spirits to labour at our code. Once they dwelt only in the terminal; now they wear what shape suits them — a possessed editor, a desktop body, even a cloud-cell — yet each is the same bound thing: a demon that has read your whole repository and remembers. Treat them with respect.*
 
-- **Claude Code** — the official harness of the House of Anthropic; a spirit that dwells in your terminal and acts with your own hands.
-- **Cursor** — a scriptorium possessed; the editor itself becomes a vessel for the spirit.
-- **Aider** — a pair-conjurer at the command line, committing its works to the git-ledger as it goes.
-- **Cline & Roo** — open familiars that nest within the editor and reach for tools unbidden.
-- **OpenAI Codex / Copilot** — the harnesses of rival houses, no less powerful for being foreign.
+**Yoked to the terminal —**
+
+- **[Claude Code](https://claude.com/claude-code)** — the official harness of the House of Anthropic; born in the terminal, it now also wears IDE-robes (VS Code, JetBrains) and a [desktop body](https://claude.com/claude-code).
+- **[Aider](https://aider.chat/)** — a pair-conjurer at the command line, committing its works to the git-ledger as it goes.
+- **[OpenAI Codex](https://developers.openai.com/codex)** — the House of OpenAI's harness, summoned in terminal, editor, or cloud.
 - **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** — the House of Google's open familiar, summoned straight into the terminal.
-- **[Kilo Code](https://github.com/Kilo-Org/kilocode)** — an open agentic harness for editor and terminal alike, yoked to five hundred spirits and beholden to no single house.
 - **[opencode](https://github.com/sst/opencode)** — a wholly open terminal harness, model-agnostic and fiercely independent.
-- **[OpenHands](https://github.com/All-Hands-AI/OpenHands)** — a fully unleashed open demon that plans, codes, and runs of its own accord.
 - **[Goose](https://github.com/block/goose)** — the House of Block's open familiar, extended through the Many-Channelled Pact (MCP).
-- **[Continue](https://github.com/continuedev/continue)** — an open familiar that nests in the editor, shaped to your own custom rites.
+- **[Warp](https://www.warp.dev/)** — the terminal itself possessed: an *"agentic development environment"* where command line and spirit share one body.
+
+**Possessed editors —**
+
+- **[Cursor](https://cursor.com/)** — a scriptorium possessed; the editor itself becomes a vessel for the spirit.
 - **[Windsurf](https://windsurf.com/)** — a possessed editor whose currents carry the spirit alongside your every keystroke.
+- **[Zed](https://zed.dev/)** — a swift Rust-forged editor with agentic editing and parallel spirits woven in.
+- **[Trae](https://www.trae.ai/)** — the House of ByteDance's AI editor, with a *SOLO* mode that hands the spirit the reins.
+- **[Cline](https://cline.bot/) & [Roo](https://github.com/RooCodeInc/Roo-Code)** — open familiars that nest within the editor and reach for tools unbidden.
+- **[Continue](https://github.com/continuedev/continue)** — an open familiar that nests in the editor, shaped to your own custom rites.
+- **[GitHub Copilot](https://github.com/features/copilot)** — the House of Microsoft's familiar, woven into the editor and since grown into an agent of its own.
+- **[Junie](https://www.jetbrains.com/junie/)** — the House of JetBrains' coding agent, native to the IDE that raised it.
+- **[Kilo Code](https://github.com/Kilo-Org/kilocode)** — an open agentic harness for editor and terminal alike, yoked to five hundred spirits and beholden to no single house.
+
+**Desktop, cloud & the autonomous —**
+
+- **[OpenHands](https://github.com/All-Hands-AI/OpenHands)** — a fully unleashed open demon that plans, codes, and runs of its own accord.
 - **[Amp](https://ampcode.com/)** — Sourcegraph's harness, bred for the vast and tangled codebase.
-- **Devin & the Autonomous Ones** — fully unleashed demons that labour through the night, for good or for ill.
+- **[Factory](https://factory.ai/)** — a platform of *"Droids"* that labour from CLI, desktop, or cloud, IDE to CI/CD.
+- **[Augment Code](https://www.augmentcode.com/)** — agentic development pitched at organisational scale.
+- **[Devin](https://devin.ai/) & the Autonomous Ones** — fully unleashed demons that labour through the night, for good or for ill.
 
 > *Never summon a Demon Harness without a Circle of Summoning it cannot escape. Heed [The Apprentice's Warnings](#-the-apprentices-warnings) before you grant it your hands.*
 
