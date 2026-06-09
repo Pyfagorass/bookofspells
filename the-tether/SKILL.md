@@ -35,13 +35,17 @@ A *tether* is a **symlink**, not a copy. This matters:
    ```
 
 2. **Find your conduit's skills-shelf.** Each harness keeps its spells in a known
-   directory. For **Claude Code**:
-   - Personal (all your projects): `~/.claude/skills/`
-   - One project only: `<project>/.claude/skills/`
+   directory:
+   - **Claude Code** — `~/.claude/skills/` (personal) or `<project>/.claude/skills/`
+     (one project only).
+   - **The open standard** ([agentskills.io](https://agentskills.io/specification))
+     — `~/.agents/skills/` (user) or `<repo>/.agents/skills/` (project). Codex,
+     Gemini, OpenCode and other honouring conduits read this universal shelf.
 
-   Other conduits keep their own shelf (e.g. an `openai-skill-creator`-style
-   forge will name its own). If unsure, consult that conduit's own docs; the
-   tether mechanism is the same wherever the shelf lives.
+   If unsure, consult that conduit's own docs; the tether mechanism is the same
+   wherever the shelf lives. The standard guarantees what we rely on: **symlinked
+   folders are followed**, and two spells of the same `name` are **never merged**
+   — which is why the Book gives each spell a house-prefixed true name.
 
 3. **Cast the tether.** Symlink the keystone folder onto the shelf. Use an
    absolute path to the repo so the link never goes stale:

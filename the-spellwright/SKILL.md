@@ -103,6 +103,11 @@ heavy detail where it loads only when needed.
 
 ## Deeper magics
 
+- **The canonical rule of the form.** The SKILL.md form is an *open standard*,
+  first cut by the House of Anthropic and now honoured across many houses. When in
+  doubt about the letter of the rite, consult the
+  [Agent Skills Specification](https://agentskills.io/specification) — the shared
+  law a spell must keep to be read by any conduit.
 - **Your conduit's own forge.** For packaging and installation specific to your
   conduit, summon your house's creator through `the-grimoire` — e.g.
   `openai-skill-creator`, `openai-plugin-creator`, `commandcode-skill-creator`,

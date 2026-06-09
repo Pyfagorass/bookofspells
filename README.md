@@ -268,6 +268,11 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 - **Slash-Sigils** — short-spoken commands (`/review`, `/init`, `/security-review`) that unleash a prepared rite in a single breath.
 - **MCP — the Many-Channelled Pact** — the protocol by which a spirit reaches beyond its circle to touch distant tools, archives, and oracles.
 
+Every spell in this Book is written in a **common script of inscription** — a `SKILL.md` and its attendant `scripts/`, `references/`, and `assets/`. This form is no single house's secret: it was first cut by the **House of Anthropic**, then loosed upon the world as an open standard, and is now read by familiars across the realm — Codex, Gemini, OpenCode, Cursor, Goose, Copilot, and dozens more.
+
+- **[The Open Codex of Spell-Forms (agentskills.io)](https://agentskills.io/)** — the shared standard for the SKILL.md form, with its [full Specification](https://agentskills.io/specification) and a [Quickstart](https://agentskills.io/skill-creation/quickstart). A spell forged to this rule is read by any conduit that honours it — which is why the Book's spells are portable across houses.
+- **[The House of OpenAI's reading of the rite (Codex Skills)](https://developers.openai.com/codex/skills)** — how one rival house honours the same standard: progressive disclosure, implicit summoning by description, and a discovery-shelf at `.agents/skills/` — proof the form is truly shared.
+
 > *This Book has gathered such inscribed spells by the hundred — see [`skills/`](./skills), the shelf the Rite of Transcription keeps, and [`the-grimoire/`](./the-grimoire), the one spell that unlocks them all.*
 
 ---
