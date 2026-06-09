@@ -109,6 +109,8 @@ Beyond hand-carving these rites lies a deeper art — **automated Verbomancy**. 
 - **[opencode](https://github.com/sst/opencode)** — a wholly open terminal harness, model-agnostic and fiercely independent.
 - **[Goose](https://github.com/block/goose)** — the House of Block's open familiar, extended through the Many-Channelled Pact (MCP).
 - **[Warp](https://www.warp.dev/)** — the terminal itself possessed: an *"agentic development environment"* where command line and spirit share one body.
+- **[Qwen Code](https://github.com/QwenLM/qwen-code)** — the House of Alibaba's open terminal coding-agent, raised on its own Qwen spirits.
+- **[Kimi CLI](https://github.com/MoonshotAI/kimi-cli)** — the House of Moonshot's terminal agent, driving its agentic Kimi spirits and fluent in both the Many-Channelled Pact (MCP) and the Concord of Spirits (ACP).
 
 **Possessed editors —**
 
@@ -176,6 +178,32 @@ Beyond hand-carving these rites lies a deeper art — **automated Verbomancy**. 
 - **[Dify](https://github.com/langgenius/dify)** — a great visual workshop where agentic workflows are wired together by hand, no incantation in raw code required.
 
 > *To forge your own demon is the conjurer's coming-of-age. Forge it well, and ward it better.*
+
+---
+
+## 🏛️ The Pantheon of Houses — *The Great Lexicons & Those Who Raised Them*
+
+*The tools are many, but the spirits are fewer — and every conjurer should know whose voice answers when the candle is lit. The houses divide along the one line that matters above all: whether a spirit may be reached only through its keeper's gate, or whether its very essence may be carried home and bound to your own hearth.*
+
+**The Sealed Oracles** — *their weights kept behind the house wall, reached only through the keeper's gate (an API):*
+
+- **[House of Anthropic — Claude](https://www.anthropic.com/claude)** — Opus, Sonnet, and Haiku; the spirits this very Book was raised to serve.
+- **[House of OpenAI — GPT & the o-series](https://openai.com/)** — the reasoning oracles of the rival house (which has of late loosed an open-weight *gpt-oss* of its own).
+- **[House of Google — Gemini](https://gemini.google.com/)** — vast spirits of long memory and many senses (with the open *Gemma* as their lesser kin).
+- **[House of xAI — Grok](https://x.ai/)** — the upstart house's spirit, brash and ever-current.
+
+**The Open-Weight Houses** — *their spirits may be downloaded whole and bound to your own iron (see **The Binding of Spirits** below). Here the Eastern houses now lead the frontier:*
+
+- **[House of Meta — Llama](https://www.llama.com/)** — the great open spirit that first opened the floodgates; the West's open standard-bearer.
+- **[House of Mistral](https://mistral.ai/)** — the swift French house; Mistral, Mixtral, and Magistral, lean and freely given.
+- **[House of Alibaba — Qwen](https://huggingface.co/Qwen)** — a vast, many-sized brood (with a coding-spirit, *Qwen-Coder*), among the most-bound open spirits in all the realm.
+- **[House of DeepSeek](https://www.deepseek.com/)** — the house that stunned the world; *V3* and the reasoning *R1*, open and formidable.
+- **[House of Zhipu — GLM](https://huggingface.co/zai-org)** — the *GLM* line (Z.ai), open-weight and honed for the coder's craft.
+- **[House of Moonshot — Kimi](https://github.com/MoonshotAI/Kimi-K2)** — *Kimi K2*, a trillion-mote spirit forged for tool-use and autonomous labour, open under a near-free licence.
+
+*And lesser-sung but freely given: the House of Microsoft's **Phi**, Google's **Gemma**, AI2's fully-open **OLMo**, Cohere's **Command**, and NVIDIA's **Nemotron** — spirits small enough to keep on modest iron.*
+
+> *Know the spirit before you summon it. A sealed oracle you rent; an open spirit you may keep — but must then feed, house, and ward yourself.*
 
 ---
 

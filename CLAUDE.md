@@ -64,6 +64,7 @@ Sections currently in the README, each with its own enchanted heading:
 - **The Marshalling of Legions** — metaharnesses/orchestrators that run many agents at once (Conductor, Solo, Herdr, JetBrains Air)
 - **The Alchemical Apparatus** — SDKs & frameworks for refining spirit
 - **The Summoning Circles** — apparatus for forging your own demons (agent SDKs)
+- **The Pantheon of Houses** — a roster of the model houses/Lexicons themselves, split by sealed (API-only) vs open-weight; the Eastern open-weight houses (Qwen, DeepSeek, GLM, Kimi) lead that frontier
 - **The Diviner's Crossroads** — model routers
 - **The Binding of Spirits** — running models yourself (local inference/serving)
 - **Borrowed Engines** — remote compute & sandboxes (a home for useful tools that don't fit the skills pipeline, e.g. a repo with one non-standard skill file)
