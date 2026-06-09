@@ -9,6 +9,37 @@ This is not engineering. This is *conjuration*. And every conjurer needs a book.
 
 ---
 
+## 🔗 Tethering the Book — *Give Your Demon the Spells*
+
+*New here? Start by binding the Book to your demon — then read on.*
+
+The Book holds hundreds of spells, but you do **not** pour them all into your demon's head — that would bloat every summoning. You tether the single keystone (**`the-grimoire`**), and it discovers and reads the rest on demand. **Tether by symlink, not by copy:** the thread keeps the Book live (`git pull` updates every spell at once) and lets the grimoire's paths resolve back into the repo. The full rite, with per-conduit detail, lives in [**`the-tether`**](./the-tether).
+
+To bind it in one breath, **speak this incantation to your demon** (paste it whole):
+
+````text
+Read the Book of Spells — a library of ready-made skills (each a folder with a
+SKILL.md, often with scripts/ and references/ beside it) that you discover ON
+DEMAND through one keystone index. Do NOT bulk-install the skills/ folder.
+
+1. House the Book somewhere permanent and tether ONLY the keystone(s) onto my
+   skills-shelf (Claude Code: ~/.claude/skills/) — symlink, never copy:
+
+     git clone https://github.com/Pyfagorass/bookofspells.git ~/grimoires/bookofspells
+     mkdir -p ~/.claude/skills
+     ln -s ~/grimoires/bookofspells/the-grimoire    ~/.claude/skills/the-grimoire
+     ln -s ~/grimoires/bookofspells/the-spellwright ~/.claude/skills/the-spellwright
+
+2. Then read the-grimoire/SKILL.md and obey it. To find a skill: grep
+   skills/_index/ (or catalog.json) for a capability, read the SKILL.md at the
+   "read at `…`" path it returns, and follow that spell — including any scripts
+   it ships. Never read the whole catalogue into context; grep it.
+````
+
+Tether `the-grimoire` to *find* spells; keep `the-spellwright` if you also want your demon to *forge* new ones. After binding, simply ask — *"is there a skill for Figma?"* — and the grimoire will stir.
+
+---
+
 ## 🜍 A Note on the Old Names
 
 The uninitiated cling to their dead acronyms. We have buried them. Where they spoke of machinery, we speak of spirits. The new tongue:
@@ -245,10 +276,11 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 
 *The deepest magic is recursive: a spell whose work is the making of other spells. Teach a demon to forge its own abilities, and you need never write every incantation by hand.*
 
-The Book carries two **keystone spells** of its own authorship — native magic, not gathered:
+The Book carries three **keystone spells** of its own authorship — native magic, not gathered:
 
 - **[`the-grimoire`](./the-grimoire)** — *the spell that finds spells.* One always-loaded index that lets a conduit discover and summon any of the hundreds of gathered spells on demand, without carrying the whole Book in its head.
 - **[`the-spellwright`](./the-spellwright)** — *the spell that makes spells.* It teaches any conduit to forge a new skill: a discoverable description, a lean progressive-disclosure body, deterministic helper scripts. The companion to the grimoire — that one *finds*, this one *creates*.
+- **[`the-tether`](./the-tether)** — *the spell that shelves the Book.* How to install these spells into your own conduit — by symlink, not by copy — so the grimoire has a living Book to reach into. Tether the one keystone; it summons the rest.
 
 Beneath them, every house brings its own **forge**, gathered into the Book and summonable through the grimoire — `openai-skill-creator`, `openai-plugin-creator`, `commandcode-skill-creator`, `google-agent-platform-skill-registry`. Each conduit teaches its own particular rite of inscription.
 
@@ -277,7 +309,7 @@ bookofspells/
 ├── gather-reliquaries.py   # the Rite of Gathering — clone/refresh houses into temp-repos/
 ├── transcribe-spells.py    # the Rite of Transcription — flatten & scry spells into skills/
 ├── the-grimoire/           # the index spell — one spell that unlocks all the others
-├── skills/                 # the gathered spellbook (generated): <house>-<spell>/ + INDEX.md
+├── skills/                 # the gathered spellbook (generated): <house>/<spell>/ + INDEX.md
 ├── temp-repos/             # gathered grimoires, kept unseen by our own book (gitignored)
 └── README.md               # this — the book's own title page
 ```

@@ -34,13 +34,15 @@ Relative to this `SKILL.md`, the Book sits one level up. The catalogue is
 - **`../skills/INDEX.md`** — tiny: just the houses and their spell counts. Safe
   to read whole; stays small no matter how large the Book grows.
 - **`../skills/_index/<house>.md`** — one house's spells (e.g. `google.md`,
-  `openai.md`), each with a one-line description. Bounded reads, one drawer at a
-  time.
+  `openai.md`), each with a one-line description **and the exact read-path** of
+  its `SKILL.md`. Bounded reads, one drawer at a time.
 - **`../skills/catalog.json`** — the full machine-readable ledger:
   `[{ "name", "provider", "description", "path" }, …]`. Grep or `jq` it; do not
   read it whole.
-- **`../skills/<spell-name>/SKILL.md`** — each spell in full, alongside any
-  `references/`, `scripts/`, or `assets/` it needs.
+- **`../skills/<house>/<spell>/SKILL.md`** — each spell in full, nested under its
+  house, alongside any `references/`, `scripts/`, or `assets/` it needs. The
+  folder isn't always guessable from the name, so **read the `path` the index
+  line gives you** rather than assembling it yourself.
 
 (If this skill was installed by symlink, those paths resolve into the
 `book-of-spells` repository it points at.)
@@ -64,11 +66,11 @@ Relative to this `SKILL.md`, the Book sits one level up. The catalogue is
    proceed without one rather than forcing a poor match.
 
 3. **Read in full.** Open that spell's own file and read it completely before
-   acting. Most spells live at `../skills/<spell-name>/SKILL.md`; if the index
-   line notes an explicit *"read at `…`"* path (as the Book's own keystone spells
-   do, e.g. `the-spellwright`), follow that instead. The one-line index
-   description is only a signpost; the spell's true instructions, guardrails, and
-   helper scripts live in its own SKILL.md.
+   acting. Every index line ends with *"read at `…`"* — a transcribed spell at
+   `../skills/<house>/<spell>/SKILL.md`, a keystone (e.g. `the-spellwright`) at
+   its own root path. Follow that path verbatim; don't assemble one from the
+   name. The one-line index description is only a signpost; the spell's true
+   instructions, guardrails, and helper scripts live in its own SKILL.md.
 
 4. **Wield.** Follow the spell's instructions faithfully, including any
    `scripts/` or `references/` it directs you to. Honour its safety wards.

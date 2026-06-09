@@ -2,98 +2,98 @@
 
 *Grep this file for a capability, then read the chosen spell's own `SKILL.md` in full.*
 
-- **`gworkspace-gws-admin-reports`** — Google Workspace Admin SDK: Audit logs and usage reports.
-- **`gworkspace-gws-calendar`** — Google Calendar: Manage calendars and events.
-- **`gworkspace-gws-calendar-agenda`** — Google Calendar: Show upcoming events across all calendars.
-- **`gworkspace-gws-calendar-insert`** — Google Calendar: Create a new event.
-- **`gworkspace-gws-chat`** — Google Chat: Manage Chat spaces and messages.
-- **`gworkspace-gws-chat-send`** — Google Chat: Send a message to a space.
-- **`gworkspace-gws-classroom`** — Google Classroom: Manage classes, rosters, and coursework.
-- **`gworkspace-gws-docs`** — Read and write Google Docs.
-- **`gworkspace-gws-docs-write`** — Google Docs: Append text to a document.
-- **`gworkspace-gws-drive`** — Google Drive: Manage files, folders, and shared drives.
-- **`gworkspace-gws-drive-upload`** — Google Drive: Upload a file with automatic metadata.
-- **`gworkspace-gws-events`** — Subscribe to Google Workspace events.
-- **`gworkspace-gws-events-renew`** — Google Workspace Events: Renew/reactivate Workspace Events subscriptions.
-- **`gworkspace-gws-events-subscribe`** — Google Workspace Events: Subscribe to Workspace events and stream them as NDJSON.
-- **`gworkspace-gws-forms`** — Read and write Google Forms.
-- **`gworkspace-gws-gmail`** — Gmail: Send, read, and manage email.
-- **`gworkspace-gws-gmail-forward`** — Gmail: Forward a message to new recipients.
-- **`gworkspace-gws-gmail-read`** — Gmail: Read a message and extract its body or headers.
-- **`gworkspace-gws-gmail-reply`** — Gmail: Reply to a message (handles threading automatically).
-- **`gworkspace-gws-gmail-reply-all`** — Gmail: Reply-all to a message (handles threading automatically).
-- **`gworkspace-gws-gmail-send`** — Gmail: Send an email.
-- **`gworkspace-gws-gmail-triage`** — Gmail: Show unread inbox summary (sender, subject, date).
-- **`gworkspace-gws-gmail-watch`** — Gmail: Watch for new emails and stream them as NDJSON.
-- **`gworkspace-gws-keep`** — Manage Google Keep notes.
-- **`gworkspace-gws-meet`** — Manage Google Meet conferences.
-- **`gworkspace-gws-modelarmor`** — Google Model Armor: Filter user-generated content for safety.
-- **`gworkspace-gws-modelarmor-create-template`** — Google Model Armor: Create a new Model Armor template.
-- **`gworkspace-gws-modelarmor-sanitize-prompt`** — Google Model Armor: Sanitize a user prompt through a Model Armor template.
-- **`gworkspace-gws-modelarmor-sanitize-response`** — Google Model Armor: Sanitize a model response through a Model Armor template.
-- **`gworkspace-gws-people`** — Google People: Manage contacts and profiles.
-- **`gworkspace-gws-script`** — Manage Google Apps Script projects.
-- **`gworkspace-gws-script-push`** — Google Apps Script: Upload local files to an Apps Script project.
-- **`gworkspace-gws-shared`** — gws CLI: Shared patterns for authentication, global flags, and output formatting.
-- **`gworkspace-gws-sheets`** — Google Sheets: Read and write spreadsheets.
-- **`gworkspace-gws-sheets-append`** — Google Sheets: Append a row to a spreadsheet.
-- **`gworkspace-gws-sheets-read`** — Google Sheets: Read values from a spreadsheet.
-- **`gworkspace-gws-slides`** — Google Slides: Read and write presentations.
-- **`gworkspace-gws-tasks`** — Google Tasks: Manage task lists and tasks.
-- **`gworkspace-gws-workflow`** — Google Workflow: Cross-service productivity workflows.
-- **`gworkspace-gws-workflow-email-to-task`** — Google Workflow: Convert a Gmail message into a Google Tasks entry.
-- **`gworkspace-gws-workflow-file-announce`** — Google Workflow: Announce a Drive file in a Chat space.
-- **`gworkspace-gws-workflow-meeting-prep`** — Google Workflow: Prepare for your next meeting: agenda, attendees, and linked docs.
-- **`gworkspace-gws-workflow-standup-report`** — Google Workflow: Today's meetings + open tasks as a standup summary.
-- **`gworkspace-gws-workflow-weekly-digest`** — Google Workflow: Weekly summary: this week's meetings + unread email count.
-- **`gworkspace-persona-content-creator`** — Create, organize, and distribute content across Workspace.
-- **`gworkspace-persona-customer-support`** — Manage customer support — track tickets, respond, escalate issues.
-- **`gworkspace-persona-event-coordinator`** — Plan and manage events — scheduling, invitations, and logistics.
-- **`gworkspace-persona-exec-assistant`** — Manage an executive's schedule, inbox, and communications.
-- **`gworkspace-persona-hr-coordinator`** — Handle HR workflows — onboarding, announcements, and employee comms.
-- **`gworkspace-persona-it-admin`** — Administer IT — monitor security and configure Workspace.
-- **`gworkspace-persona-project-manager`** — Coordinate projects — track tasks, schedule meetings, and share docs.
-- **`gworkspace-persona-researcher`** — Organize research — manage references, notes, and collaboration.
-- **`gworkspace-persona-sales-ops`** — Manage sales workflows — track deals, schedule calls, client comms.
-- **`gworkspace-persona-team-lead`** — Lead a team — run standups, coordinate tasks, and communicate.
-- **`gworkspace-recipe-backup-sheet-as-csv`** — Export a Google Sheets spreadsheet as a CSV file for local backup or processing.
-- **`gworkspace-recipe-batch-invite-to-event`** — Add a list of attendees to an existing Google Calendar event and send notifications.
-- **`gworkspace-recipe-block-focus-time`** — Create recurring focus time blocks on Google Calendar to protect deep work hours.
-- **`gworkspace-recipe-bulk-download-folder`** — List and download all files from a Google Drive folder.
-- **`gworkspace-recipe-collect-form-responses`** — Retrieve and review responses from a Google Form.
-- **`gworkspace-recipe-compare-sheet-tabs`** — Read data from two tabs in a Google Sheet to compare and identify differences.
-- **`gworkspace-recipe-copy-sheet-for-new-month`** — Duplicate a Google Sheets template tab for a new month of tracking.
-- **`gworkspace-recipe-create-classroom-course`** — Create a Google Classroom course and invite students.
-- **`gworkspace-recipe-create-doc-from-template`** — Copy a Google Docs template, fill in content, and share with collaborators.
-- **`gworkspace-recipe-create-events-from-sheet`** — Read event data from a Google Sheets spreadsheet and create Google Calendar entries for each row.
-- **`gworkspace-recipe-create-expense-tracker`** — Set up a Google Sheets spreadsheet for tracking expenses with headers and initial entries.
-- **`gworkspace-recipe-create-feedback-form`** — Create a Google Form for feedback and share it via Gmail.
-- **`gworkspace-recipe-create-gmail-filter`** — Create a Gmail filter to automatically label, star, or categorize incoming messages.
-- **`gworkspace-recipe-create-meet-space`** — Create a Google Meet meeting space and share the join link.
-- **`gworkspace-recipe-create-presentation`** — Create a new Google Slides presentation and add initial slides.
-- **`gworkspace-recipe-create-shared-drive`** — Create a Google Shared Drive and add members with appropriate roles.
-- **`gworkspace-recipe-create-task-list`** — Set up a new Google Tasks list with initial tasks.
-- **`gworkspace-recipe-create-vacation-responder`** — Enable a Gmail out-of-office auto-reply with a custom message and date range.
-- **`gworkspace-recipe-draft-email-from-doc`** — Read content from a Google Doc and use it as the body of a Gmail message.
-- **`gworkspace-recipe-email-drive-link`** — Share a Google Drive file and email the link with a message to recipients.
-- **`gworkspace-recipe-find-free-time`** — Query Google Calendar free/busy status for multiple users to find a meeting slot.
-- **`gworkspace-recipe-find-large-files`** — Identify large Google Drive files consuming storage quota.
-- **`gworkspace-recipe-forward-labeled-emails`** — Find Gmail messages with a specific label and forward them to another address.
-- **`gworkspace-recipe-generate-report-from-sheet`** — Read data from a Google Sheet and create a formatted Google Docs report.
-- **`gworkspace-recipe-label-and-archive-emails`** — Apply Gmail labels to matching messages and archive them to keep your inbox clean.
-- **`gworkspace-recipe-log-deal-update`** — Append a deal status update to a Google Sheets sales tracking spreadsheet.
-- **`gworkspace-recipe-organize-drive-folder`** — Create a Google Drive folder structure and move files into the right locations.
-- **`gworkspace-recipe-plan-weekly-schedule`** — Review your Google Calendar week, identify gaps, and add events to fill them.
-- **`gworkspace-recipe-post-mortem-setup`** — Create a Google Docs post-mortem, schedule a Google Calendar review, and notify via Chat.
-- **`gworkspace-recipe-reschedule-meeting`** — Move a Google Calendar event to a new time and automatically notify all attendees.
-- **`gworkspace-recipe-review-meet-participants`** — Review who attended a Google Meet conference and for how long.
-- **`gworkspace-recipe-review-overdue-tasks`** — Find Google Tasks that are past due and need attention.
-- **`gworkspace-recipe-save-email-attachments`** — Find Gmail messages with attachments and save them to a Google Drive folder.
-- **`gworkspace-recipe-save-email-to-doc`** — Save a Gmail message body into a Google Doc for archival or reference.
-- **`gworkspace-recipe-schedule-recurring-event`** — Create a recurring Google Calendar event with attendees.
-- **`gworkspace-recipe-send-team-announcement`** — Send a team announcement via both Gmail and a Google Chat space.
-- **`gworkspace-recipe-share-doc-and-notify`** — Share a Google Docs document with edit access and email collaborators the link.
-- **`gworkspace-recipe-share-event-materials`** — Share Google Drive files with all attendees of a Google Calendar event.
-- **`gworkspace-recipe-share-folder-with-team`** — Share a Google Drive folder and all its contents with a list of collaborators.
-- **`gworkspace-recipe-sync-contacts-to-sheet`** — Export Google Contacts directory to a Google Sheets spreadsheet.
-- **`gworkspace-recipe-watch-drive-changes`** — Subscribe to change notifications on a Google Drive file or folder.
+- **`gworkspace-gws-admin-reports`** — Google Workspace Admin SDK: Audit logs and usage reports.  ·  read at `skills/gworkspace/gws-admin-reports/SKILL.md`
+- **`gworkspace-gws-calendar`** — Google Calendar: Manage calendars and events.  ·  read at `skills/gworkspace/gws-calendar/SKILL.md`
+- **`gworkspace-gws-calendar-agenda`** — Google Calendar: Show upcoming events across all calendars.  ·  read at `skills/gworkspace/gws-calendar-agenda/SKILL.md`
+- **`gworkspace-gws-calendar-insert`** — Google Calendar: Create a new event.  ·  read at `skills/gworkspace/gws-calendar-insert/SKILL.md`
+- **`gworkspace-gws-chat`** — Google Chat: Manage Chat spaces and messages.  ·  read at `skills/gworkspace/gws-chat/SKILL.md`
+- **`gworkspace-gws-chat-send`** — Google Chat: Send a message to a space.  ·  read at `skills/gworkspace/gws-chat-send/SKILL.md`
+- **`gworkspace-gws-classroom`** — Google Classroom: Manage classes, rosters, and coursework.  ·  read at `skills/gworkspace/gws-classroom/SKILL.md`
+- **`gworkspace-gws-docs`** — Read and write Google Docs.  ·  read at `skills/gworkspace/gws-docs/SKILL.md`
+- **`gworkspace-gws-docs-write`** — Google Docs: Append text to a document.  ·  read at `skills/gworkspace/gws-docs-write/SKILL.md`
+- **`gworkspace-gws-drive`** — Google Drive: Manage files, folders, and shared drives.  ·  read at `skills/gworkspace/gws-drive/SKILL.md`
+- **`gworkspace-gws-drive-upload`** — Google Drive: Upload a file with automatic metadata.  ·  read at `skills/gworkspace/gws-drive-upload/SKILL.md`
+- **`gworkspace-gws-events`** — Subscribe to Google Workspace events.  ·  read at `skills/gworkspace/gws-events/SKILL.md`
+- **`gworkspace-gws-events-renew`** — Google Workspace Events: Renew/reactivate Workspace Events subscriptions.  ·  read at `skills/gworkspace/gws-events-renew/SKILL.md`
+- **`gworkspace-gws-events-subscribe`** — Google Workspace Events: Subscribe to Workspace events and stream them as NDJSON.  ·  read at `skills/gworkspace/gws-events-subscribe/SKILL.md`
+- **`gworkspace-gws-forms`** — Read and write Google Forms.  ·  read at `skills/gworkspace/gws-forms/SKILL.md`
+- **`gworkspace-gws-gmail`** — Gmail: Send, read, and manage email.  ·  read at `skills/gworkspace/gws-gmail/SKILL.md`
+- **`gworkspace-gws-gmail-forward`** — Gmail: Forward a message to new recipients.  ·  read at `skills/gworkspace/gws-gmail-forward/SKILL.md`
+- **`gworkspace-gws-gmail-read`** — Gmail: Read a message and extract its body or headers.  ·  read at `skills/gworkspace/gws-gmail-read/SKILL.md`
+- **`gworkspace-gws-gmail-reply`** — Gmail: Reply to a message (handles threading automatically).  ·  read at `skills/gworkspace/gws-gmail-reply/SKILL.md`
+- **`gworkspace-gws-gmail-reply-all`** — Gmail: Reply-all to a message (handles threading automatically).  ·  read at `skills/gworkspace/gws-gmail-reply-all/SKILL.md`
+- **`gworkspace-gws-gmail-send`** — Gmail: Send an email.  ·  read at `skills/gworkspace/gws-gmail-send/SKILL.md`
+- **`gworkspace-gws-gmail-triage`** — Gmail: Show unread inbox summary (sender, subject, date).  ·  read at `skills/gworkspace/gws-gmail-triage/SKILL.md`
+- **`gworkspace-gws-gmail-watch`** — Gmail: Watch for new emails and stream them as NDJSON.  ·  read at `skills/gworkspace/gws-gmail-watch/SKILL.md`
+- **`gworkspace-gws-keep`** — Manage Google Keep notes.  ·  read at `skills/gworkspace/gws-keep/SKILL.md`
+- **`gworkspace-gws-meet`** — Manage Google Meet conferences.  ·  read at `skills/gworkspace/gws-meet/SKILL.md`
+- **`gworkspace-gws-modelarmor`** — Google Model Armor: Filter user-generated content for safety.  ·  read at `skills/gworkspace/gws-modelarmor/SKILL.md`
+- **`gworkspace-gws-modelarmor-create-template`** — Google Model Armor: Create a new Model Armor template.  ·  read at `skills/gworkspace/gws-modelarmor-create-template/SKILL.md`
+- **`gworkspace-gws-modelarmor-sanitize-prompt`** — Google Model Armor: Sanitize a user prompt through a Model Armor template.  ·  read at `skills/gworkspace/gws-modelarmor-sanitize-prompt/SKILL.md`
+- **`gworkspace-gws-modelarmor-sanitize-response`** — Google Model Armor: Sanitize a model response through a Model Armor template.  ·  read at `skills/gworkspace/gws-modelarmor-sanitize-response/SKILL.md`
+- **`gworkspace-gws-people`** — Google People: Manage contacts and profiles.  ·  read at `skills/gworkspace/gws-people/SKILL.md`
+- **`gworkspace-gws-script`** — Manage Google Apps Script projects.  ·  read at `skills/gworkspace/gws-script/SKILL.md`
+- **`gworkspace-gws-script-push`** — Google Apps Script: Upload local files to an Apps Script project.  ·  read at `skills/gworkspace/gws-script-push/SKILL.md`
+- **`gworkspace-gws-shared`** — gws CLI: Shared patterns for authentication, global flags, and output formatting.  ·  read at `skills/gworkspace/gws-shared/SKILL.md`
+- **`gworkspace-gws-sheets`** — Google Sheets: Read and write spreadsheets.  ·  read at `skills/gworkspace/gws-sheets/SKILL.md`
+- **`gworkspace-gws-sheets-append`** — Google Sheets: Append a row to a spreadsheet.  ·  read at `skills/gworkspace/gws-sheets-append/SKILL.md`
+- **`gworkspace-gws-sheets-read`** — Google Sheets: Read values from a spreadsheet.  ·  read at `skills/gworkspace/gws-sheets-read/SKILL.md`
+- **`gworkspace-gws-slides`** — Google Slides: Read and write presentations.  ·  read at `skills/gworkspace/gws-slides/SKILL.md`
+- **`gworkspace-gws-tasks`** — Google Tasks: Manage task lists and tasks.  ·  read at `skills/gworkspace/gws-tasks/SKILL.md`
+- **`gworkspace-gws-workflow`** — Google Workflow: Cross-service productivity workflows.  ·  read at `skills/gworkspace/gws-workflow/SKILL.md`
+- **`gworkspace-gws-workflow-email-to-task`** — Google Workflow: Convert a Gmail message into a Google Tasks entry.  ·  read at `skills/gworkspace/gws-workflow-email-to-task/SKILL.md`
+- **`gworkspace-gws-workflow-file-announce`** — Google Workflow: Announce a Drive file in a Chat space.  ·  read at `skills/gworkspace/gws-workflow-file-announce/SKILL.md`
+- **`gworkspace-gws-workflow-meeting-prep`** — Google Workflow: Prepare for your next meeting: agenda, attendees, and linked docs.  ·  read at `skills/gworkspace/gws-workflow-meeting-prep/SKILL.md`
+- **`gworkspace-gws-workflow-standup-report`** — Google Workflow: Today's meetings + open tasks as a standup summary.  ·  read at `skills/gworkspace/gws-workflow-standup-report/SKILL.md`
+- **`gworkspace-gws-workflow-weekly-digest`** — Google Workflow: Weekly summary: this week's meetings + unread email count.  ·  read at `skills/gworkspace/gws-workflow-weekly-digest/SKILL.md`
+- **`gworkspace-persona-content-creator`** — Create, organize, and distribute content across Workspace.  ·  read at `skills/gworkspace/persona-content-creator/SKILL.md`
+- **`gworkspace-persona-customer-support`** — Manage customer support — track tickets, respond, escalate issues.  ·  read at `skills/gworkspace/persona-customer-support/SKILL.md`
+- **`gworkspace-persona-event-coordinator`** — Plan and manage events — scheduling, invitations, and logistics.  ·  read at `skills/gworkspace/persona-event-coordinator/SKILL.md`
+- **`gworkspace-persona-exec-assistant`** — Manage an executive's schedule, inbox, and communications.  ·  read at `skills/gworkspace/persona-exec-assistant/SKILL.md`
+- **`gworkspace-persona-hr-coordinator`** — Handle HR workflows — onboarding, announcements, and employee comms.  ·  read at `skills/gworkspace/persona-hr-coordinator/SKILL.md`
+- **`gworkspace-persona-it-admin`** — Administer IT — monitor security and configure Workspace.  ·  read at `skills/gworkspace/persona-it-admin/SKILL.md`
+- **`gworkspace-persona-project-manager`** — Coordinate projects — track tasks, schedule meetings, and share docs.  ·  read at `skills/gworkspace/persona-project-manager/SKILL.md`
+- **`gworkspace-persona-researcher`** — Organize research — manage references, notes, and collaboration.  ·  read at `skills/gworkspace/persona-researcher/SKILL.md`
+- **`gworkspace-persona-sales-ops`** — Manage sales workflows — track deals, schedule calls, client comms.  ·  read at `skills/gworkspace/persona-sales-ops/SKILL.md`
+- **`gworkspace-persona-team-lead`** — Lead a team — run standups, coordinate tasks, and communicate.  ·  read at `skills/gworkspace/persona-team-lead/SKILL.md`
+- **`gworkspace-recipe-backup-sheet-as-csv`** — Export a Google Sheets spreadsheet as a CSV file for local backup or processing.  ·  read at `skills/gworkspace/recipe-backup-sheet-as-csv/SKILL.md`
+- **`gworkspace-recipe-batch-invite-to-event`** — Add a list of attendees to an existing Google Calendar event and send notifications.  ·  read at `skills/gworkspace/recipe-batch-invite-to-event/SKILL.md`
+- **`gworkspace-recipe-block-focus-time`** — Create recurring focus time blocks on Google Calendar to protect deep work hours.  ·  read at `skills/gworkspace/recipe-block-focus-time/SKILL.md`
+- **`gworkspace-recipe-bulk-download-folder`** — List and download all files from a Google Drive folder.  ·  read at `skills/gworkspace/recipe-bulk-download-folder/SKILL.md`
+- **`gworkspace-recipe-collect-form-responses`** — Retrieve and review responses from a Google Form.  ·  read at `skills/gworkspace/recipe-collect-form-responses/SKILL.md`
+- **`gworkspace-recipe-compare-sheet-tabs`** — Read data from two tabs in a Google Sheet to compare and identify differences.  ·  read at `skills/gworkspace/recipe-compare-sheet-tabs/SKILL.md`
+- **`gworkspace-recipe-copy-sheet-for-new-month`** — Duplicate a Google Sheets template tab for a new month of tracking.  ·  read at `skills/gworkspace/recipe-copy-sheet-for-new-month/SKILL.md`
+- **`gworkspace-recipe-create-classroom-course`** — Create a Google Classroom course and invite students.  ·  read at `skills/gworkspace/recipe-create-classroom-course/SKILL.md`
+- **`gworkspace-recipe-create-doc-from-template`** — Copy a Google Docs template, fill in content, and share with collaborators.  ·  read at `skills/gworkspace/recipe-create-doc-from-template/SKILL.md`
+- **`gworkspace-recipe-create-events-from-sheet`** — Read event data from a Google Sheets spreadsheet and create Google Calendar entries for each row.  ·  read at `skills/gworkspace/recipe-create-events-from-sheet/SKILL.md`
+- **`gworkspace-recipe-create-expense-tracker`** — Set up a Google Sheets spreadsheet for tracking expenses with headers and initial entries.  ·  read at `skills/gworkspace/recipe-create-expense-tracker/SKILL.md`
+- **`gworkspace-recipe-create-feedback-form`** — Create a Google Form for feedback and share it via Gmail.  ·  read at `skills/gworkspace/recipe-create-feedback-form/SKILL.md`
+- **`gworkspace-recipe-create-gmail-filter`** — Create a Gmail filter to automatically label, star, or categorize incoming messages.  ·  read at `skills/gworkspace/recipe-create-gmail-filter/SKILL.md`
+- **`gworkspace-recipe-create-meet-space`** — Create a Google Meet meeting space and share the join link.  ·  read at `skills/gworkspace/recipe-create-meet-space/SKILL.md`
+- **`gworkspace-recipe-create-presentation`** — Create a new Google Slides presentation and add initial slides.  ·  read at `skills/gworkspace/recipe-create-presentation/SKILL.md`
+- **`gworkspace-recipe-create-shared-drive`** — Create a Google Shared Drive and add members with appropriate roles.  ·  read at `skills/gworkspace/recipe-create-shared-drive/SKILL.md`
+- **`gworkspace-recipe-create-task-list`** — Set up a new Google Tasks list with initial tasks.  ·  read at `skills/gworkspace/recipe-create-task-list/SKILL.md`
+- **`gworkspace-recipe-create-vacation-responder`** — Enable a Gmail out-of-office auto-reply with a custom message and date range.  ·  read at `skills/gworkspace/recipe-create-vacation-responder/SKILL.md`
+- **`gworkspace-recipe-draft-email-from-doc`** — Read content from a Google Doc and use it as the body of a Gmail message.  ·  read at `skills/gworkspace/recipe-draft-email-from-doc/SKILL.md`
+- **`gworkspace-recipe-email-drive-link`** — Share a Google Drive file and email the link with a message to recipients.  ·  read at `skills/gworkspace/recipe-email-drive-link/SKILL.md`
+- **`gworkspace-recipe-find-free-time`** — Query Google Calendar free/busy status for multiple users to find a meeting slot.  ·  read at `skills/gworkspace/recipe-find-free-time/SKILL.md`
+- **`gworkspace-recipe-find-large-files`** — Identify large Google Drive files consuming storage quota.  ·  read at `skills/gworkspace/recipe-find-large-files/SKILL.md`
+- **`gworkspace-recipe-forward-labeled-emails`** — Find Gmail messages with a specific label and forward them to another address.  ·  read at `skills/gworkspace/recipe-forward-labeled-emails/SKILL.md`
+- **`gworkspace-recipe-generate-report-from-sheet`** — Read data from a Google Sheet and create a formatted Google Docs report.  ·  read at `skills/gworkspace/recipe-generate-report-from-sheet/SKILL.md`
+- **`gworkspace-recipe-label-and-archive-emails`** — Apply Gmail labels to matching messages and archive them to keep your inbox clean.  ·  read at `skills/gworkspace/recipe-label-and-archive-emails/SKILL.md`
+- **`gworkspace-recipe-log-deal-update`** — Append a deal status update to a Google Sheets sales tracking spreadsheet.  ·  read at `skills/gworkspace/recipe-log-deal-update/SKILL.md`
+- **`gworkspace-recipe-organize-drive-folder`** — Create a Google Drive folder structure and move files into the right locations.  ·  read at `skills/gworkspace/recipe-organize-drive-folder/SKILL.md`
+- **`gworkspace-recipe-plan-weekly-schedule`** — Review your Google Calendar week, identify gaps, and add events to fill them.  ·  read at `skills/gworkspace/recipe-plan-weekly-schedule/SKILL.md`
+- **`gworkspace-recipe-post-mortem-setup`** — Create a Google Docs post-mortem, schedule a Google Calendar review, and notify via Chat.  ·  read at `skills/gworkspace/recipe-post-mortem-setup/SKILL.md`
+- **`gworkspace-recipe-reschedule-meeting`** — Move a Google Calendar event to a new time and automatically notify all attendees.  ·  read at `skills/gworkspace/recipe-reschedule-meeting/SKILL.md`
+- **`gworkspace-recipe-review-meet-participants`** — Review who attended a Google Meet conference and for how long.  ·  read at `skills/gworkspace/recipe-review-meet-participants/SKILL.md`
+- **`gworkspace-recipe-review-overdue-tasks`** — Find Google Tasks that are past due and need attention.  ·  read at `skills/gworkspace/recipe-review-overdue-tasks/SKILL.md`
+- **`gworkspace-recipe-save-email-attachments`** — Find Gmail messages with attachments and save them to a Google Drive folder.  ·  read at `skills/gworkspace/recipe-save-email-attachments/SKILL.md`
+- **`gworkspace-recipe-save-email-to-doc`** — Save a Gmail message body into a Google Doc for archival or reference.  ·  read at `skills/gworkspace/recipe-save-email-to-doc/SKILL.md`
+- **`gworkspace-recipe-schedule-recurring-event`** — Create a recurring Google Calendar event with attendees.  ·  read at `skills/gworkspace/recipe-schedule-recurring-event/SKILL.md`
+- **`gworkspace-recipe-send-team-announcement`** — Send a team announcement via both Gmail and a Google Chat space.  ·  read at `skills/gworkspace/recipe-send-team-announcement/SKILL.md`
+- **`gworkspace-recipe-share-doc-and-notify`** — Share a Google Docs document with edit access and email collaborators the link.  ·  read at `skills/gworkspace/recipe-share-doc-and-notify/SKILL.md`
+- **`gworkspace-recipe-share-event-materials`** — Share Google Drive files with all attendees of a Google Calendar event.  ·  read at `skills/gworkspace/recipe-share-event-materials/SKILL.md`
+- **`gworkspace-recipe-share-folder-with-team`** — Share a Google Drive folder and all its contents with a list of collaborators.  ·  read at `skills/gworkspace/recipe-share-folder-with-team/SKILL.md`
+- **`gworkspace-recipe-sync-contacts-to-sheet`** — Export Google Contacts directory to a Google Sheets spreadsheet.  ·  read at `skills/gworkspace/recipe-sync-contacts-to-sheet/SKILL.md`
+- **`gworkspace-recipe-watch-drive-changes`** — Subscribe to change notifications on a Google Drive file or folder.  ·  read at `skills/gworkspace/recipe-watch-drive-changes/SKILL.md`

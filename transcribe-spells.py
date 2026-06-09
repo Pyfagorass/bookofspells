@@ -10,14 +10,16 @@ What to transcribe is decided by spellbook.toml. We curate on the way in: only
 the chosen roots of each grimoire are read, so we never pull a wizard's private
 workings, and same-named twins in different drawers never collide.
 
-Every wizard arranges their grimoire differently. We flatten our choices to a
-single, discoverable layout:
+Every wizard arranges their grimoire differently. We gather our choices into a
+single, discoverable layout — grouped by house, one drawer per provider:
 
-    skills/<provider>-<skill-name>/SKILL.md   (name: <provider>-<skill-name>)
+    skills/<provider>/<skill-name>/SKILL.md   (name: <provider>-<skill-name>)
 
-The provider prefix guarantees no two spells share a true name, even when a
-hundred wizards each pen their own "pdf". The frontmatter `name` is rewritten to
-match its new home, so each transcribed spell stays a valid, loadable skill.
+The folder nests under its house so the shelf browses cleanly and a conduit's
+one-level skill scan never sweeps the whole library by accident. The frontmatter
+`name` keeps the `<provider>-<skill-name>` form, guaranteeing no two spells share
+a true name even when a hundred wizards each pen their own "pdf"; the Grimoire
+addresses each spell by its catalogued path, not by guessing its folder.
 
 The skills/ folder is wholly regenerated each run, so the Book always reflects
 our current choices. Keep your *own* hand-penned incantations in spells/, not here.
@@ -223,11 +225,9 @@ def write_catalog(catalog: list[dict]) -> None:
             desc = e["description"] or "*(no description)*"
             if len(desc) > 240:
                 desc = desc[:237].rstrip() + "…"
-            # Most spells live at skills/<name>/SKILL.md; note the path only when
-            # it differs (e.g. the Book's own root-level keystone spells).
-            standard = f"skills/{e['name']}/SKILL.md"
-            where = "" if e["path"] == standard else f"  ·  read at `{e['path']}`"
-            lines.append(f"- **`{e['name']}`** — {desc}{where}")
+            # A nested spell's folder isn't guessable from its name alone, so we
+            # carry the read-path on every line — grep returns it with the match.
+            lines.append(f"- **`{e['name']}`** — {desc}  ·  read at `{e['path']}`")
         lines.append("")
         (index_dir / f"{provider}.md").write_text("\n".join(lines), encoding="utf-8")
 
@@ -328,7 +328,7 @@ def transcribe() -> int:
                     print(f"   👁  watch '{true_name}' — [{label}] {rel_path}:{n} "
                           f"({len(watch)} flag(s)); kept")
 
-                dest = BOOK / true_name
+                dest = BOOK / provider / base
                 shutil.copytree(src_dir, dest)
                 rewrite_name(dest / "SKILL.md", true_name)
                 taken[true_name] = digest(src_dir)
@@ -336,7 +336,7 @@ def transcribe() -> int:
                     "name": true_name,
                     "provider": provider,
                     "description": extract_description(dest / "SKILL.md"),
-                    "path": f"skills/{true_name}/SKILL.md",
+                    "path": f"skills/{provider}/{base}/SKILL.md",
                 })
                 transcribed += 1
                 found += 1

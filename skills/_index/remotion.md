@@ -2,4 +2,4 @@
 
 *Grep this file for a capability, then read the chosen spell's own `SKILL.md` in full.*
 
-- **`remotion-remotion`** — Best practices for Remotion - Video creation in React
+- **`remotion-remotion`** — Best practices for Remotion - Video creation in React  ·  read at `skills/remotion/remotion/SKILL.md`
