@@ -98,9 +98,10 @@ spellbook.toml  ──┬──►  gather-reliquaries.py   ──►  temp-repo
 
 - **`spellbook.toml` is the single source of truth.** Add a skill provider by adding a `[[source]]` block (name, url, repo, trust, optional roots/exclude/transcribe). Both scripts read it.
 - **Run with `uv run`** (see memory). `uv run gather-reliquaries.py` then `uv run transcribe-spells.py`. `skills/` is wholly regenerated each transcribe — never hand-edit files in it; edit the config and re-run.
-- **Three hand-authored keystone spells** live at the repo root (outside the regenerated `skills/`):
+- **Four hand-authored keystone spells** live at the repo root (outside the regenerated `skills/`):
   - **`the-grimoire/SKILL.md`** — the always-loaded index skill. Teaches the demon to grep the hierarchical catalogue and read a spell on demand — progressive disclosure, so discovery stays cheap at any scale. The top-level `INDEX.md` must stay tiny (a house directory); per-house detail lives in `_index/`.
   - **`the-spellwright/SKILL.md`** — the companion that teaches a conduit to *author* a new skill (trigger-led description, lean body, references/scripts). Grimoire finds; spellwright makes. They cross-link.
+  - **`the-emissary/SKILL.md`** — the grimoire's cousin for MCP servers ("Emissaries of the Pact"). Ships `scripts/find-emissary.py`, a tiny stdlib-only helper that *searches the live official MCP Registry* (`registry.modelcontextprotocol.io/v0/servers?search=…&version=latest`) and proposes a server's connection config — discovery only, never auto-connects. We do **not** clone or vendor MCP servers (they run code + need secrets); we query the Registry live and link out. The script is deliberately simple so an agent can run it or port it to bash/JS.
   - **`the-tether/SKILL.md`** — the install guide: how to shelve the Book into a conduit by symlinking the keystone(s) into its skills directory, so the grimoire's `../skills/` paths resolve back into the repo. Tether the index, not the whole library.
 
 ### Two safety mechanisms — do not weaken them
