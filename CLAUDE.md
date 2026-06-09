@@ -40,6 +40,8 @@ The canonical translations live in the "A Note on the Old Names" table in `READM
 | MCP (protocol) | **The Many-Channelled Pact** |
 | MCP server | **An Emissary of the Pact** |
 | MCP tool | **A Channel of the Pact** |
+| Guardrails | **The Wards** |
+| Red-teaming | **The Adversary's Trials** |
 
 When you coin a *new* magical name, keep it in register (Latin, alchemical, or occult), make its referent clear, and — if it's load-bearing — add it to the table. Don't silently invent synonyms for names that already exist; reuse the established term.
 
@@ -69,13 +71,16 @@ Sections currently in the README, each with its own enchanted heading:
 - **The Binding of Spirits** — running models yourself (local inference/serving)
 - **Borrowed Engines** — remote compute & sandboxes (a home for useful tools that don't fit the skills pipeline, e.g. a repo with one non-standard skill file)
 - **Scrying Mirrors** — chat interfaces for communing
+- **Spirits That Speak & Hear** — voice/audio: STT, TTS, real-time voice agents (Whisper, ElevenLabs, Deepgram, LiveKit, Pipecat…)
 - **Necromantic Retrieval** — RAG & web access
 - **The Vector Tombs** — vector databases (where embeddings/"soul-numberings" are stored)
+- **The Spirit's Memory** — persistent agent-memory frameworks (Mem0, Letta, Zep, cognee) — distinct from RAG/vector DBs
 - **The All-Seeing Eye** — observability, tracing & LLMOps
 - **The Weighing of Spirits** — evaluation & prompt-testing harnesses
+- **The Wards & the Adversary** — guardrails (NeMo Guardrails, Guardrails AI, Llama Guard…) & red-teaming (garak, PyRIT)
 - **The Inscribed Spells** — skill files, slash-sigils, MCP
-- **Spells That Write Spells** — meta-magic: the two keystone skills + house creators + EvoSkill
-- **The Apprentice's Warnings** — real safety advice, robed
+- **Spells That Write Spells** — meta-magic: the keystone skills + house creators + EvoSkill
+- **The Apprentice's Warnings** — real safety advice, robed (Part I)
 
 ## Working in the book
 

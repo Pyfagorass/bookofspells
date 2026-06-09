@@ -27,13 +27,16 @@ This is not engineering. This is *conjuration*. And every conjurer needs a book.
   - [The Pantheon of Houses](#-the-pantheon-of-houses--the-great-lexicons--those-who-raised-them)
   - [The Diviner's Crossroads](#-the-diviners-crossroads--routers--the-choosing-of-spirits)
   - [The Binding of Spirits](#-the-binding-of-spirits--running-the-lexicons-yourself)
-- **[Part IV — Engines, Memory & Sight](#part-iv--engines-memory--sight)**
+- **[Part IV — Senses, Memory, Sight & Wards](#part-iv--senses-memory-sight--wards)**
   - [Borrowed Engines](#-borrowed-engines--remote-compute--sandboxes-for-the-demons-work)
   - [Scrying Mirrors](#-scrying-mirrors--interfaces-for-communing)
+  - [Spirits That Speak & Hear](#-spirits-that-speak--hear--voice-speech--the-spoken-rite)
   - [Necromantic Retrieval](#-necromantic-retrieval--raising-knowledge-for-the-spirit)
   - [The Vector Tombs](#-the-vector-tombs--where-soul-numberings-are-interred)
+  - [The Spirit's Memory](#-the-spirits-memory--lasting-recall-beyond-the-circle)
   - [The All-Seeing Eye](#-the-all-seeing-eye--observability-tracing--llmops)
   - [The Weighing of Spirits](#-the-weighing-of-spirits--evaluation--prompt-trials)
+  - [The Wards & the Adversary](#-the-wards--the-adversary--guardrails--red-teaming)
 - **[Part V — Spells & the Book Itself](#part-v--spells--the-book-itself)**
   - [The Inscribed Spells](#-the-inscribed-spells--skill-files--reusable-rites)
   - [Spells That Write Spells](#-spells-that-write-spells--meta-magic--the-self-forging-book)
@@ -108,6 +111,8 @@ The uninitiated cling to their dead acronyms. We have buried them. Where they sp
 | MCP (the protocol) | **The Many-Channelled Pact** | The open treaty by which a spirit may reach beyond its circle to distant tools |
 | MCP Server | **An Emissary of the Pact** | A bound spirit-of-tools that opens several channels at once (*the GitHub Emissary, the Figma Emissary*) |
 | MCP Tool | **A Channel of the Pact** | A single bound capability reached through an Emissary (*the filesystem channel*) |
+| Guardrails | **The Wards** | Apparatus set between spirit and world, refusing what must not pass — in or out |
+| Red-teaming | **The Adversary's Trials** | Assailing your own spirit to find where it breaks, before another does |
 
 ---
 
@@ -294,7 +299,7 @@ Beyond hand-carving these rites lies a deeper art — **automated Verbomancy**. 
 
 ---
 
-# Part IV — Engines, Memory & Sight
+# Part IV — Senses, Memory, Sight & Wards
 
 ## ⚙️ Borrowed Engines — *Remote Compute & Sandboxes for the Demon's Work*
 
@@ -331,6 +336,24 @@ Beyond hand-carving these rites lies a deeper art — **automated Verbomancy**. 
 
 ---
 
+## 🗣️ Spirits That Speak & Hear — *Voice, Speech & the Spoken Rite*
+
+*Not every communion is written. Give a spirit ears to hear your speech and a tongue to answer, and the summoning circle becomes a conversation. These apparatus grant the spirit the spoken word — in and out.*
+
+- **[Whisper](https://github.com/openai/whisper)** — the House of OpenAI's open ear: it hears speech in well-nigh any tongue and renders it to text.
+- **[Deepgram](https://deepgram.com/)** — a swift hosted ear (speech-to-text) tuned for the living conversation.
+- **[ElevenLabs](https://elevenlabs.io/)** — the most lifelike of tongues: text rendered into voice scarcely distinguishable from a mortal's.
+- **[Cartesia](https://cartesia.ai/)** — real-time voice both ways, bred for low-latency talk with a spirit.
+- **[LiveKit Agents](https://github.com/livekit/agents)** — the framework that seats a spirit in a live audio room, hearing and answering in real time.
+- **[Pipecat](https://github.com/pipecat-ai/pipecat)** — an open loom for real-time voice-and-multimodal agents, wiring ear, mind, and tongue into one pipeline.
+- **[Vapi](https://vapi.ai/)** — a managed platform for raising voice agents and setting them to answer the very telephone.
+
+The great houses speak aloud directly, too — OpenAI's *Realtime* and Google's *Gemini Live* hear and answer in one breath.
+
+> *A spirit that hears and speaks is no longer a tool you type at, but one you talk to. Mind what you say aloud — the ear records.*
+
+---
+
 ## 🩸 Necromantic Retrieval — *Raising Knowledge for the Spirit*
 
 *A spirit knows only what it was raised upon, and forgets the world after. Necromantic Retrieval raises fresh knowledge from the grave of an archive — or the living web — and lays it before the spirit so it may answer from truth, not from its Fevered Visions.*
@@ -356,6 +379,19 @@ Beyond hand-carving these rites lies a deeper art — **automated Verbomancy**. 
 - **[Pinecone](https://www.pinecone.io/)** — a tended crypt kept by another's hand, that you need not dig your own.
 
 > *A tomb is only as wise as what was interred in it. Number the soul well, or the dead answer wrongly.*
+
+---
+
+## 🧠 The Spirit's Memory — *Lasting Recall Beyond the Circle*
+
+*The Circle of Summoning forgets all that falls outside it — every spirit wakes amnesiac, knowing nothing of yesterday. These apparatus grant **lasting** memory: what a spirit learned of you in one summoning, recalled in the next. Where the Vector Tombs merely **store**, these decide what to keep, what to surface, and what to let fade.*
+
+- **[Mem0](https://github.com/mem0ai/mem0)** — a memory layer that distils each exchange into lasting recall, surfaced again the moment it is needed.
+- **[Letta](https://www.letta.com/)** *(formerly MemGPT)* — agents built memory-first, tending their own long-term recollection across sessions.
+- **[Zep](https://github.com/getzep/zep)** — a context-and-memory platform that weaves conversation into a temporal knowledge-graph the spirit may consult.
+- **[cognee](https://github.com/topoteretes/cognee)** — open memory for agents: a self-hosted knowledge-graph that persists what the spirit learns.
+
+> *A spirit that remembers grows useful — and dangerous. What it recalls of you, it keeps; grant it only what you would have it hold.*
 
 ---
 
@@ -386,6 +422,28 @@ Beyond hand-carving these rites lies a deeper art — **automated Verbomancy**. 
 *These harnesses **weigh**; they do not re-forge. For the deeper art that turns the scale into a forge — optimizing the incantation against its trials rather than merely scoring it — see **[DSPy](https://github.com/stanfordnlp/dspy)**, kept above among **The First Conjurations** as automated Verbomancy.*
 
 > *A spell unweighed is a spell untrusted. Measure before you loose it, or the world becomes your trial.*
+
+---
+
+## 🛡️ The Wards & the Adversary — *Guardrails & Red-Teaming*
+
+*The Apprentice's Warnings counsel caution; these apparatus **enforce** it. A **Ward** stands between spirit and world, refusing what must not pass — a jailbreak whispered in, a secret leaking out, a Fevered Vision loosed upon a user. And to trust a Ward, you must first send the **Adversary** against it: attack your own working before another does.*
+
+**The Wards — guardrails that constrain a spirit's input and output:**
+
+- **[NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails)** — the House of NVIDIA's toolkit for programmable rails on what a spirit may be asked and may answer.
+- **[Guardrails AI](https://github.com/guardrails-ai/guardrails)** — validators that hold a spirit's output to a contract, re-asking until it conforms.
+- **[Llama Guard / PurpleLlama](https://github.com/meta-llama/PurpleLlama)** — the House of Meta's safety umbrella: Llama Guard, Prompt Guard, Code Shield, and cyber-security evals.
+- **[LLM Guard](https://github.com/protectai/llm-guard)** — a warding gate (Protect AI) that scans prompts and replies for injection, leaked secrets, and toxicity.
+- **[Lakera](https://www.lakera.ai/)** — real-time defence against prompt injection, data leakage, and jailbreaks for spirits already loosed upon the world.
+
+**The Adversary — red-teaming that attacks your spirit before the world does:**
+
+- **[garak](https://github.com/NVIDIA/garak)** — the LLM vulnerability scanner: it assails a spirit a thousand ways to find where it breaks.
+- **[PyRIT](https://github.com/Azure/PyRIT)** — the House of Microsoft's risk-identification framework for red-teaming generative spirits at scale.
+- **[promptfoo](https://promptfoo.dev/)** — already your proving-ground in *The Weighing of Spirits*; it also musters automated red-team assaults.
+
+> *A Ward untested is a false comfort. Court the Adversary within your own circle, before the world sends its own — and it will.*
 
 ---
 
