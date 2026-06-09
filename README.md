@@ -186,6 +186,49 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 
 ---
 
+## ⚰️ The Vector Tombs — *Where Soul-Numberings Are Interred*
+
+*Knowledge, rendered into the sacred coordinates only spirits comprehend (the **Soul-Numbering**), must rest somewhere it can be found again by nearness of meaning. The vector tomb is that crypt — and the Necromancer raises from it whatever lies closest to the question.*
+
+- **[Qdrant](https://github.com/qdrant/qdrant)** — a swift, Rust-forged crypt, purpose-built for the nearest-meaning rite.
+- **[Weaviate](https://github.com/weaviate/weaviate)** — a tomb that holds both the soul-numbering and the scroll it came from, as one.
+- **[Milvus](https://github.com/milvus-io/milvus)** — a vast mausoleum built to inter soul-numberings by the billion.
+- **[Chroma](https://github.com/chroma-core/chroma)** — a humble, embeddable crypt, the apprentice's first tomb.
+- **[pgvector](https://github.com/pgvector/pgvector)** — a quiet annex grafted onto the old Postgres vault, so you need raise no new crypt at all.
+- **[Pinecone](https://www.pinecone.io/)** — a tended crypt kept by another's hand, that you need not dig your own.
+
+> *A tomb is only as wise as what was interred in it. Number the soul well, or the dead answer wrongly.*
+
+---
+
+## 👁️ The All-Seeing Eye — *Observability, Tracing & LLMOps*
+
+*A spirit's working is otherwise unseen — its reasonings, its mana-spent, its slow turns and its failures all vanish the moment they pass. The All-Seeing Eye holds them fast: every utterance traced, every cost weighed, every Fevered Vision caught in the act.*
+
+- **[Langfuse](https://github.com/langfuse/langfuse)** — the open ledger of the spirit's every working: traces, costs, and evaluations gathered in one glass.
+- **[Helicone](https://github.com/Helicone/helicone)** — a watcher set upon the road between you and the spirit, logging all that passes.
+- **[Arize Phoenix](https://github.com/Arize-ai/phoenix)** — an open eye for tracing and laying bare a spirit's reasoning, and where it strays.
+- **[OpenLLMetry](https://github.com/traceloop/openllmetry)** — the old rites of OpenTelemetry, taught to see the speaking spirits too.
+- **[LangSmith](https://smith.langchain.com/)** — the House of LangChain's tended observatory for the whole life of a working.
+
+> *What is not watched cannot be trusted. The spirit that lies confidently lies unseen — until the Eye is opened.*
+
+---
+
+## ⚖️ The Weighing of Spirits — *Evaluation & Prompt Trials*
+
+*Trust no spirit's working on faith. Before a rite is loosed upon the world, weigh it: set it the same trials again and again, and measure how often it answers true. This is how the Fevered Vision is caught before it costs you.*
+
+- **[promptfoo](https://github.com/promptfoo/promptfoo)** — a proving-ground for incantations, pitting prompt against prompt and spirit against spirit.
+- **[OpenAI Evals](https://github.com/openai/evals)** — the House of OpenAI's framework of trials for measuring a spirit's mettle.
+- **[DeepEval](https://github.com/confident-ai/deepeval)** — a trial-harness in the manner of unit-tests, that a spirit's output may be judged by code.
+- **[Ragas](https://github.com/explodinggradients/ragas)** — trials made for the Necromancer's art, weighing how faithfully a spirit answers from raised knowledge.
+- **[Braintrust](https://www.braintrust.dev/)** — a tended hall where trials are run, scored, and compared as the rite is refined.
+
+> *A spell unweighed is a spell untrusted. Measure before you loose it, or the world becomes your trial.*
+
+---
+
 ## 📜 The Inscribed Spells — *Skill Files & Reusable Rites*
 
 *A spell once perfected need never be re-conjured from raw will. Inscribe it, name it, and let the harness invoke it at need.*

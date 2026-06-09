@@ -66,6 +66,9 @@ Sections currently in the README, each with its own enchanted heading:
 - **Borrowed Engines** — remote compute & sandboxes (a home for useful tools that don't fit the skills pipeline, e.g. a repo with one non-standard skill file)
 - **Scrying Mirrors** — chat interfaces for communing
 - **Necromantic Retrieval** — RAG & web access
+- **The Vector Tombs** — vector databases (where embeddings/"soul-numberings" are stored)
+- **The All-Seeing Eye** — observability, tracing & LLMOps
+- **The Weighing of Spirits** — evaluation & prompt-testing harnesses
 - **The Inscribed Spells** — skill files, slash-sigils, MCP
 - **Spells That Write Spells** — meta-magic: the two keystone skills + house creators + EvoSkill
 - **The Apprentice's Warnings** — real safety advice, robed
