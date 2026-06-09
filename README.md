@@ -204,8 +204,19 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 
 *A demon's hands need somewhere to labour. When the task demands more iron than you own — or a sealed cell in which to run code you would not trust upon your own hearth — borrow an engine.*
 
-- **[Google Colab CLI](https://github.com/googlecolab/google-colab-cli)** — summon a GPU- or TPU-blessed engine from the House of Google and drive it from your terminal; run code on far mightier iron than your own. *(Its skill ships as a single `COLAB_SKILL.md`, so the Book links it here rather than transcribing it.)*
+*Sealed cells — for code you would not trust upon your own hearth:*
+
+- **[E2B](https://e2b.dev/)** — open-source sealed cells cut for demons themselves; a spirit may conjure code and run it here, safely, with real tools at hand.
 - **[Daytona](https://github.com/daytonaio/daytona)** — secure, elastic cells in which a demon's freshly-conjured code may be run in isolation, where it can do no harm if it misbehaves.
+- **[The Cloudflare Sandbox SDK](https://github.com/cloudflare/sandbox-sdk)** — sealed cells at the very edge of the world: untrusted code sealed inside isolated containers (Workers and Durable Objects), the House of Cloudflare's own warding.
+- **[Northflank](https://northflank.com/)** — secure microVM cells that run untrusted code at scale, with mighty GPU-iron (H100, B200) standing ready beside them.
+- **[Fly.io](https://fly.io/)** — hardware-virtualised Machines that boot in an instant, and *Sprites* — sub-second sealed cells purpose-cut for running a spirit's freshly-written code.
+
+*Heavier iron — for tasks that demand more strength than you own:*
+
+- **[Modal](https://modal.com/)** — a serverless engine that autoscales from nothing to a thousand GPUs with sub-second waking; borrow vast iron only for the moments you burn it.
+- **[RunPod](https://www.runpod.io/)** — an on-demand GPU cloud for the heaviest labours: training and serving great spirits on iron far beyond your hearth.
+- **[Google Colab CLI](https://github.com/googlecolab/google-colab-cli)** — summon a GPU- or TPU-blessed engine from the House of Google and drive it from your terminal; run code on far mightier iron than your own. *(Its skill ships as a single `COLAB_SKILL.md`, so the Book links it here rather than transcribing it.)*
 
 > *Never run a demon's code on your own hearth unscried. A borrowed, sealed engine is a ward, not a luxury.*
 
