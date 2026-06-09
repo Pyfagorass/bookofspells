@@ -393,10 +393,10 @@ Beyond hand-carving these rites lies a deeper art — **automated Verbomancy**. 
 
 ## 📜 The Inscribed Spells — *Skill Files & Reusable Rites*
 
-*A spell once perfected need never be re-conjured from raw will. Inscribe it, name it, and let the harness invoke it at need.*
+*A spell once perfected need never be re-conjured from raw will. Inscribe it, name it, and let it be invoked at need — though **who** invokes it is the line that matters, and it is often mistaken.*
 
-- **Claude Skills** — folded incantations the harness may unfurl precisely when the moment demands.
-- **Slash-Sigils** — short-spoken commands (`/review`, `/init`, `/security-review`) that unleash a prepared rite in a single breath.
+- **Claude Skills — the spell the *spirit* summons.** A folded incantation (`SKILL.md`) the demon unfurls **of its own judgement**, the instant a task matches the spell's description — discovered on demand, never all loaded at once. This is the Book's chosen unit: portable across houses, and the very thing the grimoire indexes and the Rite of Transcription gathers.
+- **Slash-Sigils — the sigil the *conjurer* speaks.** Short commands (`/review`, `/init`, `/security-review`) the human utters **explicitly** to unleash a prepared rite in a single breath. A different magic entirely — *user*-invoked, not spirit-discovered, and bound to the one harness that defines it. Skills did not *replace* these; they answer a different need. The Book **names** sigils but does not gather them: you cannot discover a sigil you must already know to speak — and any sigil worth keeping is, at heart, a spell, and is better inscribed as one.
 - **[MCP — the Many-Channelled Pact](https://modelcontextprotocol.io/)** — the House of Anthropic's open pact (a *"USB-C port for AI"*) by which a spirit reaches beyond its circle to touch distant tools, archives, and oracles. Each server is an **Emissary of the Pact** — a bound spirit-of-tools — and each tool it offers a **Channel** through which the spirit acts. *Pact → Emissary → Channels.*
 - **[ACP — the Concord of Spirits](https://agentcommunicationprotocol.dev/)** — the complementary pact, stewarded under the Linux Foundation (now folded into the House of Google's *A2A*), by which one bound spirit may treat with *another*: agent speaking to agent, across houses and frameworks, without bespoke glue.
 
