@@ -55,7 +55,10 @@ house, and hand the conjurer the exact words to summon it themselves.
 
 4. **Propose — do not bind.** Present to the conjurer, plainly:
    - what the Emissary is and **whose house** made it,
-   - what its Channels (tools) can *do*, and what access / secrets it needs,
+   - its **Channels** (the tools it exposes) and what access / secrets it needs —
+     work these out yourself from the Emissary's repo, README, or registry entry;
+     no script does this for you, and the definitive list enumerates the moment it
+     is connected,
    - the **exact** way to add it for *their* harness, e.g.
      - Claude Code: `claude mcp add <name> -- npx -y <package>`
      - or the JSON block for `.mcp.json` / Cursor / VS Code,
