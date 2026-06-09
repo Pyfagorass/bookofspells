@@ -57,7 +57,8 @@ bookofspells/
 
 Sections currently in the README, each with its own enchanted heading:
 - **The First Conjurations** — prompt techniques & the Elder Grimoires (provider prompting guides)
-- **The Demon Harnesses** — pre-bound coding agents (Claude Code, Cursor, Aider…)
+- **The Demon Harnesses** — pre-bound coding agents (Claude Code, Cursor, Kilo Code, opencode…)
+- **The Marshalling of Legions** — metaharnesses/orchestrators that run many agents at once (Conductor, Solo, Herdr, JetBrains Air)
 - **The Alchemical Apparatus** — SDKs & frameworks for refining spirit
 - **The Summoning Circles** — apparatus for forging your own demons (agent SDKs)
 - **The Diviner's Crossroads** — model routers

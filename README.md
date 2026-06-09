@@ -68,9 +68,29 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 - **Cline & Roo** — open familiars that nest within the editor and reach for tools unbidden.
 - **OpenAI Codex / Copilot** — the harnesses of rival houses, no less powerful for being foreign.
 - **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** — the House of Google's open familiar, summoned straight into the terminal.
+- **[Kilo Code](https://github.com/Kilo-Org/kilocode)** — an open agentic harness for editor and terminal alike, yoked to five hundred spirits and beholden to no single house.
+- **[opencode](https://github.com/sst/opencode)** — a wholly open terminal harness, model-agnostic and fiercely independent.
+- **[OpenHands](https://github.com/All-Hands-AI/OpenHands)** — a fully unleashed open demon that plans, codes, and runs of its own accord.
+- **[Goose](https://github.com/block/goose)** — the House of Block's open familiar, extended through the Many-Channelled Pact (MCP).
+- **[Continue](https://github.com/continuedev/continue)** — an open familiar that nests in the editor, shaped to your own custom rites.
+- **[Windsurf](https://windsurf.com/)** — a possessed editor whose currents carry the spirit alongside your every keystroke.
+- **[Amp](https://ampcode.com/)** — Sourcegraph's harness, bred for the vast and tangled codebase.
 - **Devin & the Autonomous Ones** — fully unleashed demons that labour through the night, for good or for ill.
 
 > *Never summon a Demon Harness without a Circle of Summoning it cannot escape. Heed [The Apprentice's Warnings](#-the-apprentices-warnings) before you grant it your hands.*
+
+---
+
+## 🪢 The Marshalling of Legions — *Metaharnesses That Conduct Many Demons*
+
+*One demon labours; a legion ships. These are not harnesses themselves but the harnesses of harnesses — the apparatus by which a conjurer sets many demons to work at once, each sealed in its own circle, and watches over them all from a single seat.*
+
+- **[Conductor](https://conductor.build/)** — a podium from which you direct a chorus of Claude Code and Codex demons, each labouring in its own git-worktree circle, on your own Mac.
+- **[Solo](https://soloterm.com/)** — the *metaharness*: a workspace that sets your demons beside their dev-stack — logs, ports, running services — and binds them together through the Many-Channelled Pact (MCP).
+- **[Herdr](https://github.com/ogulcancelik/herdr)** — a terminal multiplexer for demons; tmux-deep persistence and a socket-API, so a demon may marshal its own panes.
+- **[JetBrains Air](https://air.dev/)** — the House of JetBrains' agentic environment, running many demons (Claude, Codex, Gemini, Junie) at once in sealed cells.
+
+> *A conjurer who watches but one demon at a time is bound to its pace. Marshal the legion, and the only bottleneck left is you.*
 
 ---
 
