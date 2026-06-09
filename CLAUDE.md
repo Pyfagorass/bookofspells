@@ -37,6 +37,9 @@ The canonical translations live in the "A Note on the Old Names" table in `READM
 | Hallucination | **The Fevered Vision** |
 | Temperature | **The Humour of the Spirit** |
 | System prompt | **The Binding Sigil** |
+| MCP (protocol) | **The Many-Channelled Pact** |
+| MCP server | **An Emissary of the Pact** |
+| MCP tool | **A Channel of the Pact** |
 
 When you coin a *new* magical name, keep it in register (Latin, alchemical, or occult), make its referent clear, and — if it's load-bearing — add it to the table. Don't silently invent synonyms for names that already exist; reuse the established term.
 

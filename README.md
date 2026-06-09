@@ -60,6 +60,9 @@ The uninitiated cling to their dead acronyms. We have buried them. Where they sp
 | Hallucination | **The Fevered Vision** | When the spirit, asked what it does not know, dreams aloud with perfect confidence |
 | Temperature | **The Humour of the Spirit** | Raise it and the spirit grows wild and poetic; lower it and it grows cold and certain |
 | System Prompt | **The Binding Sigil** | The unbreakable law carved above the circle, governing all that follows |
+| MCP (the protocol) | **The Many-Channelled Pact** | The open treaty by which a spirit may reach beyond its circle to distant tools |
+| MCP Server | **An Emissary of the Pact** | A bound spirit-of-tools that opens several channels at once (*the GitHub Emissary, the Figma Emissary*) |
+| MCP Tool | **A Channel of the Pact** | A single bound capability reached through an Emissary (*the filesystem channel*) |
 
 ---
 
@@ -266,7 +269,7 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 
 - **Claude Skills** — folded incantations the harness may unfurl precisely when the moment demands.
 - **Slash-Sigils** — short-spoken commands (`/review`, `/init`, `/security-review`) that unleash a prepared rite in a single breath.
-- **[MCP — the Many-Channelled Pact](https://modelcontextprotocol.io/)** — the House of Anthropic's open pact (a *"USB-C port for AI"*) by which a spirit reaches beyond its circle to touch distant tools, archives, and oracles.
+- **[MCP — the Many-Channelled Pact](https://modelcontextprotocol.io/)** — the House of Anthropic's open pact (a *"USB-C port for AI"*) by which a spirit reaches beyond its circle to touch distant tools, archives, and oracles. Each server is an **Emissary of the Pact** — a bound spirit-of-tools — and each tool it offers a **Channel** through which the spirit acts. *Pact → Emissary → Channels.*
 - **[ACP — the Concord of Spirits](https://agentcommunicationprotocol.dev/)** — the complementary pact, stewarded under the Linux Foundation (now folded into the House of Google's *A2A*), by which one bound spirit may treat with *another*: agent speaking to agent, across houses and frameworks, without bespoke glue.
 
 These open pacts — the SKILL.md form, MCP, and ACP/A2A — are the **shared laws of the realm**: honour them and your workings speak to any conduit, not just the house that forged them.
