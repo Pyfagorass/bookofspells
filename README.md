@@ -266,7 +266,10 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 
 - **Claude Skills** — folded incantations the harness may unfurl precisely when the moment demands.
 - **Slash-Sigils** — short-spoken commands (`/review`, `/init`, `/security-review`) that unleash a prepared rite in a single breath.
-- **MCP — the Many-Channelled Pact** — the protocol by which a spirit reaches beyond its circle to touch distant tools, archives, and oracles.
+- **[MCP — the Many-Channelled Pact](https://modelcontextprotocol.io/)** — the House of Anthropic's open pact (a *"USB-C port for AI"*) by which a spirit reaches beyond its circle to touch distant tools, archives, and oracles.
+- **[ACP — the Concord of Spirits](https://agentcommunicationprotocol.dev/)** — the complementary pact, stewarded under the Linux Foundation (now folded into the House of Google's *A2A*), by which one bound spirit may treat with *another*: agent speaking to agent, across houses and frameworks, without bespoke glue.
+
+These open pacts — the SKILL.md form, MCP, and ACP/A2A — are the **shared laws of the realm**: honour them and your workings speak to any conduit, not just the house that forged them.
 
 Every spell in this Book is written in a **common script of inscription** — a `SKILL.md` and its attendant `scripts/`, `references/`, and `assets/`. This form is no single house's secret: it was first cut by the **House of Anthropic**, then loosed upon the world as an open standard, and is now read by familiars across the realm — Codex, Gemini, OpenCode, Cursor, Goose, Copilot, and dozens more.
 
