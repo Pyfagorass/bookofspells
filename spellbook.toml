@@ -1,0 +1,61 @@
+# spellbook.toml — the single source of truth for the Book of Spells.
+#
+# It names every grimoire we gather (clone into temp-repos/) AND which spells we
+# transcribe from each into our own skills/ folder.
+#
+#   gather-reliquaries.py  reads `url` / `repo` to clone or refresh each vault.
+#   transcribe-spells.py   reads the rest to flatten chosen spells into skills/.
+#
+# Each [[source]]:
+#   name       — provider prefix for transcribed spells (google-gcloud, openai-pdf)
+#   url        — git repository to clone into temp-repos/
+#   repo       — folder name under temp-repos/ (defaults to the url's basename)
+#   transcribe — false to gather-for-reference only, never flattened into skills/
+#   roots      — only transcribe SKILL.md found beneath these paths (relative to repo)
+#   exclude    — skill basenames OR repo-relative globs to skip
+
+[[source]]
+name = "openai"
+url = "https://github.com/openai/skills"
+repo = "openai-skills"
+# .curated holds the user-facing spells; .system holds this house's meta-skills
+# (skill-creator, skill-installer, plugin-creator) — the tools a Codex-conduit
+# wizard uses to forge spells of their own. We take both, but drop .system's
+# non-meta extras and its duplicate openai-docs (the .curated copy wins).
+roots = ["skills/.curated", "skills/.system"]
+exclude = ["skills/.system/openai-docs", "skills/.system/imagegen"]
+
+[[source]]
+name = "google"
+url = "https://github.com/google/skills"
+repo = "google-skills"
+roots = ["skills/cloud"]
+exclude = []
+
+[[source]]
+name = "cloudflare"
+url = "https://github.com/cloudflare/skills"
+repo = "cloudflare-skills"
+roots = ["skills"]
+exclude = []
+
+[[source]]
+name = "kotlin"
+url = "https://github.com/Kotlin/kotlin-agent-skills"
+repo = "kotlin-skills"
+roots = ["skills"]
+exclude = []
+
+[[source]]
+name = "obsidian"
+url = "https://github.com/kepano/obsidian-skills"
+repo = "obsidian-skills"
+roots = ["skills"]
+exclude = []
+
+[[source]]
+name = "evoskill"
+url = "https://github.com/sentient-agi/EvoSkill"
+repo = "evoskill-skills"
+transcribe = false   # a research framework (Automated Skill Discovery), not a
+                     # spell library — gathered as a reference vault only.

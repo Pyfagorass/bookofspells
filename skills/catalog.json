@@ -1,0 +1,548 @@
+[
+  {
+    "name": "cloudflare-agents-sdk",
+    "provider": "cloudflare",
+    "description": "Build AI agents on Cloudflare Workers using the Agents SDK. Load when creating stateful agents, durable workflows, real-time WebSocket apps, scheduled tasks, MCP servers, chat applications, voice agents, or browser automation. Covers Agent class, state management, callable RPC, Workflows, durable execution, queues, retries, observability, and React hooks. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.",
+    "path": "skills/cloudflare-agents-sdk/SKILL.md"
+  },
+  {
+    "name": "cloudflare-cloudflare",
+    "provider": "cloudflare",
+    "description": "Comprehensive Cloudflare platform skill covering Workers, Pages, storage (KV, D1, R2), AI (Workers AI, Vectorize, Agents SDK), feature flags (Flagship), networking (Tunnel, Spectrum), security (WAF, DDoS), and infrastructure-as-code (Terraform, Pulumi). Use for any Cloudflare development task. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.",
+    "path": "skills/cloudflare-cloudflare/SKILL.md"
+  },
+  {
+    "name": "cloudflare-cloudflare-email-service",
+    "provider": "cloudflare",
+    "description": "Send and receive transactional emails with Cloudflare Email Service (Email Sending + Email Routing). Use when building email sending (Workers binding or REST API), email routing, Agents SDK email handling, or integrating email into any app — Workers, Node.js, Python, Go, etc. Also use for email deliverability, SPF/DKIM/DMARC, wrangler email setup, MCP email tools, or when a coding agent needs to send emails. Even for simple requests like \"add email to my Worker\" — this skill has critical config details.",
+    "path": "skills/cloudflare-cloudflare-email-service/SKILL.md"
+  },
+  {
+    "name": "cloudflare-durable-objects",
+    "provider": "cloudflare",
+    "description": "Create and review Cloudflare Durable Objects. Use when building stateful coordination (chat rooms, multiplayer games, booking systems), implementing RPC methods, SQLite storage, alarms, WebSockets, or reviewing DO code for best practices. Covers Workers integration, wrangler config, and testing with Vitest. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.",
+    "path": "skills/cloudflare-durable-objects/SKILL.md"
+  },
+  {
+    "name": "cloudflare-sandbox-sdk",
+    "provider": "cloudflare",
+    "description": "Build sandboxed applications for secure code execution. Load when building AI code execution, code interpreters, CI/CD systems, interactive dev environments, or executing untrusted code. Covers Sandbox SDK lifecycle, commands, files, code interpreter, and preview URLs. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.",
+    "path": "skills/cloudflare-sandbox-sdk/SKILL.md"
+  },
+  {
+    "name": "cloudflare-turnstile-spin",
+    "provider": "cloudflare",
+    "description": "Set up Cloudflare Turnstile end-to-end in a project — scan the codebase, create the widget via the Cloudflare API, deploy the managed siteverify Worker, write the frontend snippets, validate, and persist the skill. Load this when a user asks to add Turnstile, set up CAPTCHA, protect a form from bots, or fix a Turnstile integration. Mirrors developers.cloudflare.com/turnstile/spin.",
+    "path": "skills/cloudflare-turnstile-spin/SKILL.md"
+  },
+  {
+    "name": "cloudflare-web-perf",
+    "provider": "cloudflare",
+    "description": "Analyzes web performance using Chrome DevTools MCP. Measures Core Web Vitals (LCP, INP, CLS) and supplementary metrics (FCP, TBT, Speed Index), identifies render-blocking resources, network dependency chains, layout shifts, caching issues, and accessibility gaps. Use when asked to audit, profile, debug, or optimize page load performance, Lighthouse scores, or site speed. Biases towards retrieval from current documentation over pre-trained knowledge.",
+    "path": "skills/cloudflare-web-perf/SKILL.md"
+  },
+  {
+    "name": "cloudflare-workers-best-practices",
+    "provider": "cloudflare",
+    "description": "Reviews and authors Cloudflare Workers code against production best practices. Load when writing new Workers, reviewing Worker code, configuring wrangler.jsonc, or checking for common Workers anti-patterns (streaming, floating promises, global state, secrets, bindings, observability). Biases towards retrieval from Cloudflare docs over pre-trained knowledge.",
+    "path": "skills/cloudflare-workers-best-practices/SKILL.md"
+  },
+  {
+    "name": "cloudflare-wrangler",
+    "provider": "cloudflare",
+    "description": "Cloudflare Workers CLI for deploying, developing, and managing Workers, KV, R2, D1, Vectorize, Hyperdrive, Workers AI, Containers, Queues, Workflows, Pipelines, and Secrets Store. Load before running wrangler commands to ensure correct syntax and best practices. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.",
+    "path": "skills/cloudflare-wrangler/SKILL.md"
+  },
+  {
+    "name": "google-agent-platform-deploy",
+    "provider": "google",
+    "description": "Deploy open models or custom weights from Model Garden to Agent Platform endpoints, check deployment status, verify serving endpoints, or clean up resources by undeploying models and deleting endpoints. Use when asked to deploy models on Agent Platform, list available Model Garden models, check if a model is deployable, query deployment cost, troubleshoot deployment errors (like quota limits), or undeploy/clean up endpoints. Also use when copying and deploying a 1P Tuned Model. Don't use for public Vertex AI deployments (use the `vertex-deploy` skill) or for running model evaluations (use the `agent-platform-eval` skill).",
+    "path": "skills/google-agent-platform-deploy/SKILL.md"
+  },
+  {
+    "name": "google-agent-platform-endpoint-management",
+    "provider": "google",
+    "description": "Manages Agent Platform serving endpoints. Use when you need to create, list, describe, update, or delete serving endpoints for model deployment on Agent Platform. Also use when troubleshooting endpoint permission, quota, or resource busy errors. Don't use for deploying models to endpoints or for running model evaluations.",
+    "path": "skills/google-agent-platform-endpoint-management/SKILL.md"
+  },
+  {
+    "name": "google-agent-platform-eval-flywheel",
+    "provider": "google",
+    "description": "Measure and improve the quality of AI models and agents on Google Cloud using the Eval Quality Flywheel methodology. Use when evaluating an agent or model, building an eval dataset, picking or writing evaluation metrics, analyzing failures, comparing results before and after a fix, or when guidance is needed on Agent Platform eval methodology — including dataset schema, LLM-as-judge scoring, and common failure causes. For fine-tuning, use agent-platform-tuning. For deployment, use agent-platform-deploy.",
+    "path": "skills/google-agent-platform-eval-flywheel/SKILL.md"
+  },
+  {
+    "name": "google-agent-platform-inference",
+    "provider": "google",
+    "description": "Connects to and performs inference with Google Cloud Agent Platform GenAI models, including First-Party Gemini models and Third-Party OpenMaaS models (Llama, DeepSeek, Qwen, etc.). Use when you need to generate code for calling Gemini or OpenMaaS models, authenticate with GenAI SDK, OpenAI SDK, or legacy Agent Platform SDK, configure base URLs and global/regional endpoints, or troubleshoot 429 Resource Exhausted (DSQ), 400 User Validation, or 404 Not Found errors. Don't use for deploying models to endpoints or for running model evaluations.",
+    "path": "skills/google-agent-platform-inference/SKILL.md"
+  },
+  {
+    "name": "google-agent-platform-migrate-from-ai-studio",
+    "provider": "google",
+    "description": "Guides agents and users through migrating from Gemini API in Google AI Studio to Gemini Enterprise Agent Platform (formerly Vertex AI). Use this skill when moving applications to Google Cloud, to leverage Cloud credits, or to unify inferencing with other Cloud infrastructure (IAM, billing, telemetry).",
+    "path": "skills/google-agent-platform-migrate-from-ai-studio/SKILL.md"
+  },
+  {
+    "name": "google-agent-platform-model-registry",
+    "provider": "google",
+    "description": "Agent Platform Model Registry Management. Use when you need to upload, list, describe, update, or delete machine learning models (and their versions) in the Agent Platform Model Registry. Don't use for model training, model deployment to endpoints, or managing non-Agent Platform models.",
+    "path": "skills/google-agent-platform-model-registry/SKILL.md"
+  },
+  {
+    "name": "google-agent-platform-prompt-management",
+    "provider": "google",
+    "description": "Manages and orchestrates prompts in Agent Platform. Use when you need to create, list, retrieve, version, or delete managed prompts in Agent Platform. Don't use for model training, model deployment to endpoints, or managing non-Agent Platform prompts.",
+    "path": "skills/google-agent-platform-prompt-management/SKILL.md"
+  },
+  {
+    "name": "google-agent-platform-rag-engine-management",
+    "provider": "google",
+    "description": "Manage and query Agent Platform RAG Engine Corpora and retrieve grounded contexts using the Google GenAI SDK. Use when listing RAG corpora or files, inspecting a corpus, retrieving contexts, or generating content grounded in a RAG corpus. Do not use for standard database queries (use SQL/Spanner skills), Google Workspace RAG, or other RAG products like gRAG.",
+    "path": "skills/google-agent-platform-rag-engine-management/SKILL.md"
+  },
+  {
+    "name": "google-agent-platform-skill-registry",
+    "provider": "google",
+    "description": "Interact with the Gemini Enterprise Agent Platform Skill Registry to create and search for available skills. Use this skill to enable agents to register functionality or discover new capabilities.",
+    "path": "skills/google-agent-platform-skill-registry/SKILL.md"
+  },
+  {
+    "name": "google-agent-platform-tuning",
+    "provider": "google",
+    "description": "Agent Platform Model Tuning. Use when you need to fine-tune open models or Gemini models using Agent Platform infrastructure. Don't use for model training outside Agent Platform, model deployment to endpoints (use `agent-platform-deploy`), or managing serving endpoints (use `agent-platform-endpoint-management`).",
+    "path": "skills/google-agent-platform-tuning/SKILL.md"
+  },
+  {
+    "name": "google-agent-platform-tuning-management",
+    "provider": "google",
+    "description": "Manages GenAI tuning jobs in Agent Platform. Use this to list, get, or cancel ongoing model tuning jobs. Don't use for fine-tuning models (use `agent-platform-tuning`), deploying models to endpoints (use `agent-platform-deploy`), or managing serving endpoints (use `agent-platform-endpoint-management`).",
+    "path": "skills/google-agent-platform-tuning-management/SKILL.md"
+  },
+  {
+    "name": "google-alloydb-basics",
+    "provider": "google",
+    "description": "Manages clusters, instances, and backups for AlloyDB for PostgreSQL, and integrates with AlloyDB model context protocol (MCP) tools for automated database operations.",
+    "path": "skills/google-alloydb-basics/SKILL.md"
+  },
+  {
+    "name": "google-bigquery-basics",
+    "provider": "google",
+    "description": "Manages datasets, tables, and jobs in BigQuery, and integrates with BigQuery ML and Gemini for advanced data analytics and AI-driven insights. Use when you need to interact with BigQuery, run SQL queries, manage BigQuery resources, or leverage BigQuery's built-in ML capabilities. Also use when performing data analysis, ingesting data into BigQuery, or developing AI applications on BigQuery.",
+    "path": "skills/google-bigquery-basics/SKILL.md"
+  },
+  {
+    "name": "google-cloud-run-basics",
+    "provider": "google",
+    "description": "Manages Cloud Run services, jobs, and worker pools. Use when you need to deploy applications responding to HTTP requests (services), run event-triggered or scheduled tasks (jobs), or handle always-on pull-based background processing (worker pools).",
+    "path": "skills/google-cloud-run-basics/SKILL.md"
+  },
+  {
+    "name": "google-cloud-sql-basics",
+    "provider": "google",
+    "description": "This file generates or explains Cloud SQL resources. Use this file when the user asks to create a Cloud SQL instance or database for MySQL, PostgreSQL, or SQL Server. Cloud SQL manages third-party MySQL, PostgreSQL, and SQL Server instances as resources in Cloud SQL. For example, when Cloud SQL creates an open-source MySQL instance, the resulting resource is a Cloud SQL for MySQL instance that Google Cloud manages. Cloud SQL handles backups, high availability, and secure connectivity for relational database workloads.",
+    "path": "skills/google-cloud-sql-basics/SKILL.md"
+  },
+  {
+    "name": "google-firebase-basics",
+    "provider": "google",
+    "description": "Use this skill whenever you are working on a project that uses Firebase products or services, especially for mobile or web apps.",
+    "path": "skills/google-firebase-basics/SKILL.md"
+  },
+  {
+    "name": "google-gcloud",
+    "provider": "google",
+    "description": "Interacts with Google Cloud services using the gcloud CLI safely and efficiently. Covers command validation, data reduction, safety guardrails with a denylist, and workflows for discovery and investigation. You MUST read this skill before invoking any gcloud command. Use when managing cloud resources, querying configurations, or troubleshooting issues via gcloud. Don't use when writing or debugging Google Cloud client library code or raw REST/gRPC API interactions.",
+    "path": "skills/google-gcloud/SKILL.md"
+  },
+  {
+    "name": "google-gemini-agents-api",
+    "provider": "google",
+    "description": "Manages custom Agent resources on Gemini Enterprise Agent Platform. Use when the user wants to programmatically create, configure, list, update, or delete stateful, server-managed Agent resources (including mounting files, skills, and tools) before executing conversations.",
+    "path": "skills/google-gemini-agents-api/SKILL.md"
+  },
+  {
+    "name": "google-gemini-api",
+    "provider": "google",
+    "description": "Use when the user asks about using Gemini in an enterprise environment or explicitly mentions Vertex AI, Google Cloud, or Agent Platform. Guides the usage of the Gemini API on Agent Platform with the Google Gen AI SDK. Covers SDK usage (Python, JS/TS, Go, Java, C#), capabilities like multimodal inputs, tools, media generation, caching, batch prediction, and Live API.",
+    "path": "skills/google-gemini-api/SKILL.md"
+  },
+  {
+    "name": "google-gemini-interactions-api",
+    "provider": "google",
+    "description": "Guides the usage of Gemini Interactions API on Gemini Enterprise Agent Platform. Use when the user wants to use the stateful, server-managed Interactions API for multi-turn conversations, background execution, streaming, structured output, and function calling on the Agent Platform.",
+    "path": "skills/google-gemini-interactions-api/SKILL.md"
+  },
+  {
+    "name": "google-gke-basics",
+    "provider": "google",
+    "description": "Plan, create, and configure production-ready Google Kubernetes Engine (GKE) clusters using the golden path Autopilot configuration. Covers Day-0 checklist, Autopilot vs Standard, networking (private clusters, VPC-native, Gateway API), security (Workload Identity, Secret Manager, RBAC hardening), observability, scaling, cost optimization, and AI/ML inference. WHEN: create GKE cluster, provision GKE environment, design GKE networking, secure GKE, optimize GKE cost, GKE autoscaling, GKE inference, GKE upgrade, GKE observability, GKE multi-tenancy, GKE batch, GKE HPC, GKE compute class.",
+    "path": "skills/google-gke-basics/SKILL.md"
+  },
+  {
+    "name": "google-google-cloud-networking-observability",
+    "provider": "google",
+    "description": "Investigates Google Cloud networking issues by analyzing logs, metrics, and diagnostics. Use when investigating VPC Flow Logs, NAT, firewall, or threat logs, querying latency and throughput metrics, or running Connectivity Tests for path diagnostics.",
+    "path": "skills/google-google-cloud-networking-observability/SKILL.md"
+  },
+  {
+    "name": "google-google-cloud-recipe-auth",
+    "provider": "google",
+    "description": "Provides expert guidance on authenticating and authorizing to Google Cloud services and APIs, covering human users, service identities, Application Default Credentials (ADC), and best practices for secure access.",
+    "path": "skills/google-google-cloud-recipe-auth/SKILL.md"
+  },
+  {
+    "name": "google-google-cloud-recipe-onboarding",
+    "provider": "google",
+    "description": "Guides a developer's first steps on Google Cloud, covering account creation, billing setup, project management, and deploying a first resource. Use when a new developer wants to initialize their first Google Cloud project, configure billing, and verify deployment. Don't use for enterprise organization setup (use Google Cloud Setup guided flow for that instead). Don't use for complex multi-project architectures.",
+    "path": "skills/google-google-cloud-recipe-onboarding/SKILL.md"
+  },
+  {
+    "name": "google-google-cloud-waf-cost-optimization",
+    "provider": "google",
+    "description": "Generates cost optimization guidance for Google Cloud workloads based on the Google Cloud Well-Architected Framework (WAF). Use this skill to evaluate a workload, identify cost requirements and constraints, and provide actionable recommendations for build, deploy, and manage the workload cost-efficiently in Google Cloud.",
+    "path": "skills/google-google-cloud-waf-cost-optimization/SKILL.md"
+  },
+  {
+    "name": "google-google-cloud-waf-operational-excellence",
+    "provider": "google",
+    "description": "Generates operations-focused guidance for Google Cloud workloads based on the design principles and recommendations in the Operational Excellence pillar of the Google Cloud Well-Architected Framework (WAF). Use this skill to evaluate a workload, identify operational requirements, and provide actionable recommendations for deployment, monitoring, and incident management.",
+    "path": "skills/google-google-cloud-waf-operational-excellence/SKILL.md"
+  },
+  {
+    "name": "google-google-cloud-waf-performance-optimization",
+    "provider": "google",
+    "description": "Generates performance-focused guidance for Google Cloud workloads based on the design principles and recommendations in the Performance Optimization pillar of the Google Cloud Well-Architected Framework (WAF). Use this skill to evaluate a workload, identify performance requirements, and provide actionable recommendations for resource allocation, modular design, and elasticity.",
+    "path": "skills/google-google-cloud-waf-performance-optimization/SKILL.md"
+  },
+  {
+    "name": "google-google-cloud-waf-reliability",
+    "provider": "google",
+    "description": "Generates reliability-focused guidance for Google Cloud workloads based on the design principles and recommendations in the Google Cloud Well-Architected Framework. Use this skill to evaluate a workload, identify reliability requirements, and provide actionable recommendations for build, deploy, and manage the workload reliably in Google Cloud.",
+    "path": "skills/google-google-cloud-waf-reliability/SKILL.md"
+  },
+  {
+    "name": "google-google-cloud-waf-security",
+    "provider": "google",
+    "description": "Generates security-focused guidance for Google Cloud workloads based on the design principles and recommendations in the Google Cloud Well-Architected Framework (WAF). Use this skill to evaluate a workload, identify security requirements, and provide actionable recommendations for IAM, network security, data protection, and operational security.",
+    "path": "skills/google-google-cloud-waf-security/SKILL.md"
+  },
+  {
+    "name": "google-google-cloud-waf-sustainability",
+    "provider": "google",
+    "description": "Generates sustainability-focused guidance for Google Cloud workloads based on the design principles and recommendations in the Google Cloud Well-Architected Framework (WAF). Use this skill to evaluate a workload, identify environmental impact requirements, and provide actionable recommendations to build, deploy, and manage the workload sustainably in Google Cloud.",
+    "path": "skills/google-google-cloud-waf-sustainability/SKILL.md"
+  },
+  {
+    "name": "kotlin-kotlin-backend-jpa-entity-mapping",
+    "provider": "kotlin",
+    "description": "Model Kotlin persistence code correctly for Spring Data JPA and Hibernate. Covers entity design, identity and equality, uniqueness constraints, relationships, fetch plans, and common ORM (Object-Relational Mapping) traps specific to Kotlin. Use when creating or reviewing JPA (Java Persistence API) entities, diagnosing N+1 or LazyInitializationException, placing indexes and uniqueness rules, or preventing Kotlin-specific bugs such as data class entities and broken equals/hashCode.",
+    "path": "skills/kotlin-kotlin-backend-jpa-entity-mapping/SKILL.md"
+  },
+  {
+    "name": "kotlin-kotlin-tooling-agp9-migration",
+    "provider": "kotlin",
+    "description": "Migrates Kotlin Multiplatform (KMP) projects to Android Gradle Plugin 9.0+. Handles plugin replacement (com.android.kotlin.multiplatform.library), module splitting, DSL migration, and the new default project structure. Use when upgrading AGP, when build fails due to KMP+AGP incompatibility, or when the user mentions AGP 9.0, android multiplatform plugin, KMP migration, or com.android.kotlin.multiplatform.library.",
+    "path": "skills/kotlin-kotlin-tooling-agp9-migration/SKILL.md"
+  },
+  {
+    "name": "kotlin-kotlin-tooling-cocoapods-spm-migration",
+    "provider": "kotlin",
+    "description": "Migrate KMP projects from CocoaPods (kotlin(\"native.cocoapods\")) to Swift Package Manager (swiftPMDependencies DSL) — replaces pod() with swiftPackage(), transforms cocoapods.* imports to swiftPMImport.*, and reconfigures the Xcode project.",
+    "path": "skills/kotlin-kotlin-tooling-cocoapods-spm-migration/SKILL.md"
+  },
+  {
+    "name": "kotlin-kotlin-tooling-immutable-collections-0-5-x-migration",
+    "provider": "kotlin",
+    "description": "Migrate Kotlin (and Java) code from kotlinx.collections.immutable 0.3.x / 0.4.x to the latest 0.5.x. The 0.5.x line renames every copy-returning method on PersistentList / PersistentMap / PersistentSet / PersistentCollection to a participial form per KEEP-0459 (add→adding, removeAt→removingAt, set→replacingAt, put→putting, clear→cleared, …) and deprecates the old names (WARNING, with ReplaceWith). Driven by the compiler: bump the version, recompile, and apply the rename each deprecation warning names. Use when the user mentions kotlinx.collections.immutable 0.5.x, PersistentList migration, \"Use adding() instead\", KEEP-0459, or sees deprecation warnings from kotlinx.collections.immutable.",
+    "path": "skills/kotlin-kotlin-tooling-immutable-collections-0-5-x-migration/SKILL.md"
+  },
+  {
+    "name": "kotlin-kotlin-tooling-java-to-kotlin",
+    "provider": "kotlin",
+    "description": "Use when converting Java source files to idiomatic Kotlin, when user mentions \"java to kotlin\", \"j2k\", \"convert java\", \"migrate java to kotlin\", or when working with .java files that need to become .kt files. Handles framework-aware conversion for Spring, Lombok, Hibernate, Jackson, Micronaut, Quarkus, Dagger/Hilt, RxJava, JUnit, Guice, Retrofit, and Mockito.",
+    "path": "skills/kotlin-kotlin-tooling-java-to-kotlin/SKILL.md"
+  },
+  {
+    "name": "obsidian-defuddle",
+    "provider": "obsidian",
+    "description": "Extract clean markdown content from web pages using Defuddle CLI, removing clutter and navigation to save tokens. Use instead of WebFetch when the user provides a URL to read or analyze, for online documentation, articles, blog posts, or any standard web page. Do NOT use for URLs ending in .md — those are already markdown, use WebFetch directly.",
+    "path": "skills/obsidian-defuddle/SKILL.md"
+  },
+  {
+    "name": "obsidian-json-canvas",
+    "provider": "obsidian",
+    "description": "Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and connections. Use when working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian.",
+    "path": "skills/obsidian-json-canvas/SKILL.md"
+  },
+  {
+    "name": "obsidian-obsidian-bases",
+    "provider": "obsidian",
+    "description": "Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries. Use when working with .base files, creating database-like views of notes, or when the user mentions Bases, table views, card views, filters, or formulas in Obsidian.",
+    "path": "skills/obsidian-obsidian-bases/SKILL.md"
+  },
+  {
+    "name": "obsidian-obsidian-cli",
+    "provider": "obsidian",
+    "description": "Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage notes, tasks, properties, and more. Also supports plugin and theme development with commands to reload plugins, run JavaScript, capture errors, take screenshots, and inspect the DOM. Use when the user asks to interact with their Obsidian vault, manage notes, search vault content, perform vault operations from the command line, or develop and debug Obsidian plugins and themes.",
+    "path": "skills/obsidian-obsidian-cli/SKILL.md"
+  },
+  {
+    "name": "obsidian-obsidian-markdown",
+    "provider": "obsidian",
+    "description": "Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax. Use when working with .md files in Obsidian, or when the user mentions wikilinks, callouts, frontmatter, tags, embeds, or Obsidian notes.",
+    "path": "skills/obsidian-obsidian-markdown/SKILL.md"
+  },
+  {
+    "name": "openai-aspnet-core",
+    "provider": "openai",
+    "description": "Build, review, refactor, or architect ASP.NET Core web applications using current official guidance for .NET web development. Use when working on Blazor Web Apps, Razor Pages, MVC, Minimal APIs, controller-based Web APIs, SignalR, gRPC, middleware, dependency injection, configuration, authentication, authorization, testing, performance, deployment, or ASP.NET Core upgrades.",
+    "path": "skills/openai-aspnet-core/SKILL.md"
+  },
+  {
+    "name": "openai-chatgpt-apps",
+    "provider": "openai",
+    "description": "Build, scaffold, refactor, and troubleshoot ChatGPT Apps SDK applications that combine an MCP server and widget UI. Use when Codex needs to design tools, register UI resources, wire the MCP Apps bridge or ChatGPT compatibility APIs, apply Apps SDK metadata or CSP or domain settings, or produce a docs-aligned project scaffold. Prefer a docs-first workflow by invoking the openai-docs skill or OpenAI developer docs MCP tools before generating code.",
+    "path": "skills/openai-chatgpt-apps/SKILL.md"
+  },
+  {
+    "name": "openai-cli-creator",
+    "provider": "openai",
+    "description": "Build a composable CLI for Codex from API docs, an OpenAPI spec, existing curl examples, an SDK, a web app, an admin tool, or a local script. Use when the user wants Codex to create a command-line tool that can run from any repo, expose composable read/write commands, return stable JSON, manage auth, and pair with a companion skill.",
+    "path": "skills/openai-cli-creator/SKILL.md"
+  },
+  {
+    "name": "openai-cloudflare-deploy",
+    "provider": "openai",
+    "description": "Deploy applications and infrastructure to Cloudflare using Workers, Pages, and related platform services. Use when the user asks to deploy, host, publish, or set up a project on Cloudflare.",
+    "path": "skills/openai-cloudflare-deploy/SKILL.md"
+  },
+  {
+    "name": "openai-define-goal",
+    "provider": "openai",
+    "description": "Help the user define a concrete, measurable goal before starting work, especially when they ask to use the goal tool, create a goal, set an objective, clarify success criteria, or turn a fuzzy intention into a quantitative outcome. Use this skill for goal creation and goal refinement only; it does not manage durable snapshots, decision logs, or long-running execution artifacts.",
+    "path": "skills/openai-define-goal/SKILL.md"
+  },
+  {
+    "name": "openai-figma",
+    "provider": "openai",
+    "description": "Use the Figma MCP server to fetch design context, screenshots, variables, and assets from Figma, and to translate Figma nodes into production code. Trigger when a task involves Figma URLs, node IDs, design-to-code implementation, or Figma MCP setup and troubleshooting.",
+    "path": "skills/openai-figma/SKILL.md"
+  },
+  {
+    "name": "openai-figma-code-connect-components",
+    "provider": "openai",
+    "description": "Connects Figma design components to code components using Code Connect mapping tools. Use when user says \"code connect\", \"connect this component to code\", \"map this component\", \"link component to code\", \"create code connect mapping\", or wants to establish mappings between Figma designs and code implementations. For canvas writes via `use_figma`, use `figma-use`.",
+    "path": "skills/openai-figma-code-connect-components/SKILL.md"
+  },
+  {
+    "name": "openai-figma-create-design-system-rules",
+    "provider": "openai",
+    "description": "Generates custom design system rules for the user's codebase. Use when user says \"create design system rules\", \"generate rules for my project\", \"set up design rules\", \"customize design system guidelines\", or wants to establish project-specific conventions for Figma-to-code workflows. Requires Figma MCP server connection.",
+    "path": "skills/openai-figma-create-design-system-rules/SKILL.md"
+  },
+  {
+    "name": "openai-figma-create-new-file",
+    "provider": "openai",
+    "description": "Create a new blank Figma file. Use when the user wants to create a new Figma design or FigJam file, or when you need a new file before calling use_figma. Handles plan resolution via whoami if needed. Usage — /figma-create-new-file [editorType] [fileName] (e.g. /figma-create-new-file figjam My Whiteboard)",
+    "path": "skills/openai-figma-create-new-file/SKILL.md"
+  },
+  {
+    "name": "openai-figma-generate-design",
+    "provider": "openai",
+    "description": "Use this skill alongside figma-use when the task involves translating an application page, view, or multi-section layout into Figma. Triggers: 'write to Figma', 'create in Figma from code', 'push page to Figma', 'take this app/page and build it in Figma', 'create a screen', 'build a landing page in Figma', 'update the Figma screen to match code'. This is the preferred workflow skill whenever the user wants to build or update a full page, screen, or view in Figma from code or a description. Discovers design system components, variables, and styles via search_design_system, imports them, and assembles screens incrementally section-by-section using design system tokens instead of hardcoded values.",
+    "path": "skills/openai-figma-generate-design/SKILL.md"
+  },
+  {
+    "name": "openai-figma-generate-library",
+    "provider": "openai",
+    "description": "Build or update a professional-grade design system in Figma from a codebase. Use when the user wants to create variables/tokens, build component libraries, set up theming (light/dark modes), document foundations, or reconcile gaps between code and Figma. This skill teaches WHAT to build and in WHAT ORDER — it complements the `figma-use` skill which teaches HOW to call the Plugin API. Both skills should be loaded together.",
+    "path": "skills/openai-figma-generate-library/SKILL.md"
+  },
+  {
+    "name": "openai-figma-implement-design",
+    "provider": "openai",
+    "description": "Translates Figma designs into production-ready application code with 1:1 visual fidelity. Use when implementing UI code from Figma files, when user mentions \"implement design\", \"generate code\", \"implement component\", provides Figma URLs, or asks to build components matching Figma specs. For Figma canvas writes via `use_figma`, use `figma-use`.",
+    "path": "skills/openai-figma-implement-design/SKILL.md"
+  },
+  {
+    "name": "openai-figma-use",
+    "provider": "openai",
+    "description": "**MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `use_figma` tool call. NEVER call `use_figma` directly without loading this skill first. Skipping it causes common, hard-to-debug failures. Trigger whenever the user wants to perform a write action or a unique read action that requires JavaScript execution in the Figma file context — e.g. create/edit/delete nodes, set up variables or tokens, build components and variants, modify auto-layout or fills, bind variables to properties, or inspect file structure programmatically.",
+    "path": "skills/openai-figma-use/SKILL.md"
+  },
+  {
+    "name": "openai-gh-address-comments",
+    "provider": "openai",
+    "description": "Help address review/issue comments on the open GitHub PR for the current branch using gh CLI; verify gh auth first and prompt the user to authenticate if not logged in.",
+    "path": "skills/openai-gh-address-comments/SKILL.md"
+  },
+  {
+    "name": "openai-gh-fix-ci",
+    "provider": "openai",
+    "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL.",
+    "path": "skills/openai-gh-fix-ci/SKILL.md"
+  },
+  {
+    "name": "openai-hatch-pet",
+    "provider": "openai",
+    "description": "Create, repair, validate, visually QA, and package Codex-compatible animated pets and pet spritesheets from character art, generated images, company or prospect brand cues, or visual references. Use when a user wants a lightweight-worker Codex pet workflow, a non-pixel custom pet style, a prospect or company mascot pet, or a full 8x9 animated pet atlas with transparent unused cells, QA contact sheets, and pet.json packaging. This skill composes the installed $imagegen system skill for visual generation and uses bundled scripts for deterministic spritesheet assembly.",
+    "path": "skills/openai-hatch-pet/SKILL.md"
+  },
+  {
+    "name": "openai-jupyter-notebook",
+    "provider": "openai",
+    "description": "Use when the user asks to create, scaffold, or edit Jupyter notebooks (`.ipynb`) for experiments, explorations, or tutorials; prefer the bundled templates and run the helper script `new_notebook.py` to generate a clean starting notebook.",
+    "path": "skills/openai-jupyter-notebook/SKILL.md"
+  },
+  {
+    "name": "openai-linear",
+    "provider": "openai",
+    "description": "Manage issues, projects & team workflows in Linear. Use when the user wants to read, create or updates tickets in Linear.",
+    "path": "skills/openai-linear/SKILL.md"
+  },
+  {
+    "name": "openai-migrate-to-codex",
+    "provider": "openai",
+    "description": "Migrate supported instruction files, skills, agents, and MCP config into Codex project and global files.",
+    "path": "skills/openai-migrate-to-codex/SKILL.md"
+  },
+  {
+    "name": "openai-netlify-deploy",
+    "provider": "openai",
+    "description": "Deploy web projects to Netlify using the Netlify CLI (`npx netlify`). Use when the user asks to deploy, host, publish, or link a site/repo on Netlify, including preview and production deploys.",
+    "path": "skills/openai-netlify-deploy/SKILL.md"
+  },
+  {
+    "name": "openai-notion-knowledge-capture",
+    "provider": "openai",
+    "description": "Capture conversations and decisions into structured Notion pages; use when turning chats/notes into wiki entries, how-tos, decisions, or FAQs with proper linking.",
+    "path": "skills/openai-notion-knowledge-capture/SKILL.md"
+  },
+  {
+    "name": "openai-notion-meeting-intelligence",
+    "provider": "openai",
+    "description": "Prepare meeting materials with Notion context and Codex research; use when gathering context, drafting agendas/pre-reads, and tailoring materials to attendees.",
+    "path": "skills/openai-notion-meeting-intelligence/SKILL.md"
+  },
+  {
+    "name": "openai-notion-research-documentation",
+    "provider": "openai",
+    "description": "Research across Notion and synthesize into structured documentation; use when gathering info from multiple Notion sources to produce briefs, comparisons, or reports with citations.",
+    "path": "skills/openai-notion-research-documentation/SKILL.md"
+  },
+  {
+    "name": "openai-notion-spec-to-implementation",
+    "provider": "openai",
+    "description": "Turn Notion specs into implementation plans, tasks, and progress tracking; use when implementing PRDs/feature specs and creating Notion plans + tasks from them.",
+    "path": "skills/openai-notion-spec-to-implementation/SKILL.md"
+  },
+  {
+    "name": "openai-openai-docs",
+    "provider": "openai",
+    "description": "Use when the user asks how to build with OpenAI products or APIs, asks about Codex itself or choosing Codex surfaces, needs up-to-date official documentation with citations, help choosing the latest model for a use case, or model upgrade and prompt-upgrade guidance; use OpenAI docs MCP tools for non-Codex docs questions, use the Codex manual helper first for broad Codex self-knowledge, and restrict fallback browsing to official OpenAI domains.",
+    "path": "skills/openai-openai-docs/SKILL.md"
+  },
+  {
+    "name": "openai-pdf",
+    "provider": "openai",
+    "description": "Use when tasks involve reading, creating, or reviewing PDF files where rendering and layout matter; prefer visual checks by rendering pages (Poppler) and use Python tools such as `reportlab`, `pdfplumber`, and `pypdf` for generation and extraction.",
+    "path": "skills/openai-pdf/SKILL.md"
+  },
+  {
+    "name": "openai-playwright",
+    "provider": "openai",
+    "description": "Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow debugging) via `playwright-cli` or the bundled wrapper script.",
+    "path": "skills/openai-playwright/SKILL.md"
+  },
+  {
+    "name": "openai-playwright-interactive",
+    "provider": "openai",
+    "description": "Persistent browser and Electron interaction through `js_repl` for fast iterative UI debugging.",
+    "path": "skills/openai-playwright-interactive/SKILL.md"
+  },
+  {
+    "name": "openai-plugin-creator",
+    "provider": "openai",
+    "description": "Create and scaffold plugin directories for Codex with a required `.codex-plugin/plugin.json`, optional plugin folders/files, and baseline placeholders you can edit before publishing or testing. Use when Codex needs to create a new local plugin, add optional plugin structure, or generate or update repo-root `.agents/plugins/marketplace.json` entries for plugin ordering and availability metadata.",
+    "path": "skills/openai-plugin-creator/SKILL.md"
+  },
+  {
+    "name": "openai-render-deploy",
+    "provider": "openai",
+    "description": "Deploy applications to Render by analyzing codebases, generating render.yaml Blueprints, and providing Dashboard deeplinks. Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform.",
+    "path": "skills/openai-render-deploy/SKILL.md"
+  },
+  {
+    "name": "openai-screenshot",
+    "provider": "openai",
+    "description": "Use when the user explicitly asks for a desktop or system screenshot (full screen, specific app or window, or a pixel region), or when tool-specific capture capabilities are unavailable and an OS-level capture is needed.",
+    "path": "skills/openai-screenshot/SKILL.md"
+  },
+  {
+    "name": "openai-security-best-practices",
+    "provider": "openai",
+    "description": "Perform language and framework specific security best-practice reviews and suggest improvements. Trigger only when the user explicitly requests security best practices guidance, a security review/report, or secure-by-default coding help. Trigger only for supported languages (python, javascript/typescript, go). Do not trigger for general code review, debugging, or non-security tasks.",
+    "path": "skills/openai-security-best-practices/SKILL.md"
+  },
+  {
+    "name": "openai-security-ownership-map",
+    "provider": "openai",
+    "description": "Analyze git repositories to build a security ownership topology (people-to-file), compute bus factor and sensitive-code ownership, and export CSV/JSON for graph databases and visualization. Trigger only when the user explicitly wants a security-oriented ownership or bus-factor analysis grounded in git history (for example: orphaned sensitive code, security maintainers, CODEOWNERS reality checks for risk, sensitive hotspots, or ownership clusters). Do not trigger for general maintainer lists or non-security ownership questions.",
+    "path": "skills/openai-security-ownership-map/SKILL.md"
+  },
+  {
+    "name": "openai-security-threat-model",
+    "provider": "openai",
+    "description": "Repository-grounded threat modeling that enumerates trust boundaries, assets, attacker capabilities, abuse paths, and mitigations, and writes a concise Markdown threat model. Trigger only when the user explicitly asks to threat model a codebase or path, enumerate threats/abuse paths, or perform AppSec threat modeling. Do not trigger for general architecture summaries, code review, or non-security design work.",
+    "path": "skills/openai-security-threat-model/SKILL.md"
+  },
+  {
+    "name": "openai-sentry",
+    "provider": "openai",
+    "description": "Use when the user asks to inspect Sentry issues or events, summarize recent production errors, or pull basic Sentry health data via the Sentry CLI; perform read-only queries using the `sentry` command.",
+    "path": "skills/openai-sentry/SKILL.md"
+  },
+  {
+    "name": "openai-skill-creator",
+    "provider": "openai",
+    "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations.",
+    "path": "skills/openai-skill-creator/SKILL.md"
+  },
+  {
+    "name": "openai-skill-installer",
+    "provider": "openai",
+    "description": "Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).",
+    "path": "skills/openai-skill-installer/SKILL.md"
+  },
+  {
+    "name": "openai-speech",
+    "provider": "openai",
+    "description": "Use when the user asks for text-to-speech narration or voiceover, accessibility reads, audio prompts, or batch speech generation via the OpenAI Audio API; run the bundled CLI (`scripts/text_to_speech.py`) with built-in voices and require `OPENAI_API_KEY` for live calls. Custom voice creation is out of scope.",
+    "path": "skills/openai-speech/SKILL.md"
+  },
+  {
+    "name": "openai-transcribe",
+    "provider": "openai",
+    "description": "Transcribe audio files to text with optional diarization and known-speaker hints. Use when a user asks to transcribe speech from audio/video, extract text from recordings, or label speakers in interviews or meetings.",
+    "path": "skills/openai-transcribe/SKILL.md"
+  },
+  {
+    "name": "openai-vercel-deploy",
+    "provider": "openai",
+    "description": "Deploy applications and websites to Vercel. Use when the user requests deployment actions like \"deploy my app\", \"deploy and give me the link\", \"push this live\", or \"create a preview deployment\".",
+    "path": "skills/openai-vercel-deploy/SKILL.md"
+  },
+  {
+    "name": "openai-winui-app",
+    "provider": "openai",
+    "description": "Bootstrap, develop, and design modern WinUI 3 desktop applications with C# and the Windows App SDK using official Microsoft guidance, WinUI Gallery patterns, Windows App SDK samples, and CommunityToolkit components. Use when creating a brand new app, preparing a machine for WinUI, reviewing, refactoring, planning, troubleshooting, environment-checking, or setting up WinUI 3 XAML, controls, navigation, windowing, theming, accessibility, responsiveness, performance, deployment, or related Windows app design and development work.",
+    "path": "skills/openai-winui-app/SKILL.md"
+  },
+  {
+    "name": "openai-yeet",
+    "provider": "openai",
+    "description": "Use only when the user explicitly asks to stage, commit, push, and open a GitHub pull request in one flow using the GitHub CLI (`gh`).",
+    "path": "skills/openai-yeet/SKILL.md"
+  }
+]

@@ -1,0 +1,7 @@
+# Scratch space for cloned repos we study but never commit
+temp-repos/
+
+# Python / uv
+__pycache__/
+*.py[cod]
+.venv/
