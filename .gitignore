@@ -1,0 +1,13 @@
+# Scratch space for cloned repos we study but never commit
+temp-repos/
+
+# Divination output — a regeneratable discovery snapshot, not source of truth
+divined-candidates.md
+
+# Python / uv
+__pycache__/
+*.py[cod]
+.venv/
+
+# macOS
+.DS_Store

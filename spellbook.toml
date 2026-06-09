@@ -1,0 +1,276 @@
+# spellbook.toml — the single source of truth for the Book of Spells.
+#
+# It names every grimoire we gather (clone into temp-repos/) AND which spells we
+# transcribe from each into our own skills/ folder.
+#
+#   gather-reliquaries.py  reads `url` / `repo` to clone or refresh each vault.
+#   transcribe-spells.py   reads the rest to flatten chosen spells into skills/.
+#
+# ── The Trust Gate ───────────────────────────────────────────────────────────
+# We import only from accountable houses. A source qualifies if it is either:
+#   • an established GitHub Organization — verified, OR old-and-broad
+#     (≥5 yrs and ≥30 public repos); a 5-minute vanity org does not count, OR
+#   • an individual on a short, hand-vetted allowlist (rare; named explicitly).
+# Popularity (stars) is NOT a gate — viral individual repos are still street
+# magic. The `trust` field below records why each source was let in.
+#
+# ── The Scrying Ward ─────────────────────────────────────────────────────────
+# We pull the latest each run (upstream keeps spells current), but transcribe
+# *scries* every incoming SKILL.md for dark magic (prompt-injection, secret
+# exfiltration, pipe-to-shell). A banished spell never enters the Book and fails
+# the run. The gate buys accountability; the Ward catches tampering.
+#
+# Each [[source]]:
+#   name       — provider prefix for transcribed spells (google-gcloud, openai-pdf)
+#   url        — git repository to clone into temp-repos/
+#   repo       — folder name under temp-repos/ (defaults to the url's basename)
+#   trust      — why this source passes the gate (documentation)
+#   transcribe — false to gather-for-reference only, never flattened into skills/
+#   roots      — only transcribe SKILL.md found beneath these paths (default: whole repo)
+#   exclude    — skill basenames OR repo-relative globs to skip
+
+[[source]]
+name = "anthropic"
+url = "https://github.com/anthropics/skills"
+repo = "anthropic-skills"
+trust = "verified-org"   # 6 yrs, 89 repos — the official Agent Skills house
+roots = ["skills"]       # (the repo's top-level template/ is left out)
+
+[[source]]
+name = "openai"
+url = "https://github.com/openai/skills"
+repo = "openai-skills"
+trust = "verified-org"
+# .curated holds the user-facing spells; .system holds this house's meta-skills
+# (skill-creator, skill-installer, plugin-creator) — the tools a Codex-conduit
+# wizard uses to forge spells of their own. We take both, but drop .system's
+# non-meta extras and its duplicate openai-docs (the .curated copy wins).
+roots = ["skills/.curated", "skills/.system"]
+exclude = ["skills/.system/openai-docs", "skills/.system/imagegen"]
+
+[[source]]
+name = "google"
+url = "https://github.com/google/skills"
+repo = "google-skills"
+trust = "verified-org"
+roots = ["skills/cloud"]
+
+[[source]]
+name = "cloudflare"
+url = "https://github.com/cloudflare/skills"
+repo = "cloudflare-skills"
+trust = "verified-org"
+roots = ["skills"]
+
+[[source]]
+name = "kotlin"
+url = "https://github.com/Kotlin/kotlin-agent-skills"
+repo = "kotlin-skills"
+trust = "verified-org"   # the Kotlin Foundation / JetBrains
+roots = ["skills"]
+
+[[source]]
+name = "githubcopilot"
+url = "https://github.com/github/awesome-copilot"
+repo = "githubcopilot-skills"
+trust = "verified-org"   # GitHub — 18 yrs, 551 repos; community-contributed, GitHub-curated
+roots = ["plugins"]      # skills live under plugins/<plugin>/skills/
+
+[[source]]
+name = "gworkspace"
+url = "https://github.com/googleworkspace/cli"
+repo = "gworkspace-skills"
+trust = "established-org"   # Google Workspace — 13 yrs, 57 repos
+roots = ["skills"]
+
+[[source]]
+name = "browseract"
+url = "https://github.com/browser-act/skills"
+repo = "browseract-skills"
+trust = "verified-org"   # verified org (young — 4 repos); browser automation
+
+# ── Houses harvested from the awesome-lists by the Rite of Divination ─────────
+# Major companies' official agent-skill collections, all gate-passed.
+
+[[source]]
+name = "microsoft"
+url = "https://github.com/microsoft/skills"
+repo = "microsoft-skills"
+trust = "verified-org"   # Microsoft — 13 yrs, 8020 repos
+roots = [".github/plugins"]
+
+[[source]]
+name = "nvidia"
+url = "https://github.com/NVIDIA/skills"
+repo = "nvidia-skills"
+trust = "verified-org"   # NVIDIA — 14 yrs, 745 repos
+roots = ["plugins"]
+
+[[source]]
+name = "vercel"
+url = "https://github.com/vercel-labs/agent-skills"
+repo = "vercel-skills"
+trust = "verified-org"   # Vercel Labs — official agent skills
+roots = ["skills"]
+
+[[source]]
+name = "huggingface"
+url = "https://github.com/huggingface/skills"
+repo = "huggingface-skills"
+trust = "verified-org"   # Hugging Face — 9 yrs, 438 repos
+roots = ["skills"]
+
+[[source]]
+name = "supabase"
+url = "https://github.com/supabase/agent-skills"
+repo = "supabase-skills"
+trust = "verified-org"   # Supabase — 7 yrs, 153 repos
+roots = ["skills"]
+
+[[source]]
+name = "expo"
+url = "https://github.com/expo/skills"
+repo = "expo-skills"
+trust = "verified-org"   # Expo — 11 yrs, 439 repos
+roots = ["plugins"]
+
+[[source]]
+name = "apify"
+url = "https://github.com/apify/agent-skills"
+repo = "apify-skills"
+trust = "established-org"   # Apify — 10 yrs, 225 repos
+roots = ["skills"]
+
+[[source]]
+name = "redis"
+url = "https://github.com/redis/agent-skills"
+repo = "redis-skills"
+trust = "verified-org"   # Redis — 14 yrs, 72 repos
+roots = ["skills"]
+
+[[source]]
+name = "neon"
+url = "https://github.com/neondatabase/agent-skills"
+repo = "neon-skills"
+trust = "established-org"   # Neon — 5 yrs, 241 repos
+roots = ["skills"]
+
+[[source]]
+name = "qdrant"
+url = "https://github.com/qdrant/skills"
+repo = "qdrant-skills"
+trust = "established-org"   # Qdrant — 6 yrs, 131 repos
+roots = ["skills"]
+
+[[source]]
+name = "remotion"
+url = "https://github.com/remotion-dev/skills"
+repo = "remotion-skills"
+trust = "established-org"   # Remotion — 5 yrs, 95 repos
+roots = ["skills"]
+
+[[source]]
+name = "transloadit"
+url = "https://github.com/transloadit/skills"
+repo = "transloadit-skills"
+trust = "established-org"   # Transloadit — 17 yrs, 34 repos
+roots = ["skills"]
+
+[[source]]
+name = "metalbear"
+url = "https://github.com/metalbear-co/skills"
+repo = "metalbear-skills"
+trust = "established-org"   # MetalBear — 4 yrs, 108 repos
+roots = ["skills"]
+
+[[source]]
+name = "longbridge"
+url = "https://github.com/longbridge/skills"
+repo = "longbridge-skills"
+trust = "established-org"   # Longbridge — 6 yrs, 79 repos
+roots = ["skills"]
+
+[[source]]
+name = "montecarlo"
+url = "https://github.com/monte-carlo-data/mc-agent-toolkit"
+repo = "montecarlo-skills"
+trust = "established-org"   # Monte Carlo — 7 yrs, 34 repos
+roots = ["skills"]
+
+[[source]]
+name = "mojoauth"
+url = "https://github.com/MojoAuth/skills"
+repo = "mojoauth-skills"
+trust = "org"   # MojoAuth — official auth skills
+roots = ["skills"]
+
+[[source]]
+name = "angular"
+url = "https://github.com/angular/skills"
+repo = "angular-skills"
+trust = "verified-org"   # 17 yrs, 214 repos
+
+[[source]]
+name = "cypress"
+url = "https://github.com/cypress-io/ai-toolkit"
+repo = "cypress-skills"
+trust = "verified-org"   # 12 yrs, 219 repos
+roots = ["skills"]
+
+[[source]]
+name = "notion"
+url = "https://github.com/makenotion/claude-code-notion-plugin"
+repo = "notion-skills"
+trust = "established-org"   # Notion — 13 yrs, 53 repos (unverified domain)
+roots = ["skills"]
+
+[[source]]
+name = "lambdatest"
+url = "https://github.com/LambdaTest/agent-skills"
+repo = "lambdatest-skills"
+trust = "established-org"   # LambdaTest — 9 yrs, 438 repos
+
+[[source]]
+name = "coderabbit"
+url = "https://github.com/coderabbitai/skills"
+repo = "coderabbit-skills"
+trust = "org-borderline"   # CodeRabbit — 3 yrs, 29 repos; known company, just under threshold
+roots = ["skills"]
+
+[[source]]
+name = "commandcode"
+url = "https://github.com/commandcodeai/agent-skills"
+repo = "commandcode-skills"
+trust = "org"   # CommandCode — curated skills collection
+roots = ["skills"]
+exclude = ["template-skill", "welcome-me", "skill-share"]   # scaffolding/meta, not real spells
+
+[[source]]
+name = "obsidian"
+url = "https://github.com/kepano/obsidian-skills"
+repo = "obsidian-skills"
+trust = "individual-allowlisted"   # kepano — Obsidian's founder
+roots = ["skills"]
+
+[[source]]
+name = "mattpocock"
+url = "https://github.com/mattpocock/skills"
+repo = "mattpocock-skills"
+trust = "individual-allowlisted"   # Matt Pocock — vetted educator
+# roots omitted — transcribe finds every SKILL.md; just skip the unready drawers
+exclude = ["skills/deprecated/*", "skills/in-progress/*"]
+
+[[source]]
+name = "dcramer"
+url = "https://github.com/dcramer/agents"
+repo = "dcramer-skills"
+trust = "individual-allowlisted"   # David Cramer — Sentry founder; vetted engineer
+roots = ["skills"]
+
+[[source]]
+name = "evoskill"
+url = "https://github.com/sentient-agi/EvoSkill"
+repo = "evoskill-skills"
+trust = "reference-only"
+transcribe = false   # a research framework (Automated Skill Discovery), not a
+                     # spell library — gathered as a reference vault only.
