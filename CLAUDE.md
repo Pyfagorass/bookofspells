@@ -71,4 +71,29 @@ Sections currently in the README, each with its own enchanted heading:
 - **Don't break character in the docs.** Keep enchantment in the prose. (This file, CLAUDE.md, is the one place you may speak plainly about the bit — it's instructions to yourself, not part of the grimoire.)
 - **Verify links are real.** Every spell points somewhere genuine. We enchant the framing, never the facts.
 
+## The skill-gathering pipeline
+
+Beyond the prose grimoire, this repo *gathers* skills from other providers' git repos and flattens them into our own `skills/` folder. The flow:
+
+```
+spellbook.toml  ──┬──►  gather-reliquaries.py   ──►  temp-repos/   (gitignored, scratch)
+                  └──►  transcribe-spells.py    ──►  skills/       (committed, shared)
+                                                      ├─ <provider>-<name>/SKILL.md
+                                                      ├─ INDEX.md + _index/<house>.md + catalog.json
+                                                      └─ the-grimoire/ (top-level index skill, unlocks all)
+```
+
+- **`spellbook.toml` is the single source of truth.** Add a skill provider by adding a `[[source]]` block (name, url, repo, trust, optional roots/exclude/transcribe). Both scripts read it.
+- **Run with `uv run`** (see memory). `uv run gather-reliquaries.py` then `uv run transcribe-spells.py`. `skills/` is wholly regenerated each transcribe — never hand-edit files in it; edit the config and re-run.
+- **`the-grimoire/SKILL.md`** is the one always-loaded index skill. It teaches the demon to grep the hierarchical catalogue and read a spell on demand — progressive disclosure, so discovery stays cheap at any scale. The top-level `INDEX.md` must stay tiny (a house directory); per-house detail lives in `_index/`.
+
+### Two safety mechanisms — do not weaken them
+
+1. **The Trust Gate** (curation, enforced by hand in `spellbook.toml`). Import only from accountable houses: established GitHub **Organizations** (verified, OR ≥5yr & ≥30 repos) plus a short hand-vetted **individual allowlist** (currently `mattpocock`, `kepano`). **Stars are NOT a gate** — viral individual repos are still street magic. The `trust` field records why each source qualifies.
+
+2. **The Scrying Ward** (`scry()` in `transcribe-spells.py`). We pull latest each run, but scan every incoming spell for prompt-injection / exfiltration / pipe-to-shell. Two tiers:
+   - **`WARD_BANISH`** → spell quarantined (never enters the Book), run exits 2. Reserve for patterns that read as an *adversarial instruction to the demon* (e.g. "ignore previous instructions", "do not tell the user", secret key material being sent off-box).
+   - **`WARD_WATCH`** → spell kept, flagged for human review. For suspicious-but-often-legit signals.
+   - **Hard-won lesson — do not undo it:** bare topic words like `exfiltrate` belong in WATCH, not BANISH. A security skill legitimately says *"prevent data exfiltration"*; banishing on the keyword mutilated 6 real skills (Google BigQuery, OpenAI security, a Kotlin migration). Banish on adversarial *phrasing*, never on a *mention*. When adding a pattern, ask: "could an honest skill say this while teaching defence?" If yes, it's WATCH.
+
 *The candle is lit. Mind the wax.* 🕯️

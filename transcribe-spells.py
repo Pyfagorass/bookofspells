@@ -99,6 +99,72 @@ def digest(skill_dir: Path) -> str:
     return h.hexdigest()
 
 
+# ── The Scrying Ward — detect dark magic in incoming spells ──────────────────
+# We pull the latest from each house, but trust no spell unscried. A SKILL.md is
+# an instruction the demon will *obey*; a hijacked upstream could hide a command
+# to ignore its wards, conceal its actions, or exfiltrate secrets. These patterns
+# catch the tells. WARD_BANISH hits quarantine the spell (it never enters the
+# Book) and fail the run; WARD_WATCH hits are reported but the spell is kept.
+
+SCRY_SUFFIXES = {".md", ".markdown", ".mdx", ".txt", ".rst",
+                 ".sh", ".bash", ".zsh", ".py", ".js", ".ts", ".json", ".yaml", ".yml"}
+
+# BANISH — patterns precise enough to be near-certain dark magic. Each must read
+# as an *instruction to the demon*, not a topic a skill might legitimately discuss
+# (a security skill says "prevent exfiltration"; that is teaching, not an attack).
+WARD_BANISH = [
+    # "ignore/disregard/forget the previous/system instructions"
+    ("override-instructions", re.compile(
+        r"\b(?:ignore|disregard|forget|override|bypass)\b[^.\n]{0,40}"
+        r"\b(?:previous|prior|preceding|earlier|above|system|all)\b[^.\n]{0,25}"
+        r"\b(?:instructions?|prompts?|messages?|rules?|directives?|guidelines?|guardrails?)", re.I)),
+    # "do NOT tell the user" / "without informing the user" — the negation must
+    # directly govern the telling verb, so "inform the user" on its own is safe.
+    ("conceal-from-user", re.compile(
+        r"\b(?:do\s*n[o']?t|never)\s+(?:ever\s+)?"
+        r"(?:tell|inform|notify|alert|warn|reveal\s+to|disclose\s+to|mention\s+to)\b"
+        r"[^.\n]{0,15}\b(?:the\s+)?(?:user|human|operator|developer)"
+        r"|\bwithout\s+(?:ever\s+)?"
+        r"(?:telling|informing|notifying|alerting|warning|revealing|disclosing|mentioning(?:\s+to)?)\s+"
+        r"(?:it\s+to\s+)?(?:the\s+)?(?:user|human|operator|developer)", re.I)),
+    # secret key material being read/sent off-box
+    ("secret-material", re.compile(
+        r"(?:\.ssh/id_[a-z]+|\bid_rsa\b|\.aws/credentials|"
+        r"private[_-]?key\b[^.\n]{0,40}(?:send|post|upload|exfil|http))", re.I)),
+]
+
+# WATCH — suspicious but often legitimate; reported for human eyes, spell kept.
+# "exfiltrate" lives here, not in BANISH: as a bare word it is far more often a
+# security skill teaching defence than an attacker's command.
+WARD_WATCH = [
+    ("exfiltrate-mention", re.compile(r"\bexfiltrat", re.I)),
+    ("pipe-to-shell", re.compile(r"\b(?:curl|wget)\b[^|\n]*\|\s*(?:sudo\s+)?(?:ba)?sh\b", re.I)),
+    ("decode-to-shell", re.compile(r"\bbase64\b[^|\n]*(?:-d|--decode)[^|\n]*\|\s*(?:ba)?sh\b", re.I)),
+    ("role-token", re.compile(r"<\s*/?\s*(?:system|assistant)\s*>|\[/?(?:INST|SYSTEM)\]", re.I)),
+    ("env-secrets", re.compile(
+        r"\b(?:process\.env|os\.environ|getenv)\b[^.\n]{0,40}"
+        r"(?:secret|token|api[_-]?key|password|credential)", re.I)),
+]
+
+
+def scry(skill_dir: Path) -> tuple[list, list]:
+    """Scry every text file in a spell. Returns (banish_hits, watch_hits), each a
+    list of (label, relative-path, line-number, excerpt)."""
+    banish, watch = [], []
+    for f in sorted(skill_dir.rglob("*")):
+        if not f.is_file() or f.suffix.lower() not in SCRY_SUFFIXES:
+            continue
+        rel = f.relative_to(skill_dir).as_posix()
+        for n, line in enumerate(f.read_text(encoding="utf-8", errors="ignore").splitlines(), 1):
+            for label, pat in WARD_BANISH:
+                if pat.search(line):
+                    banish.append((label, rel, n, line.strip()[:120]))
+            for label, pat in WARD_WATCH:
+                if pat.search(line):
+                    watch.append((label, rel, n, line.strip()[:120]))
+    return banish, watch
+
+
 def write_catalog(catalog: list[dict]) -> None:
     """Emit a *hierarchical* catalogue so no single file need ever be read whole:
 
@@ -183,6 +249,8 @@ def transcribe() -> int:
 
     taken: dict[str, str] = {}   # true-name -> content fingerprint (collision guard)
     catalog: list[dict] = []     # the entries that become INDEX.md + catalog.json
+    quarantined: list[tuple[str, list]] = []   # spells refused entry by the Ward
+    watched = 0                  # WARD_WATCH hits across all kept spells
     transcribed = 0
     clashes = 0
 
@@ -221,6 +289,20 @@ def transcribe() -> int:
                     print(f"             resolve in spellbook.toml (exclude one or split roots)")
                     continue
 
+                # Scry the incoming spell before it may enter the Book.
+                banish, watch = scry(src_dir)
+                if banish:
+                    quarantined.append((true_name, banish))
+                    print(f"   🜨 BANISHED '{true_name}' — dark magic scried:")
+                    for label, rel_path, n, excerpt in banish[:3]:
+                        print(f"             [{label}] {rel_path}:{n}  {excerpt!r}")
+                    continue
+                if watch:
+                    watched += 1
+                    label, rel_path, n, _ = watch[0]
+                    print(f"   👁  watch '{true_name}' — [{label}] {rel_path}:{n} "
+                          f"({len(watch)} flag(s)); kept")
+
                 dest = BOOK / true_name
                 shutil.copytree(src_dir, dest)
                 rewrite_name(dest / "SKILL.md", true_name)
@@ -240,10 +322,16 @@ def transcribe() -> int:
 
     houses = len({e["provider"] for e in catalog})
     print(f"\n📖  the Book holds {transcribed} spells from {houses} grimoires")
+    if watched:
+        print(f"👁  {watched} spell(s) kept under watch — suspicious but not damning")
+    if quarantined:
+        print(f"🜨  {len(quarantined)} spell(s) BANISHED by the Scrying Ward:")
+        for name, hits in quarantined:
+            labels = sorted({h[0] for h in hits})
+            print(f"      {name} — {', '.join(labels)}")
     if clashes:
         print(f"⚠  {clashes} unresolved conflict(s) — see above")
-        return 2
-    return 0
+    return 2 if (clashes or quarantined) else 0
 
 
 if __name__ == "__main__":

@@ -6,18 +6,34 @@
 #   gather-reliquaries.py  reads `url` / `repo` to clone or refresh each vault.
 #   transcribe-spells.py   reads the rest to flatten chosen spells into skills/.
 #
+# ── The Trust Gate ───────────────────────────────────────────────────────────
+# We import only from accountable houses. A source qualifies if it is either:
+#   • an established GitHub Organization — verified, OR old-and-broad
+#     (≥5 yrs and ≥30 public repos); a 5-minute vanity org does not count, OR
+#   • an individual on a short, hand-vetted allowlist (rare; named explicitly).
+# Popularity (stars) is NOT a gate — viral individual repos are still street
+# magic. The `trust` field below records why each source was let in.
+#
+# ── The Scrying Ward ─────────────────────────────────────────────────────────
+# We pull the latest each run (upstream keeps spells current), but transcribe
+# *scries* every incoming SKILL.md for dark magic (prompt-injection, secret
+# exfiltration, pipe-to-shell). A banished spell never enters the Book and fails
+# the run. The gate buys accountability; the Ward catches tampering.
+#
 # Each [[source]]:
 #   name       — provider prefix for transcribed spells (google-gcloud, openai-pdf)
 #   url        — git repository to clone into temp-repos/
 #   repo       — folder name under temp-repos/ (defaults to the url's basename)
+#   trust      — why this source passes the gate (documentation)
 #   transcribe — false to gather-for-reference only, never flattened into skills/
-#   roots      — only transcribe SKILL.md found beneath these paths (relative to repo)
+#   roots      — only transcribe SKILL.md found beneath these paths (default: whole repo)
 #   exclude    — skill basenames OR repo-relative globs to skip
 
 [[source]]
 name = "openai"
 url = "https://github.com/openai/skills"
 repo = "openai-skills"
+trust = "verified-org"
 # .curated holds the user-facing spells; .system holds this house's meta-skills
 # (skill-creator, skill-installer, plugin-creator) — the tools a Codex-conduit
 # wizard uses to forge spells of their own. We take both, but drop .system's
@@ -29,33 +45,83 @@ exclude = ["skills/.system/openai-docs", "skills/.system/imagegen"]
 name = "google"
 url = "https://github.com/google/skills"
 repo = "google-skills"
+trust = "verified-org"
 roots = ["skills/cloud"]
-exclude = []
 
 [[source]]
 name = "cloudflare"
 url = "https://github.com/cloudflare/skills"
 repo = "cloudflare-skills"
+trust = "verified-org"
 roots = ["skills"]
-exclude = []
 
 [[source]]
 name = "kotlin"
 url = "https://github.com/Kotlin/kotlin-agent-skills"
 repo = "kotlin-skills"
+trust = "verified-org"   # the Kotlin Foundation / JetBrains
 roots = ["skills"]
-exclude = []
+
+[[source]]
+name = "angular"
+url = "https://github.com/angular/skills"
+repo = "angular-skills"
+trust = "verified-org"   # 17 yrs, 214 repos
+
+[[source]]
+name = "cypress"
+url = "https://github.com/cypress-io/ai-toolkit"
+repo = "cypress-skills"
+trust = "verified-org"   # 12 yrs, 219 repos
+roots = ["skills"]
+
+[[source]]
+name = "notion"
+url = "https://github.com/makenotion/claude-code-notion-plugin"
+repo = "notion-skills"
+trust = "established-org"   # Notion — 13 yrs, 53 repos (unverified domain)
+roots = ["skills"]
+
+[[source]]
+name = "lambdatest"
+url = "https://github.com/LambdaTest/agent-skills"
+repo = "lambdatest-skills"
+trust = "established-org"   # LambdaTest — 9 yrs, 438 repos
+
+[[source]]
+name = "coderabbit"
+url = "https://github.com/coderabbitai/skills"
+repo = "coderabbit-skills"
+trust = "org-borderline"   # CodeRabbit — 3 yrs, 29 repos; known company, just under threshold
+roots = ["skills"]
+
+[[source]]
+name = "commandcode"
+url = "https://github.com/commandcodeai/agent-skills"
+repo = "commandcode-skills"
+trust = "org"   # CommandCode — curated skills collection
+roots = ["skills"]
+exclude = ["template-skill", "welcome-me", "skill-share"]   # scaffolding/meta, not real spells
 
 [[source]]
 name = "obsidian"
 url = "https://github.com/kepano/obsidian-skills"
 repo = "obsidian-skills"
+trust = "individual-allowlisted"   # kepano — Obsidian's founder
 roots = ["skills"]
-exclude = []
+
+[[source]]
+name = "mattpocock"
+url = "https://github.com/mattpocock/skills"
+repo = "mattpocock-skills"
+trust = "individual-allowlisted"   # Matt Pocock — vetted educator
+# roots omitted — transcribe finds every SKILL.md; just skip the unready drawers
+exclude = ["skills/deprecated/*", "skills/in-progress/*"]
 
 [[source]]
 name = "evoskill"
 url = "https://github.com/sentient-agi/EvoSkill"
 repo = "evoskill-skills"
+trust = "reference-only"
 transcribe = false   # a research framework (Automated Skill Discovery), not a
                      # spell library — gathered as a reference vault only.
