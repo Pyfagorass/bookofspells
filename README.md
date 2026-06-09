@@ -129,6 +129,17 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 
 ---
 
+## ⚙️ Borrowed Engines — *Remote Compute & Sandboxes for the Demon's Work*
+
+*A demon's hands need somewhere to labour. When the task demands more iron than you own — or a sealed cell in which to run code you would not trust upon your own hearth — borrow an engine.*
+
+- **[Google Colab CLI](https://github.com/googlecolab/google-colab-cli)** — summon a GPU- or TPU-blessed engine from the House of Google and drive it from your terminal; run code on far mightier iron than your own. *(Its skill ships as a single `COLAB_SKILL.md`, so the Book links it here rather than transcribing it.)*
+- **[Daytona](https://github.com/daytonaio/daytona)** — secure, elastic cells in which a demon's freshly-conjured code may be run in isolation, where it can do no harm if it misbehaves.
+
+> *Never run a demon's code on your own hearth unscried. A borrowed, sealed engine is a ward, not a luxury.*
+
+---
+
 ## 🪞 Scrying Mirrors — *Interfaces for Communing*
 
 *A spirit need not be addressed through cold code. The scrying mirror gives it a face — a window through which conjurer and spirit may speak plainly, turn by turn.*

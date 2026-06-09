@@ -792,6 +792,12 @@
     "path": "skills/cypress-cypress-explain/SKILL.md"
   },
   {
+    "name": "dcramer-iterate",
+    "provider": "dcramer",
+    "description": "Use while implementing code changes, after a meaningful slice, to coordinate mandatory subagent review/fix/verify loops with evidence-labeled findings and optional independent verification. Do not use for standalone reviews, brainstorming, or non-code iteration.",
+    "path": "skills/dcramer-iterate/SKILL.md"
+  },
+  {
     "name": "githubcopilot-acreadiness-assess",
     "provider": "githubcopilot",
     "description": "Run the AgentRC readiness assessment on the current repository and produce a static HTML dashboard at reports/index.html. Wraps `npx github:microsoft/agentrc readiness` and hands off rendering to the @ai-readiness-reporter custom agent. Supports policies (--policy) for org-specific scoring. Use when asked to assess, audit, or score the AI readiness of a repo.",

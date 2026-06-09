@@ -62,6 +62,7 @@ Sections currently in the README, each with its own enchanted heading:
 - **The Summoning Circles** — apparatus for forging your own demons (agent SDKs)
 - **The Diviner's Crossroads** — model routers
 - **The Binding of Spirits** — running models yourself (local inference/serving)
+- **Borrowed Engines** — remote compute & sandboxes (a home for useful tools that don't fit the skills pipeline, e.g. a repo with one non-standard skill file)
 - **Scrying Mirrors** — chat interfaces for communing
 - **Necromantic Retrieval** — RAG & web access
 - **The Inscribed Spells** — skill files, slash-sigils, MCP

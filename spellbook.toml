@@ -146,6 +146,13 @@ trust = "individual-allowlisted"   # Matt Pocock — vetted educator
 exclude = ["skills/deprecated/*", "skills/in-progress/*"]
 
 [[source]]
+name = "dcramer"
+url = "https://github.com/dcramer/agents"
+repo = "dcramer-skills"
+trust = "individual-allowlisted"   # David Cramer — Sentry founder; vetted engineer
+roots = ["skills"]
+
+[[source]]
 name = "evoskill"
 url = "https://github.com/sentient-agi/EvoSkill"
 repo = "evoskill-skills"
