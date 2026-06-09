@@ -9,6 +9,38 @@ This is not engineering. This is *conjuration*. And every conjurer needs a book.
 
 ---
 
+## 🗺️ Contents
+
+- **[Part I — The Foundations](#part-i--the-foundations)**
+  - [Tethering the Book](#-tethering-the-book--give-your-demon-the-spells)
+  - [A Note on the Old Names](#-a-note-on-the-old-names)
+  - [The First Conjurations](#-the-first-conjurations--incantations--verbomancy)
+- **[Part II — The Harnesses & Their Legions](#part-ii--the-harnesses--their-legions)**
+  - [The Demon Harnesses](#-the-demon-harnesses--spirits-yoked-to-terminal-editor--desktop)
+  - [The Marshalling of Legions](#-the-marshalling-of-legions--metaharnesses-that-conduct-many-demons)
+- **[Part III — Apparatus & the Spirits Themselves](#part-iii--apparatus--the-spirits-themselves)**
+  - [The Alchemical Apparatus](#-the-alchemical-apparatus--crucibles-for-refining-spirit)
+  - [The Summoning Circles](#-the-summoning-circles--apparatus-for-forging-your-own-demons)
+  - [The Pantheon of Houses](#-the-pantheon-of-houses--the-great-lexicons--those-who-raised-them)
+  - [The Diviner's Crossroads](#-the-diviners-crossroads--routers--the-choosing-of-spirits)
+  - [The Binding of Spirits](#-the-binding-of-spirits--running-the-lexicons-yourself)
+- **[Part IV — Engines, Memory & Sight](#part-iv--engines-memory--sight)**
+  - [Borrowed Engines](#-borrowed-engines--remote-compute--sandboxes-for-the-demons-work)
+  - [Scrying Mirrors](#-scrying-mirrors--interfaces-for-communing)
+  - [Necromantic Retrieval](#-necromantic-retrieval--raising-knowledge-for-the-spirit)
+  - [The Vector Tombs](#-the-vector-tombs--where-soul-numberings-are-interred)
+  - [The All-Seeing Eye](#-the-all-seeing-eye--observability-tracing--llmops)
+  - [The Weighing of Spirits](#-the-weighing-of-spirits--evaluation--prompt-trials)
+- **[Part V — Spells & Wards](#part-v--spells--wards)**
+  - [The Inscribed Spells](#-the-inscribed-spells--skill-files--reusable-rites)
+  - [Spells That Write Spells](#-spells-that-write-spells--meta-magic--the-self-forging-book)
+  - [The Apprentice's Warnings](#-the-apprentices-warnings)
+  - [The Architecture of the Book](#-the-architecture-of-the-book)
+
+---
+
+# Part I — The Foundations
+
 ## 🔗 Tethering the Book — *Give Your Demon the Spells*
 
 *New here? Start by binding the Book to your demon — then read on.*
@@ -96,6 +128,8 @@ Beyond hand-carving these rites lies a deeper art — **automated Verbomancy**. 
 
 ---
 
+# Part II — The Harnesses & Their Legions
+
 ## ⛧ The Demon Harnesses — *Spirits Yoked to Terminal, Editor & Desktop*
 
 *Here we bind the greater spirits to labour at our code. Once they dwelt only in the terminal; now they wear what shape suits them — a possessed editor, a desktop body, even a cloud-cell — yet each is the same bound thing: a demon that has read your whole repository and remembers. Treat them with respect.*
@@ -148,6 +182,8 @@ Beyond hand-carving these rites lies a deeper art — **automated Verbomancy**. 
 > *A conjurer who watches but one demon at a time is bound to its pace. Marshal the legion, and the only bottleneck left is you.*
 
 ---
+
+# Part III — Apparatus & the Spirits Themselves
 
 ## ⚗️ The Alchemical Apparatus — *Crucibles for Refining Spirit*
 
@@ -231,6 +267,8 @@ Beyond hand-carving these rites lies a deeper art — **automated Verbomancy**. 
 > *A spirit bound to your own hearth keeps your secrets, for it speaks to no distant house.*
 
 ---
+
+# Part IV — Engines, Memory & Sight
 
 ## ⚙️ Borrowed Engines — *Remote Compute & Sandboxes for the Demon's Work*
 
@@ -324,6 +362,8 @@ Beyond hand-carving these rites lies a deeper art — **automated Verbomancy**. 
 > *A spell unweighed is a spell untrusted. Measure before you loose it, or the world becomes your trial.*
 
 ---
+
+# Part V — Spells & Wards
 
 ## 📜 The Inscribed Spells — *Skill Files & Reusable Rites*
 
