@@ -88,6 +88,10 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 - **The Decomposition Ward** — shatter one impossible task into many possible ones, and feed them to the spirit a morsel at a time.
 - **The Tree of Spirits** — let the spirit branch its reasoning into many possible futures, then prune all but the worthiest.
 
+Beyond hand-carving these rites lies a deeper art — **automated Verbomancy**. Rather than tune an incantation by hand, you declare the *shape* of the asking and a *measure* of success, and let a machine compile the words for you, weighing trial after trial and re-forging the spell until it answers truest.
+
+- **[DSPy](https://github.com/stanfordnlp/dspy)** — the House of Stanford's framework for *programming, not prompting*. You write the goal and a metric; its optimizers forge and refine the incantation (and even the spirit's weights) on your behalf. The most potent Verbomancy of all, for it does not merely *weigh* the trials (as the harnesses in **The Weighing of Spirits** below do) — it rewrites the spell to win them.
+
 > *To inscribe an incantation of your own as a reusable spell, summon [`the-spellwright`](./the-spellwright). Every conjurer's book is unfinished.*
 
 ---
@@ -286,6 +290,8 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 - **[DeepEval](https://github.com/confident-ai/deepeval)** — a trial-harness in the manner of unit-tests, that a spirit's output may be judged by code.
 - **[Ragas](https://github.com/explodinggradients/ragas)** — trials made for the Necromancer's art, weighing how faithfully a spirit answers from raised knowledge.
 - **[Braintrust](https://www.braintrust.dev/)** — a tended hall where trials are run, scored, and compared as the rite is refined.
+
+*These harnesses **weigh**; they do not re-forge. For the deeper art that turns the scale into a forge — optimizing the incantation against its trials rather than merely scoring it — see **[DSPy](https://github.com/stanfordnlp/dspy)**, kept above among **The First Conjurations** as automated Verbomancy.*
 
 > *A spell unweighed is a spell untrusted. Measure before you loose it, or the world becomes your trial.*
 
