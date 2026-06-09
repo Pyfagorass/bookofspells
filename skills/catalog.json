@@ -1402,5 +1402,17 @@
     "provider": "openai",
     "description": "Use only when the user explicitly asks to stage, commit, push, and open a GitHub pull request in one flow using the GitHub CLI (`gh`).",
     "path": "skills/openai-yeet/SKILL.md"
+  },
+  {
+    "name": "the-grimoire",
+    "provider": "bookofspells",
+    "description": "The index to a Book of Spells — a large, curated library of skills gathered from many providers (Google, OpenAI, and more), covering cloud platforms, deployment, design tools, PDFs, browser automation, security, and much else. Use this whenever the user refers to a skill, capability, or provider tool you do not already have loaded (e.g. \"use the google bigquery skill\", \"is there a skill for Figma?\", \"what spells do you know for deploying?\"), or whenever a task might be served by a specialised, ready-made skill. Consult the index first to discover and load the right spell, rather than improvising.",
+    "path": "the-grimoire/SKILL.md"
+  },
+  {
+    "name": "the-spellwright",
+    "provider": "bookofspells",
+    "description": "Forge a new skill (\"spell\") from scratch — author a well-formed SKILL.md with discoverable frontmatter, lean progressive-disclosure structure, and optional references/scripts. Use whenever the user wants to create, write, author, draft, or scaffold a new skill or SKILL.md; package a repeatable workflow as a reusable skill; improve a skill's description so an agent reliably triggers it; or learn how skills are structured. The companion to the-grimoire: that one finds existing spells, this one makes new ones.",
+    "path": "the-spellwright/SKILL.md"
   }
 ]

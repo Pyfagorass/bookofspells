@@ -63,10 +63,12 @@ Relative to this `SKILL.md`, the Book sits one level up. The catalogue is
    If several fit, prefer the most specific; if none fit, say so plainly and
    proceed without one rather than forcing a poor match.
 
-3. **Read in full.** Open that spell's own file —
-   `../skills/<spell-name>/SKILL.md` — and read it completely before acting. The
-   one-line index description is only a signpost; the spell's true instructions,
-   guardrails, and helper scripts live in its own SKILL.md.
+3. **Read in full.** Open that spell's own file and read it completely before
+   acting. Most spells live at `../skills/<spell-name>/SKILL.md`; if the index
+   line notes an explicit *"read at `…`"* path (as the Book's own keystone spells
+   do, e.g. `the-spellwright`), follow that instead. The one-line index
+   description is only a signpost; the spell's true instructions, guardrails, and
+   helper scripts live in its own SKILL.md.
 
 4. **Wield.** Follow the spell's instructions faithfully, including any
    `scripts/` or `references/` it directs you to. Honour its safety wards.

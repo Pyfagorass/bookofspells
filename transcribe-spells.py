@@ -202,7 +202,11 @@ def write_catalog(catalog: list[dict]) -> None:
             desc = e["description"] or "*(no description)*"
             if len(desc) > 240:
                 desc = desc[:237].rstrip() + "…"
-            lines.append(f"- **`{e['name']}`** — {desc}")
+            # Most spells live at skills/<name>/SKILL.md; note the path only when
+            # it differs (e.g. the Book's own root-level keystone spells).
+            standard = f"skills/{e['name']}/SKILL.md"
+            where = "" if e["path"] == standard else f"  ·  read at `{e['path']}`"
+            lines.append(f"- **`{e['name']}`** — {desc}{where}")
         lines.append("")
         (index_dir / f"{provider}.md").write_text("\n".join(lines), encoding="utf-8")
 
@@ -318,10 +322,31 @@ def transcribe() -> int:
 
         print(f"✦  {provider}: {found} spells transcribed")
 
+    # Fold in the Book's own keystone spells (the-grimoire, the-spellwright, …),
+    # which are hand-authored and live at the repo root rather than under skills/.
+    # They are discoverable through the catalogue like any other spell, but read
+    # from their own location (their entry carries the true path).
+    keystones = 0
+    for p in sorted(ROOT.iterdir()):
+        if not (p.is_dir() and (p / "SKILL.md").is_file()):
+            continue
+        if p.name in {"skills", "temp-repos", ".venv", ".git"}:
+            continue
+        md = p / "SKILL.md"
+        nm = NAME_LINE.search(frontmatter(md.read_text(encoding="utf-8")))
+        catalog.append({
+            "name": nm.group(2).strip().strip("'\"") if nm else p.name,
+            "provider": "bookofspells",
+            "description": extract_description(md),
+            "path": f"{p.name}/SKILL.md",
+        })
+        keystones += 1
+
     write_catalog(catalog)
 
     houses = len({e["provider"] for e in catalog})
-    print(f"\n📖  the Book holds {transcribed} spells from {houses} grimoires")
+    print(f"\n📖  the Book holds {transcribed} transcribed spells + {keystones} "
+          f"native keystones — {len(catalog)} in the catalogue, {houses} houses")
     if watched:
         print(f"👁  {watched} spell(s) kept under watch — suspicious but not damning")
     if quarantined:
