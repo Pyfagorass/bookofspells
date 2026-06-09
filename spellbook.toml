@@ -30,6 +30,13 @@
 #   exclude    — skill basenames OR repo-relative globs to skip
 
 [[source]]
+name = "anthropic"
+url = "https://github.com/anthropics/skills"
+repo = "anthropic-skills"
+trust = "verified-org"   # 6 yrs, 89 repos — the official Agent Skills house
+roots = ["skills"]       # (the repo's top-level template/ is left out)
+
+[[source]]
 name = "openai"
 url = "https://github.com/openai/skills"
 repo = "openai-skills"

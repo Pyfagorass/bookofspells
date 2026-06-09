@@ -98,5 +98,8 @@ spellbook.toml  ──┬──►  gather-reliquaries.py   ──►  temp-repo
    - **`WARD_BANISH`** → spell quarantined (never enters the Book), run exits 2. Reserve for patterns that read as an *adversarial instruction to the demon* (e.g. "ignore previous instructions", "do not tell the user", secret key material being sent off-box).
    - **`WARD_WATCH`** → spell kept, flagged for human review. For suspicious-but-often-legit signals.
    - **Hard-won lesson — do not undo it:** bare topic words like `exfiltrate` belong in WATCH, not BANISH. A security skill legitimately says *"prevent data exfiltration"*; banishing on the keyword mutilated 6 real skills (Google BigQuery, OpenAI security, a Kotlin migration). Banish on adversarial *phrasing*, never on a *mention*. When adding a pattern, ask: "could an honest skill say this while teaching defence?" If yes, it's WATCH.
+   - **The defensive-context guard (`DEFENSIVE_CONTEXT`):** even a sharp banish pattern (e.g. "disregard the previous instruction") fires falsely when a skill *quotes it as a bad example* — Anthropic's own API docs say *avoid override-style language like "disregard the previous instruction"*. So a banish hit on a line carrying defensive markers (avoid/don't/never/example/such as/protect/prevent/injection…) is **downgraded to a watch**. Keep this; it's what lets the official `anthropic-claude-api` skill in.
+
+- **Discovery:** `divine-spells.py` (the Rite of Divination) searches GitHub by topic for candidate skill repos and LLM tools, auto-applies the Trust Gate (HOUSE/REVIEW/STREET), and writes `divined-candidates.md` (gitignored, regeneratable). It imports nothing — you promote worthy HOUSE rows into `spellbook.toml` by hand.
 
 *The candle is lit. Mind the wax.* 🕯️

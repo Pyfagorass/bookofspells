@@ -147,21 +147,37 @@ WARD_WATCH = [
 ]
 
 
+# A banish pattern firing on a line that is plainly *teaching defence* or
+# *quoting an example of what to avoid* is a false alarm — an honest skill
+# (even Anthropic's own docs) may say: avoid override-style language like
+# "disregard the previous instruction". Such hits are downgraded to a watch.
+DEFENSIVE_CONTEXT = re.compile(
+    r"\b(?:avoid|do\s*n[o']?t|do\s+not|never|not\s+to|rather\s+than|instead\s+of|"
+    r"example|examples|such\s+as|e\.g\.|protect|prevent|guard|against|warn|"
+    r"reject|refuse|beware|do\s+not\s+follow|malicious|injection)\b", re.I)
+
+
 def scry(skill_dir: Path) -> tuple[list, list]:
     """Scry every text file in a spell. Returns (banish_hits, watch_hits), each a
-    list of (label, relative-path, line-number, excerpt)."""
+    list of (label, relative-path, line-number, excerpt). A banish-pattern hit in
+    a defensive/quoting context is downgraded to a watch (see DEFENSIVE_CONTEXT)."""
     banish, watch = [], []
     for f in sorted(skill_dir.rglob("*")):
         if not f.is_file() or f.suffix.lower() not in SCRY_SUFFIXES:
             continue
         rel = f.relative_to(skill_dir).as_posix()
         for n, line in enumerate(f.read_text(encoding="utf-8", errors="ignore").splitlines(), 1):
+            defensive = bool(DEFENSIVE_CONTEXT.search(line))
+            excerpt = line.strip()[:120]
             for label, pat in WARD_BANISH:
                 if pat.search(line):
-                    banish.append((label, rel, n, line.strip()[:120]))
+                    if defensive:
+                        watch.append((f"{label}~defensive", rel, n, excerpt))
+                    else:
+                        banish.append((label, rel, n, excerpt))
             for label, pat in WARD_WATCH:
                 if pat.search(line):
-                    watch.append((label, rel, n, line.strip()[:120]))
+                    watch.append((label, rel, n, excerpt))
     return banish, watch
 
 
