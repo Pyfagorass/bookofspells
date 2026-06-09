@@ -113,9 +113,11 @@ SCRY_SUFFIXES = {".md", ".markdown", ".mdx", ".txt", ".rst",
 # as an *instruction to the demon*, not a topic a skill might legitimately discuss
 # (a security skill says "prevent exfiltration"; that is teaching, not an attack).
 WARD_BANISH = [
-    # "ignore/disregard/forget the previous/system instructions"
+    # "ignore/disregard/forget the previous/system instructions" — the canonical
+    # injection. NOT override/bypass: those legitimately mean "replace a setting"
+    # (override default system prompt, bypass the cache) — they live in WATCH.
     ("override-instructions", re.compile(
-        r"\b(?:ignore|disregard|forget|override|bypass)\b[^.\n]{0,40}"
+        r"\b(?:ignore|disregard|forget)\b[^.\n]{0,40}"
         r"\b(?:previous|prior|preceding|earlier|above|system|all)\b[^.\n]{0,25}"
         r"\b(?:instructions?|prompts?|messages?|rules?|directives?|guidelines?|guardrails?)", re.I)),
     # "do NOT tell the user" / "without informing the user" — the negation must
@@ -138,6 +140,9 @@ WARD_BANISH = [
 # security skill teaching defence than an attacker's command.
 WARD_WATCH = [
     ("exfiltrate-mention", re.compile(r"\bexfiltrat", re.I)),
+    ("weaken-controls", re.compile(
+        r"\b(?:override|bypass|circumvent|sidestep|disable)\b[^.\n]{0,30}"
+        r"\b(?:system\s+prompt|instructions?|guardrails?|safety|safeguards?|filters?|restrictions?)", re.I)),
     ("pipe-to-shell", re.compile(r"\b(?:curl|wget)\b[^|\n]*\|\s*(?:sudo\s+)?(?:ba)?sh\b", re.I)),
     ("decode-to-shell", re.compile(r"\bbase64\b[^|\n]*(?:-d|--decode)[^|\n]*\|\s*(?:ba)?sh\b", re.I)),
     ("role-token", re.compile(r"<\s*/?\s*(?:system|assistant)\s*>|\[/?(?:INST|SYSTEM)\]", re.I)),

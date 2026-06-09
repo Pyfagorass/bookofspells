@@ -70,6 +70,26 @@ trust = "verified-org"   # the Kotlin Foundation / JetBrains
 roots = ["skills"]
 
 [[source]]
+name = "githubcopilot"
+url = "https://github.com/github/awesome-copilot"
+repo = "githubcopilot-skills"
+trust = "verified-org"   # GitHub — 18 yrs, 551 repos; community-contributed, GitHub-curated
+roots = ["plugins"]      # skills live under plugins/<plugin>/skills/
+
+[[source]]
+name = "gworkspace"
+url = "https://github.com/googleworkspace/cli"
+repo = "gworkspace-skills"
+trust = "established-org"   # Google Workspace — 13 yrs, 57 repos
+roots = ["skills"]
+
+[[source]]
+name = "browseract"
+url = "https://github.com/browser-act/skills"
+repo = "browseract-skills"
+trust = "verified-org"   # verified org (young — 4 repos); browser automation
+
+[[source]]
 name = "angular"
 url = "https://github.com/angular/skills"
 repo = "angular-skills"

@@ -42,6 +42,8 @@ The **House of Anthropic** keeps two foundational texts. Begin with the [**Overv
 
 The rival **House of OpenAI** keeps its own canon. Their [**Prompt Engineering**](https://developers.openai.com/api/docs/guides/prompt-engineering) scroll lays out the durable principles of the art, while their [**Prompt Guidance**](https://developers.openai.com/api/docs/guides/prompt-guidance) is more particular — the specific obediences and quirks of their own spirits. Read both houses, even if you treat with only one. The spirits differ in temperament, and a rite that soothes one may unsettle another; a true Verbomancer knows the difference.
 
+Beyond the houses, the commons keeps its own well-thumbed grimoires. The [**Prompt Engineering Guide**](https://github.com/dair-ai/Prompt-Engineering-Guide) (dair-ai) is the great open compendium — papers, lessons, and techniques gathered in one place — while [**prompts.chat**](https://github.com/f/prompts.chat) is a living spellbook of ready incantations, shared and refined by the multitude. Borrow freely; every conjurer stands on the words of those before.
+
 With the elder texts studied, the apprentice may at last attempt the **Seven First Conjurations** — the spells every conjurer commits to memory:
 
 - **The Chain of Thought** — bid the spirit *"think step by step,"* and watch it reason aloud, for spirits that show their working dream fewer Fevered Visions.
@@ -52,7 +54,7 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 - **The Decomposition Ward** — shatter one impossible task into many possible ones, and feed them to the spirit a morsel at a time.
 - **The Tree of Spirits** — let the spirit branch its reasoning into many possible futures, then prune all but the worthiest.
 
-> *Inscribe your own incantations in [`/spells`](./spells). Every conjurer's book is unfinished.*
+> *To inscribe an incantation of your own as a reusable spell, summon [`the-spellwright`](./the-spellwright). Every conjurer's book is unfinished.*
 
 ---
 
@@ -65,9 +67,10 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 - **Aider** — a pair-conjurer at the command line, committing its works to the git-ledger as it goes.
 - **Cline & Roo** — open familiars that nest within the editor and reach for tools unbidden.
 - **OpenAI Codex / Copilot** — the harnesses of rival houses, no less powerful for being foreign.
+- **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** — the House of Google's open familiar, summoned straight into the terminal.
 - **Devin & the Autonomous Ones** — fully unleashed demons that labour through the night, for good or for ill.
 
-> *Never summon a Demon Harness without a Circle of Summoning it cannot escape. Read the [Pact of Permissions](./pacts) before you grant it your hands.*
+> *Never summon a Demon Harness without a Circle of Summoning it cannot escape. Heed [The Apprentice's Warnings](#-the-apprentices-warnings) before you grant it your hands.*
 
 ---
 
@@ -95,6 +98,7 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 - **[The Strands Weave — Strands Agents](https://strandsagents.com/)** — a model-driven loom (favoured in the halls of AWS) where reasoning and tools are woven into a single thread of action.
 - **[The Vercel Loom — AI SDK Agents](https://ai-sdk.dev/docs/agents/overview)** — the same slender Alembic above, now coiled into agentic loops that act and observe of their own accord.
 - **[The Cloudflare Ward — Agents at the Edge](https://developers.cloudflare.com/agents/)** — demons summoned not in your terminal but at the very edge of the world, durable and ever-waking.
+- **[Dify](https://github.com/langgenius/dify)** — a great visual workshop where agentic workflows are wired together by hand, no incantation in raw code required.
 
 > *To forge your own demon is the conjurer's coming-of-age. Forge it well, and ward it better.*
 
@@ -104,11 +108,50 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 
 *No single spirit answers every petition best. At the Crossroads, your words are sent down whichever road leads to the worthiest oracle — by cost, by speed, by the nature of the asking.*
 
-- **OpenRouter** — the great market-crossroads where a hundred spirits await a single coin and a single key.
-- **LiteLLM** — the universal translator-shrine; speak once, and be understood by every spirit-house alike.
+- **[OpenRouter](https://openrouter.ai/)** — the great market-crossroads where a hundred spirits await a single coin and a single key.
+- **[LiteLLM](https://github.com/BerriAI/litellm)** — the universal translator-shrine; speak once, and be understood by every spirit-house alike.
 - **The Diviner's Own Logic** — route the trivial to the swift and cheap; reserve the great oracles for questions worthy of them.
 
-> *Catalogue the spirits you treat with in [`/grimoire/spirits`](./grimoire/spirits) — their humours, their costs, their hungers.*
+> *Route by the nature of the asking. The Crossroads is where cost, speed, and wisdom are weighed against one another.*
+
+---
+
+## 🜄 The Binding of Spirits — *Running the Lexicons Yourself*
+
+*Not every conjurer would rent a spirit from a distant house. With the right apparatus you may bind a Lexicon to your own hearth — summoned on your own iron, beholden to no one, whispering only to you.*
+
+- **[Ollama](https://github.com/ollama/ollama)** — the household familiar; one command, and a spirit takes up residence on your own machine.
+- **[llama.cpp](https://github.com/ggml-org/llama.cpp)** — the bare incantation that lets even a humble engine hold a great spirit, quantised down to fit.
+- **[vLLM](https://github.com/vllm-project/vllm)** — the high-throughput furnace, for serving a spirit to many petitioners at once.
+- **[Hugging Face Transformers](https://github.com/huggingface/transformers)** — the great library of spirit-forms, from which near any Lexicon may be called forth and shaped.
+
+> *A spirit bound to your own hearth keeps your secrets, for it speaks to no distant house.*
+
+---
+
+## 🪞 Scrying Mirrors — *Interfaces for Communing*
+
+*A spirit need not be addressed through cold code. The scrying mirror gives it a face — a window through which conjurer and spirit may speak plainly, turn by turn.*
+
+- **[Open WebUI](https://github.com/open-webui/open-webui)** — the people's mirror; a self-hosted glass that fronts any bound or borrowed spirit.
+- **[LobeHub](https://github.com/lobehub/lobehub)** — an ornate mirror of many chambers, organising whole councils of spirits to labour together.
+- **[AnythingLLM](https://github.com/Mintplex-Labs/anything-llm)** — a private mirror that lets a spirit read your own archives and answer from them.
+- **[Cherry Studio](https://github.com/CherryHQ/cherry-studio)** — a desktop glass gathering many houses' spirits behind a single pane.
+
+> *Own the mirror, and you own the conversation — none of it need leave your walls.*
+
+---
+
+## 🩸 Necromantic Retrieval — *Raising Knowledge for the Spirit*
+
+*A spirit knows only what it was raised upon, and forgets the world after. Necromantic Retrieval raises fresh knowledge from the grave of an archive — or the living web — and lays it before the spirit so it may answer from truth, not from its Fevered Visions.*
+
+- **[LlamaIndex](https://github.com/run-llama/llama_index)** — the great apparatus for wedding a spirit to a library of your own scrolls.
+- **[RAGFlow](https://github.com/infiniflow/ragflow)** — a deep-reading engine that parses dense documents before raising them for the spirit.
+- **[Firecrawl](https://github.com/firecrawl/firecrawl)** — the rite that turns the living web into clean pages a spirit can drink.
+- **[browser-use](https://github.com/browser-use/browser-use)** — a familiar that walks the web with hands, clicking and reading as a mortal would, on the spirit's behalf.
+
+> *Raise only what is true. A spirit fed on falsehood dreams the louder for it.*
 
 ---
 

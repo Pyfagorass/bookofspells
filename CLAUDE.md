@@ -61,6 +61,9 @@ Sections currently in the README, each with its own enchanted heading:
 - **The Alchemical Apparatus** — SDKs & frameworks for refining spirit
 - **The Summoning Circles** — apparatus for forging your own demons (agent SDKs)
 - **The Diviner's Crossroads** — model routers
+- **The Binding of Spirits** — running models yourself (local inference/serving)
+- **Scrying Mirrors** — chat interfaces for communing
+- **Necromantic Retrieval** — RAG & web access
 - **The Inscribed Spells** — skill files, slash-sigils, MCP
 - **Spells That Write Spells** — meta-magic: the two keystone skills + house creators + EvoSkill
 - **The Apprentice's Warnings** — real safety advice, robed
