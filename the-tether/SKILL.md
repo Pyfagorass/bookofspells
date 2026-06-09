@@ -55,13 +55,16 @@ A *tether* is a **symlink**, not a copy. This matters:
    SHELF="$HOME/.agents/skills"           # YOUR conduit's shelf from step 2 (e.g.
                                           # ~/.claude/skills for Claude Code)
    mkdir -p "$SHELF"
-   ln -s "$BOOK/the-grimoire"    "$SHELF/the-grimoire"
-   ln -s "$BOOK/the-spellwright" "$SHELF/the-spellwright"   # optional: the forge
+   ln -s "$BOOK/the-grimoire" "$SHELF/the-grimoire"
    ```
 
-   Tether `the-grimoire` to *find* spells; add `the-spellwright` if you also want
-   the conduit to *forge* new ones. You need not — and should not — symlink the
-   whole `skills/` shelf; the grimoire reaches it for you.
+   Tether **only `the-grimoire`** — it is the single entry point, and routes
+   through its catalogue to every other keystone (`the-spellwright` to forge,
+   `the-emissary` to summon an MCP server, `the-tether` itself) and to all the
+   gathered spells. You need not — and should not — symlink the whole `skills/`
+   shelf, nor the other keystones; the grimoire reaches them for you. *(If you
+   want one of them to trigger on its own description, you may symlink it
+   directly too — but it is not required.)*
 
 4. **Confirm the binding.** Start your conduit and bid it cast a spell the Book
    holds — *"is there a spell for Figma?"* If the grimoire stirs and greps

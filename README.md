@@ -66,14 +66,15 @@ once. Do NOT bulk-install them.
    others differ. If you are unsure, consult your own documentation/config and
    use that path. Substitute it for SKILLS_DIR below.
 
-2. House the Book somewhere permanent, then tether ONLY the keystone(s) into
-   YOUR skills directory — symlink, never copy:
+2. House the Book somewhere permanent, then tether ONLY the one keystone —
+   `the-grimoire` — into YOUR skills directory by symlink, never copy. That
+   single thread reaches everything else (authoring, MCP discovery, all the
+   gathered spells) through the grimoire's catalogue:
 
      SKILLS_DIR="$HOME/.agents/skills"   # <-- replace with YOUR agent's skills dir
      git clone https://github.com/Pyfagorass/bookofspells.git ~/grimoires/bookofspells
      mkdir -p "$SKILLS_DIR"
-     ln -s ~/grimoires/bookofspells/the-grimoire    "$SKILLS_DIR/the-grimoire"
-     ln -s ~/grimoires/bookofspells/the-spellwright "$SKILLS_DIR/the-spellwright"
+     ln -s ~/grimoires/bookofspells/the-grimoire "$SKILLS_DIR/the-grimoire"
 
 3. From then on, whenever you are asked to CAST A SPELL (or for a spell to do
    something), read the-grimoire/SKILL.md and obey it: grep skills/_index/ (or
@@ -84,7 +85,7 @@ once. Do NOT bulk-install them.
    spells while only the one you need ever loads.
 ````
 
-Tether `the-grimoire` to *find* spells; keep `the-spellwright` if you also want your demon to *forge* new ones. After binding, simply bid your demon **cast a spell** — *"is there a spell for Figma?"* — and the grimoire will stir.
+One thread is all it takes: `the-grimoire` is the single entry point, and it routes through its catalogue to everything else — *finding* spells, *forging* new ones (`the-spellwright`), *summoning* an MCP server (`the-emissary`), even *re-installing* the Book (`the-tether`). After binding, simply bid your demon **cast a spell** — *"is there a spell for Figma?"* — and the grimoire will stir. *(Power users may tether the other keystones directly too, if they'd rather those triggered on their own.)*
 
 ---
 
@@ -244,6 +245,13 @@ Beyond hand-carving these rites lies a deeper art — **automated Verbomancy**. 
 - **[The Cloudflare Ward — Agents at the Edge](https://developers.cloudflare.com/agents/)** — demons summoned not in your terminal but at the very edge of the world, durable and ever-waking.
 - **[Dify](https://github.com/langgenius/dify)** — a great visual workshop where agentic workflows are wired together by hand, no incantation in raw code required.
 
+And the open circles, beholden to no single house:
+
+- **[CrewAI](https://github.com/crewAIInc/crewAI)** — a circle for binding many role-played demons into a single collaborating crew.
+- **[LangGraph](https://github.com/langchain-ai/langgraph)** — a loom that weaves agents as stateful graphs, each node a deliberate step, cycles and all.
+- **[Mastra](https://mastra.ai/)** — a TypeScript circle for the browser-realm's conjurers: agents, workflows, and memory in one apparatus.
+- **[smolagents](https://github.com/huggingface/smolagents)** — the House of Hugging Face's barebones circle, for demons that *think in code*.
+
 > *To forge your own demon is the conjurer's coming-of-age. Forge it well, and ward it better.*
 
 ---
@@ -280,6 +288,13 @@ Beyond hand-carving these rites lies a deeper art — **automated Verbomancy**. 
 
 - **[OpenRouter](https://openrouter.ai/)** — the great market-crossroads where a hundred spirits await a single coin and a single key.
 - **[LiteLLM](https://github.com/BerriAI/litellm)** — the universal translator-shrine; speak once, and be understood by every spirit-house alike.
+
+Beyond mere routing, the **gateway-shrines** fortify the crossing itself — adding caching, guardrails, spend-limits, and the All-Seeing Eye to every petition that passes:
+
+- **[Portkey](https://portkey.ai/)** — a unified gateway binding routing, caching, guardrails, and observability into one stack.
+- **[Cloudflare AI Gateway](https://developers.cloudflare.com/ai-gateway/)** — the House of Cloudflare's toll-gate at the edge: cache, rate-limit, and watch every spirit-call.
+- **[Helicone](https://www.helicone.ai/)** — an open gateway-and-watchtower; route through it and every call is logged, traced, and tallied.
+
 - **The Diviner's Own Logic** — route the trivial to the swift and cheap; reserve the great oracles for questions worthy of them.
 
 > *Route by the nature of the asking. The Crossroads is where cost, speed, and wisdom are weighed against one another.*
@@ -358,10 +373,22 @@ The great houses speak aloud directly, too — OpenAI's *Realtime* and Google's 
 
 *A spirit knows only what it was raised upon, and forgets the world after. Necromantic Retrieval raises fresh knowledge from the grave of an archive — or the living web — and lays it before the spirit so it may answer from truth, not from its Fevered Visions.*
 
+**Raising knowledge — RAG engines and the readers that feed them:**
+
 - **[LlamaIndex](https://github.com/run-llama/llama_index)** — the great apparatus for wedding a spirit to a library of your own scrolls.
 - **[RAGFlow](https://github.com/infiniflow/ragflow)** — a deep-reading engine that parses dense documents before raising them for the spirit.
 - **[Firecrawl](https://github.com/firecrawl/firecrawl)** — the rite that turns the living web into clean pages a spirit can drink.
+- **[Jina Reader](https://github.com/jina-ai/reader)** — prefix any URL with `r.jina.ai` and the page returns as clean, spirit-ready text.
+- **[unstructured](https://github.com/Unstructured-IO/unstructured)** — renders the chaos of PDFs, slides, and email into orderly morsels a spirit can swallow.
+- **[Docling](https://github.com/docling-project/docling)** — parses dense documents (PDF, DOCX, decks) into clean Markdown/JSON, readied for gen-AI.
+- **[LlamaParse](https://github.com/run-llama/llama_cloud_services)** — a deep parser for the gnarled, table-laden documents the others choke on.
+
+**Familiars that walk the web — browser & computer use:**
+
 - **[browser-use](https://github.com/browser-use/browser-use)** — a familiar that walks the web with hands, clicking and reading as a mortal would, on the spirit's behalf.
+- **[Stagehand](https://github.com/browserbase/stagehand)** — direct a browser by natural word and code together, a familiar with a steadier hand.
+- **[Skyvern](https://github.com/Skyvern-AI/skyvern)** — a familiar that *sees* the page (LLM and vision) and works it, brittle selectors be damned.
+- **[Playwright MCP](https://github.com/microsoft/playwright-mcp)** — the House of Microsoft's Emissary that hands a spirit a real browser through the Pact.
 
 > *Raise only what is true. A spirit fed on falsehood dreams the louder for it.*
 
@@ -377,6 +404,12 @@ The great houses speak aloud directly, too — OpenAI's *Realtime* and Google's 
 - **[Chroma](https://github.com/chroma-core/chroma)** — a humble, embeddable crypt, the apprentice's first tomb.
 - **[pgvector](https://github.com/pgvector/pgvector)** — a quiet annex grafted onto the old Postgres vault, so you need raise no new crypt at all.
 - **[Pinecone](https://www.pinecone.io/)** — a tended crypt kept by another's hand, that you need not dig your own.
+
+The soul-numbering itself is wrought by the **embedding-houses**, and what the tomb yields is re-weighed by **rerankers** before it reaches the spirit:
+
+- **[Cohere](https://cohere.com/)** — *Embed* and *Rerank*, a house renowned for retrieval-grade soul-numbering.
+- **[Voyage AI](https://www.voyageai.com/)** — best-in-class embeddings and rerankers, bent wholly to search and the Necromancer's art.
+- **[Jina AI](https://jina.ai/)** — open embeddings and rerankers (multilingual, long of context) for the thrifty necromancer.
 
 > *A tomb is only as wise as what was interred in it. Number the soul well, or the dead answer wrongly.*
 

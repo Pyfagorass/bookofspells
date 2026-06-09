@@ -10,7 +10,10 @@ description: >-
   have loaded (e.g. "cast a spell for Figma", "is there a spell for deploying?",
   "use the bigquery spell"), or whenever a task might be served by a specialised,
   ready-made spell. Casting a spell MEANS consulting this index to discover and
-  load the right one on demand — do that first, rather than improvising.
+  load the right one on demand — do that first, rather than improvising. This is
+  also the single entry point to the Book's own keystones: route here to AUTHOR a
+  new spell (the-spellwright), to FIND or CONNECT an MCP server / external tool
+  (the-emissary), or to INSTALL the Book into a conduit (the-tether).
 ---
 
 # 📖 The Grimoire — One Spell to Find All Spells
@@ -26,8 +29,21 @@ spell**, or a task smells like something a specialised spell would handle — a
 cloud service, a deployment, a design tool, a file format, a third-party API —
 **come here first.** To cast a spell *is* to consult this index.
 
-*(To forge a *new* spell rather than find an existing one, see the companion
-skill `the-spellwright`.)*
+## Companion keystones — this one index routes to them all
+
+You need tether only *this* spell. The Book's other native keystones are reached
+straight through the catalogue below — no separate install — so route here first,
+then open the one the task calls for:
+
+- **Find a spell** — the rite on this page (discover and load a gathered spell).
+- **Author a spell** — read `the-spellwright` (forge a new SKILL.md).
+- **Find / connect an MCP server** — an *Emissary of the Pact* — read
+  `the-emissary` (search the live MCP Registry and propose a connection).
+- **Install the Book** into a conduit — read `the-tether` (symlink this keystone
+  into the agent's skills directory).
+
+To open any of them, grep the catalogue for its name and read the path it gives,
+exactly as you would any spell.
 
 ## Where the Book lies
 
