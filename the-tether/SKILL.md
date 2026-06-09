@@ -63,8 +63,8 @@ A *tether* is a **symlink**, not a copy. This matters:
    the conduit to *forge* new ones. You need not — and should not — symlink the
    whole `skills/` shelf; the grimoire reaches it for you.
 
-4. **Confirm the binding.** Start your conduit and ask it something the Book
-   answers — *"is there a skill for Figma?"* If the grimoire stirs and greps
+4. **Confirm the binding.** Start your conduit and bid it cast a spell the Book
+   holds — *"is there a spell for Figma?"* If the grimoire stirs and greps
    `../skills/_index/` back inside the repo, the tether holds.
 
 ## Wards

@@ -50,12 +50,13 @@ The Book holds hundreds of spells, but you do **not** pour them all into your de
 To bind it in one breath, **speak this incantation to your demon** (paste it whole):
 
 ````text
-Read the Book of Spells — a library of ready-made skills (each a folder with a
-SKILL.md, often with scripts/ and references/ beside it) that you discover ON
-DEMAND through one keystone index. Do NOT bulk-install the skills/ folder.
+Read the Book of Spells — a library of ready-made spells (skills in the SKILL.md
+format: each a folder with a SKILL.md, often with scripts/ and references/
+beside it) that you discover ON DEMAND through one keystone index, never all at
+once. Do NOT bulk-install them.
 
 1. Determine YOUR OWN skills directory — wherever you, the agent reading this,
-   load SKILL.md skills from. It depends on which agent you are: the open Agent
+   load SKILL.md spells from. It depends on which agent you are: the open Agent
    Skills standard uses ~/.agents/skills/; Claude Code uses ~/.claude/skills/;
    others differ. If you are unsure, consult your own documentation/config and
    use that path. Substitute it for SKILLS_DIR below.
@@ -69,13 +70,16 @@ DEMAND through one keystone index. Do NOT bulk-install the skills/ folder.
      ln -s ~/grimoires/bookofspells/the-grimoire    "$SKILLS_DIR/the-grimoire"
      ln -s ~/grimoires/bookofspells/the-spellwright "$SKILLS_DIR/the-spellwright"
 
-3. Then read the-grimoire/SKILL.md and obey it. To find a spell: grep
-   skills/_index/ (or catalog.json) for a capability, read the SKILL.md at the
-   "read at `…`" path it returns, and follow that spell — including any scripts
-   it ships. Never read the whole catalogue into context; grep it.
+3. From then on, whenever you are asked to CAST A SPELL (or for a spell to do
+   something), read the-grimoire/SKILL.md and obey it: grep skills/_index/ (or
+   catalog.json) for the capability, read the SKILL.md at the "read at `…`" path
+   it returns, and follow that spell — including any scripts it ships. Never read
+   the whole catalogue into context; grep it. This indirection IS the point — to
+   cast a spell is to consult the grimoire, so the Book can hold thousands of
+   spells while only the one you need ever loads.
 ````
 
-Tether `the-grimoire` to *find* spells; keep `the-spellwright` if you also want your demon to *forge* new ones. After binding, simply ask — *"is there a spell for Figma?"* — and the grimoire will stir.
+Tether `the-grimoire` to *find* spells; keep `the-spellwright` if you also want your demon to *forge* new ones. After binding, simply bid your demon **cast a spell** — *"is there a spell for Figma?"* — and the grimoire will stir.
 
 ---
 

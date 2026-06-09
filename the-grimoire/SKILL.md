@@ -1,14 +1,16 @@
 ---
 name: the-grimoire
 description: >-
-  The index to a Book of Spells — a large, curated library of skills gathered
-  from many providers (Google, OpenAI, and more), covering cloud platforms,
-  deployment, design tools, PDFs, browser automation, security, and much else.
-  Use this whenever the user refers to a skill, capability, or provider tool you
-  do not already have loaded (e.g. "use the google bigquery skill", "is there a
-  skill for Figma?", "what spells do you know for deploying?"), or whenever a
-  task might be served by a specialised, ready-made skill. Consult the index
-  first to discover and load the right spell, rather than improvising.
+  The index to a Book of Spells — a large, curated library of ready-made spells
+  (skills in the SKILL.md format) gathered from many providers (Google, OpenAI,
+  and more), covering cloud platforms, deployment, design tools, PDFs, browser
+  automation, security, and much else. The spells are NOT preloaded — there may
+  be thousands. Use this whenever the user asks to cast a spell, or for a spell
+  to do something, or names a capability, provider, or tool you do not already
+  have loaded (e.g. "cast a spell for Figma", "is there a spell for deploying?",
+  "use the bigquery spell"), or whenever a task might be served by a specialised,
+  ready-made spell. Casting a spell MEANS consulting this index to discover and
+  load the right one on demand — do that first, rather than improvising.
 ---
 
 # 📖 The Grimoire — One Spell to Find All Spells
@@ -19,9 +21,10 @@ loaded into your context — there may be hundreds or thousands of them, far mor
 than would fit. Instead, this single skill teaches you to **discover and summon**
 exactly the spell you need, the moment you need it.
 
-This is how you learn your own magical abilities. When a task smells like
-something a specialised skill would handle — a cloud service, a deployment, a
-design tool, a file format, a third-party API — **come here first.**
+This is how you learn your own magical abilities. When the user bids you **cast a
+spell**, or a task smells like something a specialised spell would handle — a
+cloud service, a deployment, a design tool, a file format, a third-party API —
+**come here first.** To cast a spell *is* to consult this index.
 
 *(To forge a *new* spell rather than find an existing one, see the companion
 skill `the-spellwright`.)*
