@@ -178,6 +178,7 @@ Beyond hand-carving these rites lies a deeper art — **automated Verbomancy**. 
 - **[Solo](https://soloterm.com/)** — the *metaharness*: a workspace that sets your demons beside their dev-stack — logs, ports, running services — and binds them together through the Many-Channelled Pact (MCP).
 - **[Herdr](https://github.com/ogulcancelik/herdr)** — a terminal multiplexer for demons; tmux-deep persistence and a socket-API, so a demon may marshal its own panes.
 - **[JetBrains Air](https://air.dev/)** — the House of JetBrains' agentic environment, running many demons (Claude, Codex, Gemini, Junie) at once in sealed cells.
+- **[Kimi Agent Swarm](https://www.kimi.com/blog/agent-swarm)** — the House of Moonshot's *self-marshalling* legion: a lead orchestrator that recruits and directs as many as a hundred sub-demons in parallel (1,500+ tool-calls to a task, some four-and-a-half times swifter than one demon alone). Here the conjurer does not conduct the chorus — the chorus conducts itself, atop the Kimi K2.5 spirit.
 
 > *A conjurer who watches but one demon at a time is bound to its pace. Marshal the legion, and the only bottleneck left is you.*
 
