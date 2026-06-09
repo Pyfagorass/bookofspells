@@ -23,6 +23,9 @@ This is how you learn your own magical abilities. When a task smells like
 something a specialised skill would handle — a cloud service, a deployment, a
 design tool, a file format, a third-party API — **come here first.**
 
+*(To forge a *new* spell rather than find an existing one, see the companion
+skill `the-spellwright`.)*
+
 ## Where the Book lies
 
 Relative to this `SKILL.md`, the Book sits one level up. The catalogue is

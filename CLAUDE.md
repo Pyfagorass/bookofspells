@@ -62,6 +62,7 @@ Sections currently in the README, each with its own enchanted heading:
 - **The Summoning Circles** — apparatus for forging your own demons (agent SDKs)
 - **The Diviner's Crossroads** — model routers
 - **The Inscribed Spells** — skill files, slash-sigils, MCP
+- **Spells That Write Spells** — meta-magic: the two keystone skills + house creators + EvoSkill
 - **The Apprentice's Warnings** — real safety advice, robed
 
 ## Working in the book
@@ -85,7 +86,9 @@ spellbook.toml  ──┬──►  gather-reliquaries.py   ──►  temp-repo
 
 - **`spellbook.toml` is the single source of truth.** Add a skill provider by adding a `[[source]]` block (name, url, repo, trust, optional roots/exclude/transcribe). Both scripts read it.
 - **Run with `uv run`** (see memory). `uv run gather-reliquaries.py` then `uv run transcribe-spells.py`. `skills/` is wholly regenerated each transcribe — never hand-edit files in it; edit the config and re-run.
-- **`the-grimoire/SKILL.md`** is the one always-loaded index skill. It teaches the demon to grep the hierarchical catalogue and read a spell on demand — progressive disclosure, so discovery stays cheap at any scale. The top-level `INDEX.md` must stay tiny (a house directory); per-house detail lives in `_index/`.
+- **Two hand-authored keystone spells** live at the repo root (outside the regenerated `skills/`):
+  - **`the-grimoire/SKILL.md`** — the always-loaded index skill. Teaches the demon to grep the hierarchical catalogue and read a spell on demand — progressive disclosure, so discovery stays cheap at any scale. The top-level `INDEX.md` must stay tiny (a house directory); per-house detail lives in `_index/`.
+  - **`the-spellwright/SKILL.md`** — the companion that teaches a conduit to *author* a new skill (trigger-led description, lean body, references/scripts). Grimoire finds; spellwright makes. They cross-link.
 
 ### Two safety mechanisms — do not weaken them
 

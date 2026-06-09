@@ -120,7 +120,22 @@ With the elder texts studied, the apprentice may at last attempt the **Seven Fir
 - **Slash-Sigils** — short-spoken commands (`/review`, `/init`, `/security-review`) that unleash a prepared rite in a single breath.
 - **MCP — the Many-Channelled Pact** — the protocol by which a spirit reaches beyond its circle to touch distant tools, archives, and oracles.
 
-> *Gather your inscribed spells in [`/spells`](./spells). The well-organised grimoire is the conjurer's true power.*
+> *This Book has gathered such inscribed spells by the hundred — see [`skills/`](./skills), the shelf the Rite of Transcription keeps, and [`the-grimoire/`](./the-grimoire), the one spell that unlocks them all.*
+
+---
+
+## 🜔 Spells That Write Spells — *Meta-Magic & the Self-Forging Book*
+
+*The deepest magic is recursive: a spell whose work is the making of other spells. Teach a demon to forge its own abilities, and you need never write every incantation by hand.*
+
+The Book carries two **keystone spells** of its own authorship — native magic, not gathered:
+
+- **[`the-grimoire`](./the-grimoire)** — *the spell that finds spells.* One always-loaded index that lets a conduit discover and summon any of the hundreds of gathered spells on demand, without carrying the whole Book in its head.
+- **[`the-spellwright`](./the-spellwright)** — *the spell that makes spells.* It teaches any conduit to forge a new skill: a discoverable description, a lean progressive-disclosure body, deterministic helper scripts. The companion to the grimoire — that one *finds*, this one *creates*.
+
+Beneath them, every house brings its own **forge**, gathered into the Book and summonable through the grimoire — `openai-skill-creator`, `openai-plugin-creator`, `commandcode-skill-creator`, `google-agent-platform-skill-registry`. Each conduit teaches its own particular rite of inscription.
+
+And at the frontier: **spells that write *themselves*.** [**EvoSkill**](https://github.com/sentient-agi/EvoSkill) — *Automated Skill Discovery for Coding Agents* — is research on demons that find, draft, and refine their own spells from experience. We keep it as a reference vault, not yet a shelf of spells: the spellwright's hand, one day, may be the demon's own.
 
 ---
 
